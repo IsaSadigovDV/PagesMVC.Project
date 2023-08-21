@@ -5,244 +5,244 @@
       "PackagePath": "staticwebassets\\Pages.App.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\about.css",
+      "PackagePath": "staticwebassets\\Css\\about.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\blog.css",
+      "PackagePath": "staticwebassets\\Css\\blog.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\contact.css",
+      "PackagePath": "staticwebassets\\Css\\contact.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "PackagePath": "staticwebassets\\lib\\bootstrap"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\errorpage.css",
+      "PackagePath": "staticwebassets\\Css\\errorpage.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\home.css",
+      "PackagePath": "staticwebassets\\Css\\home.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\login.css",
+      "PackagePath": "staticwebassets\\Css\\login.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\password.css",
+      "PackagePath": "staticwebassets\\Css\\password.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\singleblog.css",
+      "PackagePath": "staticwebassets\\Css\\singleblog.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\singleproduct.css",
+      "PackagePath": "staticwebassets\\Css\\singleproduct.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\store.css",
+      "PackagePath": "staticwebassets\\Css\\store.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Js\\home.js",
+      "PackagePath": "staticwebassets\\Js\\home.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Js\\modal.js",
+      "PackagePath": "staticwebassets\\Js\\modal.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Js\\swiper.js",
+      "PackagePath": "staticwebassets\\Js\\swiper.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Author.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\Author.jpg"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book-sm-audio-atomic.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Book-sm-audio-atomic.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book-sm-audio-light.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Book-sm-audio-light.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book-sm-disc-atomic - Copy.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Book-sm-disc-atomic - Copy.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book-sm-disc-atomic.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Book-sm-disc-atomic.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book-sm-disc-light.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Book-sm-disc-light.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book-sm1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Book-sm1.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book-sm2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Book-sm2.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Book.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Logo-amazen.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Logo-amazen.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Logo-megan.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Logo-megan.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Logo-megan2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Logo-megan2.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Logo-urban.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Logo-urban.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Photo1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Photo1.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Photo2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Photo2.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Photo3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Photo3.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\about-author-img.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about-author-img.jpg"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\article1.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\article2.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\article3.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\article4.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\article5.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article6.png",
+      "PackagePath": "staticwebassets\\assets\\img\\article6.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article8.png",
+      "PackagePath": "staticwebassets\\assets\\img\\article8.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article9.png",
+      "PackagePath": "staticwebassets\\assets\\img\\article9.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\blog-img.png",
+      "PackagePath": "staticwebassets\\assets\\img\\blog-img.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\book-reader.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\book-reader.jpg"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\dashed-line.png",
+      "PackagePath": "staticwebassets\\assets\\img\\dashed-line.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\dots.png",
+      "PackagePath": "staticwebassets\\assets\\img\\dots.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\edit.png",
+      "PackagePath": "staticwebassets\\assets\\img\\edit.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\envelope-icon.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\envelope-icon.svg"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\errorPage.png",
+      "PackagePath": "staticwebassets\\assets\\img\\errorPage.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\home-icon.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home-icon.svg"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\icon.png",
+      "PackagePath": "staticwebassets\\assets\\img\\icon.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\key-icon.png",
+      "PackagePath": "staticwebassets\\assets\\img\\key-icon.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\magazine.png",
+      "PackagePath": "staticwebassets\\assets\\img\\magazine.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\mail.png",
+      "PackagePath": "staticwebassets\\assets\\img\\mail.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\martin.png",
+      "PackagePath": "staticwebassets\\assets\\img\\martin.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\my-story.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\my-story.jpg"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\phone-icon.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\phone-icon.svg"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\phone.png",
+      "PackagePath": "staticwebassets\\assets\\img\\phone.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\quote.png",
+      "PackagePath": "staticwebassets\\assets\\img\\quote.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\satisfaction.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\satisfaction.svg"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\secure.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\secure.svg"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\shipping.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\shipping.svg"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\user.png",
+      "PackagePath": "staticwebassets\\assets\\img\\user.png"
     },
     {
-      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\visit-card.png",
+      "PackagePath": "staticwebassets\\assets\\img\\visit-card.png"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Pages.App.Microsoft.AspNetCore.StaticWebAssets.props",

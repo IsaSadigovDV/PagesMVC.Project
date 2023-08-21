@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3PS/cyG0lTGO4iGJJzhQjryE04fXG9iYqLCISW8vut4=",
+  "Hash": "5bfTD8zMTDfA1pqusBDlaksvfSaw2aycFp5Hrt4fueA=",
   "Source": "Pages.App",
   "BasePath": "_content/Pages.App",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Pages.App.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\about-author-img.jpg",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "css/site.css",
+      "RelativePath": "assets/img/about-author-img.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,15 +65,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\site.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\about-author-img.jpg"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article1.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "favicon.ico",
+      "RelativePath": "assets/img/article1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,15 +82,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\article1.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article2.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "js/site.js",
+      "RelativePath": "assets/img/article2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,15 +99,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\article2.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article3.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
+      "RelativePath": "assets/img/article3.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,15 +116,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\article3.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article4.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
+      "RelativePath": "assets/img/article4.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,15 +133,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\article4.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article5.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
+      "RelativePath": "assets/img/article5.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,15 +150,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\article5.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article6.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "RelativePath": "assets/img/article6.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,15 +167,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\article6.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article8.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "RelativePath": "assets/img/article8.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,15 +184,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\article8.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\article9.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "RelativePath": "assets/img/article9.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -201,15 +201,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\article9.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Author.jpg",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "RelativePath": "assets/img/Author.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -218,15 +218,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Author.jpg"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\blog-img.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "RelativePath": "assets/img/blog-img.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -235,15 +235,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\blog-img.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
+      "RelativePath": "assets/img/Book.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -252,15 +252,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Book.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\book-reader.jpg",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "RelativePath": "assets/img/book-reader.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -269,15 +269,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\book-reader.jpg"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book-sm1.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "RelativePath": "assets/img/Book-sm1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -286,15 +286,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Book-sm1.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book-sm2.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "RelativePath": "assets/img/Book-sm2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -303,15 +303,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Book-sm2.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book-sm-audio-atomic.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "RelativePath": "assets/img/Book-sm-audio-atomic.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -320,15 +320,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Book-sm-audio-atomic.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book-sm-audio-light.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "RelativePath": "assets/img/Book-sm-audio-light.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -337,15 +337,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Book-sm-audio-light.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book-sm-disc-atomic - Copy.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "RelativePath": "assets/img/Book-sm-disc-atomic - Copy.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -354,15 +354,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Book-sm-disc-atomic - Copy.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book-sm-disc-atomic.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "RelativePath": "assets/img/Book-sm-disc-atomic.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -371,15 +371,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Book-sm-disc-atomic.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Book-sm-disc-light.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "RelativePath": "assets/img/Book-sm-disc-light.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -388,15 +388,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Book-sm-disc-light.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\dashed-line.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "RelativePath": "assets/img/dashed-line.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -405,15 +405,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\dashed-line.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\dots.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "RelativePath": "assets/img/dots.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -422,15 +422,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\dots.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\edit.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "RelativePath": "assets/img/edit.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -439,15 +439,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\edit.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\envelope-icon.svg",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "RelativePath": "assets/img/envelope-icon.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -456,15 +456,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\envelope-icon.svg"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\errorPage.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "RelativePath": "assets/img/errorPage.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -473,15 +473,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\errorPage.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\home-icon.svg",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "RelativePath": "assets/img/home-icon.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -490,15 +490,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\home-icon.svg"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\icon.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "RelativePath": "assets/img/icon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -507,15 +507,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\icon.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\key-icon.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "RelativePath": "assets/img/key-icon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -524,15 +524,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\key-icon.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Logo-amazen.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "RelativePath": "assets/img/Logo-amazen.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -541,15 +541,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Logo-amazen.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Logo-megan.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "RelativePath": "assets/img/Logo-megan.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -558,15 +558,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Logo-megan.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Logo-megan2.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "RelativePath": "assets/img/Logo-megan2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -575,15 +575,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Logo-megan2.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Logo-urban.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "RelativePath": "assets/img/Logo-urban.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -592,15 +592,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Logo-urban.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\magazine.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "RelativePath": "assets/img/magazine.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -609,15 +609,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\magazine.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\mail.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "RelativePath": "assets/img/mail.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -626,15 +626,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\mail.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\martin.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "RelativePath": "assets/img/martin.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -643,15 +643,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\martin.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\my-story.jpg",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "RelativePath": "assets/img/my-story.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -660,15 +660,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\my-story.jpg"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\phone.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "RelativePath": "assets/img/phone.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -677,15 +677,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\phone.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\phone-icon.svg",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "RelativePath": "assets/img/phone-icon.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -694,15 +694,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\phone-icon.svg"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Photo1.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "RelativePath": "assets/img/Photo1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -711,15 +711,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Photo1.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Photo2.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
+      "RelativePath": "assets/img/Photo2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -728,15 +728,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Photo2.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Photo3.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "RelativePath": "assets/img/Photo3.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -745,15 +745,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Photo3.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\quote.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "RelativePath": "assets/img/quote.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -762,15 +762,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\quote.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\satisfaction.svg",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "RelativePath": "assets/img/satisfaction.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -779,15 +779,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\satisfaction.svg"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\secure.svg",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
+      "RelativePath": "assets/img/secure.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -796,15 +796,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\secure.svg"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\shipping.svg",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
+      "RelativePath": "assets/img/shipping.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -813,15 +813,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\shipping.svg"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\user.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
+      "RelativePath": "assets/img/user.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -830,15 +830,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\user.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\visit-card.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "RelativePath": "assets/img/visit-card.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -847,15 +847,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\visit-card.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\about.css",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/bootstrap/LICENSE",
+      "RelativePath": "Css/about.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -864,15 +864,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
+      "OriginalItemSpec": "wwwroot\\Css\\about.css"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\blog.css",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/jquery/dist/jquery.js",
+      "RelativePath": "Css/blog.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -881,15 +881,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
+      "OriginalItemSpec": "wwwroot\\Css\\blog.css"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\contact.css",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/jquery/dist/jquery.min.js",
+      "RelativePath": "Css/contact.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -898,15 +898,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
+      "OriginalItemSpec": "wwwroot\\Css\\contact.css"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\errorpage.css",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/jquery/dist/jquery.min.map",
+      "RelativePath": "Css/errorpage.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -915,15 +915,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
+      "OriginalItemSpec": "wwwroot\\Css\\errorpage.css"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\home.css",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/jquery/LICENSE.txt",
+      "RelativePath": "Css/home.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -932,15 +932,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\Css\\home.css"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\login.css",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
+      "RelativePath": "Css/login.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -949,15 +949,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
+      "OriginalItemSpec": "wwwroot\\Css\\login.css"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\password.css",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
+      "RelativePath": "Css/password.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -966,15 +966,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+      "OriginalItemSpec": "wwwroot\\Css\\password.css"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\singleblog.css",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
+      "RelativePath": "Css/singleblog.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -983,15 +983,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
+      "OriginalItemSpec": "wwwroot\\Css\\singleblog.css"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\singleproduct.css",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
+      "RelativePath": "Css/singleproduct.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1000,15 +1000,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+      "OriginalItemSpec": "wwwroot\\Css\\singleproduct.css"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\store.css",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/jquery-validation/LICENSE.md",
+      "RelativePath": "Css/store.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1017,15 +1017,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
+      "OriginalItemSpec": "wwwroot\\Css\\store.css"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Js\\home.js",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "RelativePath": "Js/home.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1034,15 +1034,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+      "OriginalItemSpec": "wwwroot\\Js\\home.js"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Js\\modal.js",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "RelativePath": "Js/modal.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1051,15 +1051,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+      "OriginalItemSpec": "wwwroot\\Js\\modal.js"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Js\\swiper.js",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "RelativePath": "Js/swiper.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1068,7 +1068,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\Js\\swiper.js"
     }
   ]
 }

@@ -1,0 +1,12 @@
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.Core\bin\Debug\net6.0\Pages.Core.deps.json
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.Core\bin\Debug\net6.0\Pages.Core.dll
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.Core\bin\Debug\net6.0\Pages.Core.pdb
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.Core\obj\Debug\net6.0\Pages.Core.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.Core\obj\Debug\net6.0\Pages.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.Core\obj\Debug\net6.0\Pages.Core.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.Core\obj\Debug\net6.0\Pages.Core.AssemblyInfo.cs
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.Core\obj\Debug\net6.0\Pages.Core.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.Core\obj\Debug\net6.0\Pages.Core.dll
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.Core\obj\Debug\net6.0\refint\Pages.Core.dll
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.Core\obj\Debug\net6.0\Pages.Core.pdb
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.Core\obj\Debug\net6.0\ref\Pages.Core.dll

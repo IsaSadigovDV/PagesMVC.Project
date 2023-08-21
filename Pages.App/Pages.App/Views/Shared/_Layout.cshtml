@@ -1,49 +1,217 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Pages.App</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Pages.App.styles.css" asp-append-version="true" />
+    <title>Book Store</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="~/Css/home.css" />
+    <link rel="stylesheet"
+          href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Pages.App</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+    <header class="bg-blue">
+        <div class="header d-flex container space-between align-center">
+            <div class="d-flex align-center icon-container">
+                <div class="d-flex align-center logo-container">
+                    <i class="fa-solid fa-book-bookmark yellow fa-lg"></i>
+                    <h3>Pages</h3>
+                </div>
+                <div class="header-icons-container d-flex">
+                    <a class="icons-border-bg-white"
+                       target="_blank"
+                       href="https://www.facebook.com/">
+                        <i class="fa-brands i-blue fa-facebook-f fa-sm"> </i>
+                    </a>
+
+                    <a class="icons-border-bg-white"
+                       target="_blank"
+                       href="https://twitter.com/">
+                        <i class="fa-brands i-blue fa-twitter fa-sm"> </i>
+                    </a>
+                    <a class="icons-border-bg-white"
+                       target="_blank"
+                       href="https://www.linkedin.com/">
+                        <i class="fa-brands i-blue fa-linkedin-in fa-sm"> </i>
+                    </a>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+            <!-- navigation start -->
+            <div class="d-flex pages-container align-center">
+                <ul class="d-flex pages-container align-center links">
+                    <div class="d-flex align-center hidden-logo logo-container">
+                        <i class="fa-solid fa-book-bookmark yellow fa-lg"></i>
+                        <h3>Pages</h3>
+                        <a class="cart-shop" href="#cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <div id="close-menu">
+                            <i class="fa-regular fa-rectangle-xmark fa-lg"></i>
+                        </div>
+                    </div>
+                    <li><a href="">Home</a></li>
+                    <li class="dropdown-wrapper">
+                        <a href="">
+                            Pages <i class="fa-solid fa-chevron-down fa-xs"></i>
+                        </a>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - Pages.App - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <ul class="dropdown">
+                            <li><a href="./store.html">Books</a></li>
+
+                            <li><a href="./blog.html">Blogs</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./blog.html">Services</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./signup.html">Signup</a></li>
+                    <div class="header-icons-container d-flex">
+                        <a class="icons-border-bg-white"
+                           target="_blank"
+                           href="https://www.facebook.com/">
+                            <i class="fa-brands i-blue fa-facebook-f fa-sm"> </i>
+                        </a>
+
+                        <a class="icons-border-bg-white"
+                           target="_blank"
+                           href="https://twitter.com/">
+                            <i class="fa-brands i-blue fa-twitter fa-sm"> </i>
+                        </a>
+                        <a class="icons-border-bg-white"
+                           target="_blank"
+                           href="https://www.linkedin.com/">
+                            <i class="fa-brands i-blue fa-linkedin-in fa-sm"> </i>
+                        </a>
+                    </div>
+                    <button class="btn menu-btn">
+                        <a class="blue" href="#">Order Today</a>
+                    </button>
+                </ul>
+                <a class="cart-shop" href="#cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+
+                <button class="btn menu-btn">
+                    <a class="blue" href="#">Order Today</a>
+                </button>
+                <div class="menu" id="menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- navigation end -->
+    @RenderBody()
+
+    <!-- footer start -->
+    <footer class="bg-blue">
+        <div class="d-flex space-between container footer-container">
+            <div class="footer-logo-container d-flex">
+                <div class="d-flex align-center pages-bookmark">
+                    <i class="fa-solid fa-book-bookmark yellow fa-lg"></i>
+                    <h3>Pages</h3>
+                </div>
+                <div class="soc-media-icons d-flex">
+                    <a class="icons-border"
+                       target="_blank"
+                       href="https://www.facebook.com/">
+                        <i class="fa-brands fa-facebook-f fa-sm"> </i>
+                    </a>
+                    <a class="icons-border" target="_blank" href="https://twitter.com/">
+                        <i class="fa-brands fa-twitter fa-sm"> </i>
+                    </a>
+                    <a class="icons-border"
+                       target="_blank"
+                       href="https://www.linkedin.com/">
+                        <i class="fa-brands fa-linkedin-in fa-sm"> </i>
+                    </a>
+                    <a class="icons-border"
+                       target="_blank"
+                       href="https://www.instagram.com/">
+                        <i class="fa-brands fa-instagram fa-sm"> </i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="explore d-flex">
+                <h3>Explore</h3>
+                <ul class="gray">
+                    <li>
+                        <img src="~/assets/img/dots.png" alt="" />
+                        <a href="" class="gray"> Home</a>
+                    </li>
+                    <li>
+                        <img src="~/assets/img/dots.png" alt="" />
+                        <a href="" class="gray"> About Us</a>
+                    </li>
+                    <li>
+                        <img src="~/assets/img/dots.png" alt="" />
+                        <a href="" class="gray"> Services </a>
+                    </li>
+                    <li>
+                        <img src="~/assets/img/dots.png" alt="" />
+                        <a href="" class="gray">Appointments</a>
+                    </li>
+                    <li>
+                        <img src="~/assets/img/dots.png" alt="" />
+                        <a href="" class="gray">Blog</a>
+                    </li>
+                    <li>
+                        <img src="~/assets/img/dots.png" alt="" />
+                        <a href="" class="gray">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="utility d-flex">
+                <h3>Utility Pages</h3>
+                <ul class="gray">
+                    <li>
+                        <img src="~/assets/img/dots.png" alt="" />
+                        <a href="" class="gray">Start Here</a>
+                    </li>
+                    <li>
+                        <img src="~/assets/img/dots.png" alt="" />
+                        <a href="" class="gray">Style guide</a>
+                    </li>
+                    <li>
+                        <img src="~/assets/img/dots.png" alt="" />
+                        <a href="" class="gray">Password Protected</a>
+                    </li>
+                    <li>
+                        <img src="~/assets/img/dots.png" alt="" />
+                        <a href="" class="gray">Licences</a>
+                    </li>
+                    <li>
+                        <img src="~/assets/img/dots.png" alt="" />
+                        <a href="" class="gray">Changelog</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="in-touch d-flex">
+                <h3>Keep in Touch</h3>
+                <div class="contact d-flex">
+                    <h4 class="min-66">Address :</h4>
+                    <a href="" class="gray">24A Kingston St, Los Vegas NC 28202, USA.</a>
+                </div>
+                <div class="contact d-flex">
+                    <h4 class="min-66">Mail :</h4>
+                    <a class="gray" href="">support@doctors.com</a>
+                </div>
+                <div class="contact d-flex">
+                    <h4 class="min-66">Telefon :</h4>
+                    <a href="" class="gray">(+22) 123 - 4567 - 900 </a>
+                </div>
+            </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    <!-- footer end -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="~/js/swiper.js"></script>
+    <script src="~/Js/home.js"></script>
 </body>
 </html>
