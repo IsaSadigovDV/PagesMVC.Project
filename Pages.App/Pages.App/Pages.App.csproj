@@ -11,12 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="areas\" />
     <Folder Include="Areas\Admin\Controllers\" />
-    <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\" />
-    <Folder Include="wwwroot\" />
+    <Folder Include="Areas\Admin\Views\Home\" />
+    <Folder Include="areas\Admin\Views\Shared\" />
   </ItemGroup>
 
   <ItemGroup>
