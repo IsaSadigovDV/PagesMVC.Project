@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "4KdBSiUwTjAO3VuqZq4P9WgjtsELVbZao4IZc50js/42OKebHp4H22GwOeusv9Zq47CMsx6DdeDEA5B0JYNDTw==",
+  "dgSpecHash": "Zm+i1UMapXTcedhKICMixUtVgbCZHdsGKHgAEb8OrtOMP+5CYurHrU8OaDYrez7wPrbHhkt01HR0G1CyMp9/eg==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.Core\\Pages.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

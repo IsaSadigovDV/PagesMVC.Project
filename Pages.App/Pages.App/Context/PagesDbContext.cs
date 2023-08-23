@@ -6,6 +6,7 @@ namespace Pages.App.Context
     public class PagesDbContext:DbContext
     {
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Blog> Blogs  { get; set; }
         public PagesDbContext(DbContextOptions<PagesDbContext> options) : base(options)
         {
 
