@@ -1,0 +1,13 @@
+﻿@model Category
+
+<div class="container">
+	<form method="post" enctype="multipart/form-data">
+		<div class="form-group">
+			<label asp-for="Name">Name:</label>
+			<input type="text" class="form-control" asp-for="Name" />
+			<span asp-validation-for="Name" class="text text-danger"></span>
+		</div>
+		@Html.AntiForgeryToken()
+		<button type="submit">Update</button>
+	</form>
+</div>
