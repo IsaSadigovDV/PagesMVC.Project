@@ -40,12 +40,22 @@ button:hover {
 .menu {
   display: none;
 }
-.header {
-  padding-bottom: 30px;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+
+.header-top {
+  background-color: #ffca42;
+}
+
+.header-top a {
+  color: #1b3764;
 }
 .nav {
   gap: 80px;
-  padding-bottom: 30px;
+  padding: 30px 0;
 }
 
 .unique-text {
@@ -836,6 +846,11 @@ ul {
     max-width: 560px;
     padding: 15px;
   }
+
+  .header-top > .container {
+    padding: 0;
+  }
+
   .lined::before {
     display: none;
   }

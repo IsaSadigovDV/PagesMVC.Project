@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\Css\\blog.css"
     },
     {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\card.css",
+      "PackagePath": "staticwebassets\\Css\\card.css"
+    },
+    {
       "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\Css\\contact.css",
       "PackagePath": "staticwebassets\\Css\\contact.css"
     },
@@ -165,6 +169,26 @@
       "PackagePath": "staticwebassets\\assets\\img\\book-reader.jpg"
     },
     {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\book2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\book2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\book3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\book3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\book5.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\book5.webp"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\book6.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\book6.webp"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\book7.webp",
+      "PackagePath": "staticwebassets\\assets\\img\\book7.webp"
+    },
+    {
       "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\dashed-line.png",
       "PackagePath": "staticwebassets\\assets\\img\\dashed-line.png"
     },
@@ -243,6 +267,18 @@
     {
       "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\visit-card.png",
       "PackagePath": "staticwebassets\\assets\\img\\visit-card.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\fonts\\Cardo-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Cardo-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\fonts\\Cardo-Italic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Cardo-Italic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\fonts\\Cardo-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Cardo-Regular.ttf"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Pages.App.Microsoft.AspNetCore.StaticWebAssets.props",

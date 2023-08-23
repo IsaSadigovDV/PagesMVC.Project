@@ -123,6 +123,23 @@
   .header {
     padding-bottom: 30px;
   }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+  }
+  
+  .header-top {
+    background-color: #ffca42;
+  }
+  
+  .header-top a {
+    color: #1b3764;
+  }
+  .nav {
+    gap: 80px;
+    padding: 30px 0;
+  }
   .nav {
     gap: 20px;
     padding-bottom: 30px;
@@ -453,6 +470,9 @@
   }
   .unique-text::after {
     display: none;
+  }
+  .header-top > .container {
+    padding: 0;
   }
   .bg-light-gray {
     padding: 50px;
