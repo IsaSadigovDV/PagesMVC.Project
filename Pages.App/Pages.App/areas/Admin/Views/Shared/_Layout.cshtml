@@ -54,7 +54,7 @@
                             <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
                             <a class="dropdown-item">
                                 <div class="item-thumbnail">
-                                    <img src="~/admin/assets/images/faces/face4.jpg" alt="image" class="profile-pic">
+                                    <img src="~/admin/assets/img/faces/face4.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
                                     <h6 class="ellipsis font-weight-normal">
@@ -177,16 +177,12 @@
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                             <i class="mdi mdi-circle-outline menu-icon"></i>
-                            <span class="menu-title">Courses</span>
+                            <span class="menu-title">Books</span>
                             <i class="menu-arrow"></i>
                         </a>
                         <div class="collapse" id="ui-basic">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="course">Course</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="category">Category</a></li>
-                                <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="tag">Tag</a></li>
-                                <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="assesment">Assesment</a></li>
-                                <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="courselanguage">Course Language</a></li>
                             </ul>
                         </div>
                     </li>
@@ -200,11 +196,11 @@
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="blog">Blog</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="category">Category</a></li>
-                                <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="tag">Tag</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="sponsor">Sponsors</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item">
+                   @* <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
                             <i class="mdi mdi-account menu-icon"></i>
                             <span class="menu-title">Teacher</span>
@@ -220,7 +216,7 @@
                                 <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="social">Social</a></li>
                             </ul>
                         </div>
-                    </li>
+                    </li>*@
                     <li class="nav-item">
                         <a class="nav-link" asp-action="index" asp-controller="message">
                             <i class="mdi mdi-view-headline menu-icon"></i>

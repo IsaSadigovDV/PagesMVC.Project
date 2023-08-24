@@ -14,6 +14,7 @@
     <Folder Include="Areas\Admin\Views\Blog\" />
     <Folder Include="Areas\Admin\Views\Home\" />
     <Folder Include="areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Admin\Views\Sponsor\" />
   </ItemGroup>
 
   <ItemGroup>
