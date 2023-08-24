@@ -8,6 +8,7 @@ namespace Pages.App.Context
         public DbSet<Category> Categories { get; set; }
         public DbSet<Blog> Blogs  { get; set; }
         public DbSet<Sponsor> Sponsors  { get; set; }
+        public DbSet<Subscribe> Subscribes  { get; set; }
         public PagesDbContext(DbContextOptions<PagesDbContext> options) : base(options)
         {
 

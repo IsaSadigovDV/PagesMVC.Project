@@ -4,6 +4,30 @@
 
 <!-- welcome to pages start -->
 <div class="bg-blue">
+    @if (!string.IsNullOrWhiteSpace((string)TempData["Email"]))
+    {
+        <div style="display:none;" id="emailFormat">
+            @TempData["Email"]
+        </div>
+    }
+    @if (!string.IsNullOrWhiteSpace((string)TempData["Register"]))
+    {
+        <div style="display:none;" id="verifyEmail">
+            @TempData["Register"]
+        </div>
+    }
+    @if (!string.IsNullOrWhiteSpace((string)TempData["Verify"]))
+    {
+        <div style="display:none;" id="successVerify">
+            @TempData["Verify"]
+        </div>
+    }
+    @if (!string.IsNullOrWhiteSpace((string)TempData["AdminInfo"]))
+    {
+        <div style="display:none;" id="adminInfo">
+            @TempData["AdminInfo"]
+        </div>
+    }
     <div class="nav container d-flex space-between">
         <div>
             <div class="welcome-section">
@@ -32,7 +56,7 @@
                     </div>
                     <div class="bulleted">
                         <h4>Ratings:</h4>
-                        <p class="gray">4.5/5 (305 reytinq)</p>
+                        <p class="gray">4.5/5 (305 rating)</p>
                     </div>
                 </div>
             </div>
@@ -588,22 +612,33 @@
     </div>
 </div>
 <!-- articles end -->
-<!-- read free chapter start -->
-<div>
-    <div class="container bg-orange blue d-flex align-center">
-        <div class="chapter-container">
-            <h2 class="read-free">Read a free Chapter</h2>
-            <h4 class="free-chapter">
-                Making this the first true value generator on the Internet. It of
-                over 200 Latin words, combined with a handful.
-            </h4>
-        </div>
-        <form action="" class="d-flex form">
-            <input class="input-email"
-                   type="email"
-                   placeholder="Your Email id..." />
-            <button class="btn-bg-blue" type="submit">Subscribe</button>
-        </form>
-    </div>
-</div>
-<!--read  free chapters end -->
+
+<script>
+    const verifyEmail = document.querySelector("#verifyEmail");
+    const successVerify = document.querySelector("#successVerify")
+
+    if (verifyEmail != undefined) {
+        const message1 = verifyEmail.innerHTML;
+        if (message1 != "") {
+            Swal.fire({
+                title: `${message1}`,
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                }
+            })
+        }
+    }
+    if (successVerify != undefined) {
+        const message = successVerify.innerHTML;
+        if (message != "") {
+            Swal.fire(
+                `${message}`,
+                'You clicked the button!',
+                'success'
+            )
+        }
+    }
+</script>

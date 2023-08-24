@@ -115,6 +115,26 @@
     </header>
     <!-- navigation end -->
     @RenderBody()
+    <!-- read free chapter start -->
+    <div>
+        <div class="container bg-orange blue d-flex align-center">
+            <div class="chapter-container">
+                <h2 class="read-free">Read a free Chapter</h2>
+                <h4 class="free-chapter">
+                    Making this the first true value generator on the Internet. It of
+                    over 200 Latin words, combined with a handful.
+                </h4>
+            </div>
+            <form method="post" asp-controller="home" asp-action="PostSubscribe" class="d-flex form">
+                <div asp-validation-summary="ModelOnly"></div>
+                <input class="input-email" type="email" name="email" placeholder="Your Email id..." />
+                
+                <span class="text text-danger"></span>
+                <button class="btn-bg-blue" type="submit"><span>subscribe</span></button>
+            </form>
+        </div>
+    </div>
+    <!--read  free chapters end -->
 
     <!-- footer start -->
     <footer class="bg-blue">
