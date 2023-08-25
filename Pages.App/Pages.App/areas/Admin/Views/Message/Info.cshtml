@@ -1,0 +1,27 @@
+﻿@model Message
+
+<div class="container">
+	<form method="post" enctype="multipart/form-data">
+		<div class="form-group">
+			<label asp-for="Name">Name:</label>
+			<input disabled type="text" class="form-control" asp-for="Name" />
+			<span asp-validation-for="Name" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="Email">Email:</label>
+			<input disabled type="text" class="form-control" asp-for="Email" />
+			<span asp-validation-for="Email" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="PhoneNumber">PhoneNumber:</label>
+			<input disabled type="text" class="form-control" asp-for="PhoneNumber" />
+			<span asp-validation-for="PhoneNumber" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="Body">Body:</label>
+			<input disabled  type="text" class="form-control" asp-for="Body" />
+			<span asp-validation-for="Body" class="text text-danger"></span>
+		</div>
+		@Html.AntiForgeryToken()
+	</form>
+</div>

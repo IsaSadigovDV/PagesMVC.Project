@@ -94,6 +94,7 @@ namespace Pages.App.areas.Admin.Controllers
             language.IsDeleted = true;
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+
         }
     }
 }
