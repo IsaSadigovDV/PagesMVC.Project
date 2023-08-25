@@ -35,7 +35,7 @@ namespace Pages.App.Services.Implementations
             smtp.Port = 587;
             smtp.UseDefaultCredentials = false;
             smtp.EnableSsl = true;
-            smtp.Credentials = new System.Net.NetworkCredential(from, "gmaagjxgczxovsrw");
+            smtp.Credentials = new System.Net.NetworkCredential(from, "sadiqovisa11");
 
             await smtp.SendMailAsync(mm);
         }

@@ -1,33 +1,33 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+@if (!string.IsNullOrWhiteSpace((string)TempData["Email"]))
+{
+    <div style="display:none;" id="emailFormat">
+        @TempData["Email"]
+    </div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["Register"]))
+{
+    <div style="display:none;" id="verifyEmail">
+        @TempData["Register"]
+    </div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["Verify"]))
+{
+    <div style="display:none;" id="successVerify">
+        @TempData["Verify"]
+    </div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["AdminInfo"]))
+{
+    <div style="display:none;" id="adminInfo">
+        @TempData["AdminInfo"]
+    </div>
+}
 <!-- welcome to pages start -->
 <div class="bg-blue">
-    @if (!string.IsNullOrWhiteSpace((string)TempData["Email"]))
-    {
-        <div style="display:none;" id="emailFormat">
-            @TempData["Email"]
-        </div>
-    }
-    @if (!string.IsNullOrWhiteSpace((string)TempData["Register"]))
-    {
-        <div style="display:none;" id="verifyEmail">
-            @TempData["Register"]
-        </div>
-    }
-    @if (!string.IsNullOrWhiteSpace((string)TempData["Verify"]))
-    {
-        <div style="display:none;" id="successVerify">
-            @TempData["Verify"]
-        </div>
-    }
-    @if (!string.IsNullOrWhiteSpace((string)TempData["AdminInfo"]))
-    {
-        <div style="display:none;" id="adminInfo">
-            @TempData["AdminInfo"]
-        </div>
-    }
+ 
     <div class="nav container d-flex space-between">
         <div>
             <div class="welcome-section">
@@ -51,12 +51,12 @@
                         <p class="gray">586 Pages</p>
                     </div>
                     <div class="bulleted">
-                        <h4>Length:</h4>
-                        <p class="gray">10 Hours</p>
+                        <h4>Author:</h4>
+                        <p class="gray">Issac Newton</p>
                     </div>
                     <div class="bulleted">
-                        <h4>Ratings:</h4>
-                        <p class="gray">4.5/5 (305 rating)</p>
+                        <h4>Category:</h4>
+                        <p class="gray">Dram</p>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                                         <p class="gray">586 pages</p>
                                     </div>
                                     <div class="bulleted">
-                                        <h4>Length:</h4>
+                                        <h4>Auto:</h4>
                                         <p class="gray">10 hours</p>
                                     </div>
                                 </div>
@@ -612,11 +612,14 @@
     </div>
 </div>
 <!-- articles end -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 <script>
     const verifyEmail = document.querySelector("#verifyEmail");
     const successVerify = document.querySelector("#successVerify")
-
+    const adminInfo = document.querySelector("#adminInfo");
+    const emailFormat = document.querySelector("#emailFormat");
     if (verifyEmail != undefined) {
         const message1 = verifyEmail.innerHTML;
         if (message1 != "") {
@@ -641,4 +644,35 @@
             )
         }
     }
+    if (successVerify != undefined) {
+        const message = successVerify.innerHTML;
+        if (message != "") {
+            Swal.fire(
+                `${message}`,
+                'You clicked the button!',
+                'success'
+            )
+        }
+    }
+    if (adminInfo != undefined) {
+        const message = adminInfo.innerHTML;
+        if (message != "") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: `${message}`,
+            })
+        }
+    }
+    if (emailFormat != undefined) {
+        const message = emailFormat.innerHTML;
+        if (message != "") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: `${message}`,
+            })
+        }
+    }
+
 </script>

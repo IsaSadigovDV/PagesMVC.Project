@@ -40,8 +40,14 @@ namespace Pages.App.Controllers
             {
                 ModelState.AddModelError("", "Invalid Email");
             }
+            if( _context.Subscribes.Any(x=>x.Email == subscribe.Email))
+            {
+                TempData["Email"] = "This email is already registered";
+
+            }
             await _context.AddAsync(subscribe);
             await _context.SaveChangesAsync();
+            TempData["Verify"] = "Successfully added Email";
             return RedirectToAction(nameof(Index));
         }
     }

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Pages.Core.Entities
 {
-    public class Category:BaseModel
+    public class Message:BaseModel
     {
         public string Name { get; set; }
-        public List<Book>? Books { get; set; }
-
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Body { get; set; }
     }
 }

@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Pages.Core.Entities
 {
-    public class Category:BaseModel
+    public class Language:BaseModel
     {
         public string Name { get; set; }
         public List<Book>? Books { get; set; }
-
     }
 }

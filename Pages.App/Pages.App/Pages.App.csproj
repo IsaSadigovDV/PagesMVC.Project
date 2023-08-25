@@ -13,6 +13,7 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Views\Blog\" />
     <Folder Include="Areas\Admin\Views\Home\" />
+    <Folder Include="Areas\Admin\Views\Language\" />
     <Folder Include="areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Admin\Views\Sponsor\" />
     <Folder Include="Areas\Admin\Views\Subscribe\" />

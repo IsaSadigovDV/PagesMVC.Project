@@ -1,0 +1,126 @@
+﻿<link rel="stylesheet" href="~/Css/contact.css" />
+<link rel="stylesheet" href="~/Css/home.css" />
+@if (!string.IsNullOrWhiteSpace((string)TempData["Message"]))
+{
+    <div style="display:none;" id="messageFormat">
+        @TempData["Message"]
+    </div>
+}
+@if (!string.IsNullOrWhiteSpace((string)TempData["Success"]))
+{
+    <div style="display:none;" id="success">
+        @TempData["Success"]
+    </div>
+}
+<!-- contact us section start -->
+<div class="bg-blue">
+    <div class="nav container d-flex">
+        <h1 class="unique-text">Contact Us</h1>
+        <p class="gray w-400">
+            There are many variations of passages of Lorem Ipsum available, have
+            suffered alteration in some form.
+        </p>
+    </div>
+</div>
+<!-- contact us section end -->
+<!-- keep in touch start -->
+<div class="keepInTouch">
+    <div class="container contact-container d-flex space-between">
+        <div class="contact-left d-flex f-dir-column">
+            <h2 class="contact-heading blue">Keep in Touch</h2>
+            <p class="gray">
+                There are many variations of passages of Lorem Ipsum available, but
+                the majority have suffered alteration in some form, by injected
+                humour, or randomised words which don't look even slightly
+                believable.
+            </p>
+            <div class="contact-icons-container d-flex f-dir-column">
+                <div class="contact-blocks d-flex align-center">
+                    <div class="contact-icon">
+                        <img src="../assets/img/home-icon.svg" alt="home icon" />
+                    </div>
+                    <div class="contact-icon-txt">
+                        <h3 class="blue">Vist Us :</h3>
+                        <p class="gray">No: 09a, Downtown, San Dieago, USA.</p>
+                    </div>
+                </div>
+                <div class="contact-blocks d-flex align-center">
+                    <div class="contact-icon">
+                        <img src="../assets/img/envelope-icon.svg" alt="envelope icon" />
+                    </div>
+                    <div class="contact-icon-txt">
+                        <h3 class="blue">Drop Us :</h3>
+                        <p class="gray">support@pages.com</p>
+                    </div>
+                </div>
+                <div class="contact-blocks d-flex align-center">
+                    <div class="contact-icon">
+                        <img src="../assets/img/phone-icon.svg" alt="phone icon" />
+                    </div>
+                    <div class="contact-icon-txt">
+                        <h3 class="blue">Call Us :</h3>
+                        <p class="gray">Call: 1-800-123-9999</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- form start -->
+        <div class="d-flex f-dir-column form-container">
+            <form class="d-flex f-dir-column" asp-controller="contact" asp-action="sendemail" method="post">
+                <div class="name-email-inputs d-flex space-between align-center">
+                    <label for="userName">
+                        <img src="../assets/img/user.png" alt="user icon" />
+                        <input type="text" name="name" placeholder="Name" id="userName" />
+                    </label>
+
+                    <label class="email" for="email">
+                        <img src="../assets/img/mail.png" alt="mail icon" />
+                        <input type="email" name="email" placeholder="Email" id="email" />
+                    </label>
+                </div>
+                <label class="phone" for="phone">
+                    <img src="../assets/img/phone.png" alt="phone icon" />
+                    <input type="number" name="phonenumber" id="phone" placeholder="Phone" />
+                </label>
+                <label for="textarea">
+                    <img src="../assets/img/edit.png" alt="edit icon" />
+                    <textarea name="body" id="textarea" placeholder="Message"></textarea>
+                </label>
+
+                <label class="gray check d-flex align-center" for="check">
+                    <input type="checkbox" name="check" id="check" />
+                    Keep me up to date with news and offers from time to time by email
+                </label>
+                <button type="submit" class="btn btn-send">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- form end -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const messageFormat = document.querySelector("#messageFormat");
+    const successFormat = document.querySelector("#success")
+    if (messageFormat != undefined) {
+        const message = messageFormat.innerHTML;
+        if (message != "") {
+            Swal.fire(
+                'Contact',
+                `${message}`,
+                'question'
+            )
+        }
+    }
+    if (successFormat != undefined) {
+        const message = successFormat.innerHTML;
+        if (message != "") {
+            Swal.fire({
+                position: 'middle-end',
+                icon: 'success',
+                title: `${message}`,
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    }
+</script>
