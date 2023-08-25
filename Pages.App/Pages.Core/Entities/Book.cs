@@ -22,8 +22,8 @@ namespace Pages.Core.Entities
         public string Dimensions { get; set; }
         public string Image { get; set; }
         [NotMapped]
-        public IFormFile file { get; set; } 
-        public string Author { get; set; }
+        public IFormFile? file { get; set; } 
+        public List<BookAuthor>? BookAuthors { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
 

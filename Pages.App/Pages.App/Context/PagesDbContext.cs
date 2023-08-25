@@ -11,6 +11,9 @@ namespace Pages.App.Context
         public DbSet<Subscribe> Subscribes  { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Language> Languages { get; set; }  
+        public DbSet<Author> Authors { get; set; }  
+        public DbSet<Book> Books { get; set; }  
+        public DbSet<BookAuthor> BookAuthors { get; set; }  
         public PagesDbContext(DbContextOptions<PagesDbContext> options) : base(options)
         {
 
