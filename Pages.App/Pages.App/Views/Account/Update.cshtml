@@ -1,0 +1,86 @@
+﻿@using Pages.App.ViewModels;
+@model UpdatedUserVM
+<!-- Banner Area Start -->
+<div class="banner-area-wrapper">
+    <div class="banner-area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="banner-content-wrapper">
+                        <div class="banner-content">
+                            <h2>sign up</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Banner Area End -->
+<!-- Register start -->
+<div class="register-area pt-150 pb-150">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <div class="login">
+                    <div class="login-form-container">
+                        <div class="login-text">
+                            <h2>update</h2>
+                            <span>Please update using account detail bellow.</span>
+                        </div>
+                        <div class="login-form">
+                            <form  method="post">
+                                <div class="text text-danger" asp-validation-summary="ModelOnly"></div>
+                                <div class="d-flex flex-row align-items-center mb-4">
+                                    <div class="form-outline flex-fill mb-0">
+                                        <input type="text" placeholder="Name"  asp-for="Name" class="form-control" />
+                                        <span class="text text-danger" asp-validation-for="Name"></span>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row align-items-center mb-4">
+                                    <div class="form-outline flex-fill mb-0">
+                                        <input type="text" placeholder="Surname" asp-for="Surname" class="form-control" />
+                                        <span class="text text-danger" asp-validation-for="Surname"></span>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row align-items-center mb-4">
+                                    <div class="form-outline flex-fill mb-0">
+                                        <input type="email" placeholder="Email" asp-for="Email" class="form-control" />
+                                        <span class="text text-danger" asp-validation-for="Email"></span>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row align-items-center mb-4">
+                                    <div class="form-outline flex-fill mb-0">
+                                        <input placeholder="UserName" asp-for="UserName" class="form-control" />
+                                        <span class="text text-danger" asp-validation-for="UserName"></span>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row align-items-center mb-4">
+                                    <div class="form-outline flex-fill mb-0">
+                                        <input type="password" placeholder="Current Password" asp-for="CurrentPassword" class="form-control" />
+                                        <span class="text text-danger" asp-validation-for="CurrentPassword"></span>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row align-items-center mb-4">
+                                    <div class="form-outline flex-fill mb-0">
+                                        <input type="password" placeholder="New Password" asp-for="Password" class="form-control" />
+                                        <span class="text text-danger" asp-validation-for="Password"></span>
+                                    </div>
+                                </div>     <div class="d-flex flex-row align-items-center mb-4">
+                                    <div class="form-outline flex-fill mb-0">
+                                        <input type="password" placeholder="Confirm New Password" asp-for="ConfirmPassword" class="form-control" />
+                                        <span class="text text-danger" asp-validation-for="ConfirmPassword"></span>
+                                    </div>
+                                </div>
+                                <div class="button-box">
+                                    <button type="submit" class="default-btn">update</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Register end --> 
