@@ -39,8 +39,16 @@
                 </div>
 
                 <ul class="d-flex" style="gap: 15px">
-                    <li><a href="./login.html">Login</a></li>
-                    <li><a href="./signup.html">Signup</a></li>
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <li><a asp-action="login" asp-controller="account">login</a></li>
+                        <li><a asp-action="signup" asp-controller="account">signup</a></li>
+                    }
+                    else
+                    {
+                        <li><a asp-action="info" asp-controller="account">@User.Identity.Name</a></li>
+                        <li><a asp-action="logout" asp-controller="account">logout</a></li>
+                    }
                 </ul>
             </div>
         </div>
