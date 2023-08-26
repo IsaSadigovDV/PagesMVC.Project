@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Pages.Core.Entities;
 
 namespace Pages.App.Context
 {
-    public class PagesDbContext:DbContext
+    public class PagesDbContext: IdentityDbContext<AppUser>
     {
         public DbSet<Category> Categories { get; set; }
         public DbSet<Blog> Blogs  { get; set; }

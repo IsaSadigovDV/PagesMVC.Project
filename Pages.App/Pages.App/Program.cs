@@ -1,14 +1,15 @@
-using Microsoft.EntityFrameworkCore;
-using Pages.App.Context;
+using Pages.App.ServiceRegistrations;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<PagesDbContext>(opt =>
-{
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
-});
+
+
+builder.Services.Register(builder.Configuration);
+builder.Services.AddRazorPages();
+builder.Services.AddHttpContextAccessor();
+
 
 var app = builder.Build();
 

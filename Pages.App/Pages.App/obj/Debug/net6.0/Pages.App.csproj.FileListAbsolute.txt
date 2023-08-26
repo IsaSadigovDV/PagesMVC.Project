@@ -249,3 +249,8 @@ C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\obj\Debug\net6.0\refint\Page
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\obj\Debug\net6.0\Pages.App.pdb
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\obj\Debug\net6.0\Pages.App.genruntimeconfig.cache
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\obj\Debug\net6.0\ref\Pages.App.dll
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
