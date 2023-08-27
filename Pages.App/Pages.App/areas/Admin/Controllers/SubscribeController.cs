@@ -1,11 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Pages.App.Context;
 using Pages.Core.Entities;
+using System.Data;
 
 namespace Pages.App.areas.Admin.Controllers
 {
     [Area("Admin")]
+    //[Authorize(Roles = "Admin,SuperAdmin")]
     public class SubscribeController : Controller
     {
         private readonly PagesDbContext _context;

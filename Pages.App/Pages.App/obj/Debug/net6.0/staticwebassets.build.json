@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OdM9OHUB0fsEQsUWpXAzRLpp412cJ4VgSdh/+GOC1WY=",
+  "Hash": "fYUfZX8Hq77KkRS9QpJH6HCMcadtiR7PaA/57bjQILg=",
   "Source": "Pages.App",
   "BasePath": "_content/Pages.App",
   "Mode": "Default",
@@ -1936,6 +1936,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\9746c693-de0f-4e7d-b347-8cb239b3f644Logo-megan2.png"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\a437acb2-0f60-41a8-82d4-0729151e09e2Photo1.png",
+      "SourceId": "Pages.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
+      "BasePath": "_content/Pages.App",
+      "RelativePath": "assets/img/a437acb2-0f60-41a8-82d4-0729151e09e2Photo1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\a437acb2-0f60-41a8-82d4-0729151e09e2Photo1.png"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\about-author-img.jpg",

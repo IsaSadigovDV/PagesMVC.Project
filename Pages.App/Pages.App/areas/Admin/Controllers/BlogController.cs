@@ -1,13 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Pages.App.Context;
 using Pages.App.Extentions;
 using Pages.App.Helpers;
 using Pages.Core.Entities;
+using System.Data;
 
 namespace Pages.App.areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class BlogController : Controller
     {
         private readonly PagesDbContext _context;

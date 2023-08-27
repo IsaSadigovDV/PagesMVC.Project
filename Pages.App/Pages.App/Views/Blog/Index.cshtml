@@ -1,0 +1,44 @@
+﻿@using Pages.Core.Entities;
+    <link rel="stylesheet" href="../Css/blog.css">
+    <link rel="stylesheet" href="../Css/home.css">
+@model IEnumerable<Blog>
+@{
+    int i = 0;
+}
+
+<!-- Articles txt section start -->
+<div class="bg-blue">
+    <div class="nav container d-flex">
+        <h1 class="unique-text">Articles</h1>
+        <p class="gray w-400">
+            There are many variations of passages of Lorem Ipsum available, have
+            suffered alteration in some form.
+        </p>
+    </div>
+</div>
+<!-- Articles txt section end -->
+<!-- aricles start -->
+<div class="bg-light-blue articles blue">
+    <div class="container d-flex align-center articles-container">
+        <div class="article-img-container d-flex">
+            <!-- start of cards -->
+            <div class="article-card d-flex">
+              @foreach (var item in Model.Take(3))
+                {
+                    <img src="../assets/img/@item.Image" alt="girl reading book" />
+                    <div class="article-text-container">
+                        <h4>@item.Title</h4>
+                        <h5 class="gray">
+                            @item.Description
+                        </h5>
+                        <div class="d-flex space-between align-center article-card-details">
+                            <h6><a class="blue" href="#">Read more</a></h6>
+                            <h6>Author - 23.05.2022</h6>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<!-- articles end -->
