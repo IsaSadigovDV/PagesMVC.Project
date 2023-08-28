@@ -1,7 +1,6 @@
 ﻿<link rel="stylesheet" href="~/Css/login.css" />
 <link rel="stylesheet" href="~/Css/home.css" />
 
-@using Pages.App.ViewModels;
 @model LoginVM
 <!-- Login start -->
 <div class="login-container d-flex center">
@@ -14,8 +13,8 @@
 						<span class="gray">Please login using account detail bellow.</span>
 					</div>
 					<div class="login-form">
-						<form action="#" method="post">
-							<div class="text text-danger" asp-validation-summary="ModelOnly"></div>
+						<form  method="post">
+							<div class="text text-danger" style="color:red" asp-validation-summary="ModelOnly"></div>
 							<div class="form-outline flex-fill mb-0">
 								<input type="text" placeholder="UserName" asp-for="UserName" class="form-control" />
 								<span class="text text-danger" asp-validation-for="UserName"></span>
@@ -26,9 +25,9 @@
 							</div>
 							<div class="button-box">
 								<div class="login-toggle-btn">
-									<input type="checkbox" id="remember">
-									<label for="remember">Remember me</label>
-									<a asp-action="ForgetPassword" asp-controller="account">Forgot Password?</a>
+									<input type="checkbox"  id="remember">
+									<label style="color:cornflowerblue" for="remember">Remember me</label>
+									<a asp-action="ForgetPassword" style="color:red" asp-controller="account">Forgot Password?</a>
 								</div>
 								<button type="submit" class="default-btn">Login</button>
 							</div>

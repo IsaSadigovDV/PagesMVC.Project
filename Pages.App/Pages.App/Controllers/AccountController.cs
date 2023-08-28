@@ -65,9 +65,12 @@ namespace Pages.App.Controllers
                 token = token,
                 mail = appUser.Email
             }, protocol: Request.Scheme);
+            string text = $"<a href='{link}' id='link-a' target='_blank'" +
+                 $" style='display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro'," +
+                 $" Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none;" +
+                 $" border-radius: 6px;'>Click me for reset password</a>";
 
-            await _mailService.SendMail("sadiqovisa11@gmail.com", appUser.Email,
-               "Verify Email", "Click me to verify email", link, appUser.Name + " " + appUser.Surname);
+            await _mailService.Send("isans@code.edu.az", appUser.Email, link, text, "Reset Password");
 
             TempData["Register"] = "Please verify your email";
             return RedirectToAction("index", "home");
@@ -169,8 +172,12 @@ namespace Pages.App.Controllers
                 mail = mail
             }, protocol: Request.Scheme);
 
-            await _mailService.SendMail("sadiqovisa11@gmail.com", user.Email,
-            "Reset Password", "Click me for reseting password", link, user.Name + " " + user.Surname);
+            string text = $"<a href='{link}' id='link-a' target='_blank'" +
+           $" style='display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro'," +
+           $" Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none;" +
+           $" border-radius: 6px;'>Click me for reset password</a>";
+
+            await _mailService.Send("isans@code.edu.az", user.Email, link, text, "Reset Password");
             return RedirectToAction("index", "home");
         }
 

@@ -113,8 +113,12 @@ namespace Pages.App.Areas.Admin.Controllers
                 mail= mail
             },protocol:Request.Scheme );
 
-            await _mailService.SendMail("sadiqovisa11@gmail.com", user.Email,
-            "Reset Password", "Click me for reseting password", link, user.Name + " " + user.Surname);
+            string text = $"<a href='{link}' id='link-a' target='_blank'" +
+            $" style='display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro'," +
+            $" Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none;" +
+            $" border-radius: 6px;'>Click me for reset password</a>";
+
+            await _mailService.Send("isans@code.edu.az", user.Email, link, text, "Reset Password"); 
             return RedirectToAction("index", "home");
         }
 
@@ -218,6 +222,8 @@ namespace Pages.App.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(Info));
         }
+
+  
 
     }
 }
