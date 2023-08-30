@@ -1,3 +1,5 @@
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.CodeAnalysis.Features.dll
+C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\appsettings.json
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Pages.App.staticwebassets.runtime.json
@@ -21,7 +23,6 @@ C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.C
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Features.dll
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.CodeAnalysis.Features.dll
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.CodeAnalysis.Scripting.dll
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.CodeAnalysis.Workspaces.dll
@@ -51,7 +52,6 @@ C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\dotnet-aspn
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
-C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\HP\Desktop\BookBackend\Pages.App\Pages.App\bin\Debug\net6.0\NuGet.Common.dll

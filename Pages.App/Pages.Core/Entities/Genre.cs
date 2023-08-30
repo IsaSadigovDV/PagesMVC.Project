@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Pages.Core.Entities
 {
-    internal class Genre
+    public class Genre:BaseModel
     {
+        public string Name { get; set; }
+        public List<Book> Books { get; set; }
     }
 }

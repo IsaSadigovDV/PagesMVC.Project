@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Pages.Core.Entities
 {
-    internal class WhatLearn
+    public class WhatLearn:BaseModel
     {
+        public string Text { get; set; }
+        public int SettingId { get; set; }
+        public Setting? Setting { get; set; }
     }
 }
+ 

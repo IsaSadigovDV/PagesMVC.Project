@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Pages.Core.Entities
 {
-    internal class AuthoreGenre
+    public class AuthoreGenre:BaseModel
     {
+        public int AuthorId { get; set; }
+        public Author? Author { get; set; }
+        public int GenreId { get; set; }
+        public Genre? Genre { get; set; }
+
     }
 }

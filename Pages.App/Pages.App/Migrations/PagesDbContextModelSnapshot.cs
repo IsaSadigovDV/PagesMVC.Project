@@ -155,6 +155,32 @@ namespace Pages.App.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Pages.Core.Entities.ALanguage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ALanguages");
+                });
+
             modelBuilder.Entity("Pages.Core.Entities.AppUser", b =>
                 {
                     b.Property<string>("Id")
@@ -236,6 +262,9 @@ namespace Pages.App.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<int>("CountryId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
@@ -258,12 +287,81 @@ namespace Pages.App.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PublicationDate")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("UpdatedDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CountryId");
+
                     b.ToTable("Authors");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.AuthoreGenre", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("GenreId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
+
+                    b.HasIndex("GenreId");
+
+                    b.ToTable("AuthoreGenres");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.AuthorLanguage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ALanguageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ALanguageId");
+
+                    b.HasIndex("AuthorId");
+
+                    b.ToTable("AuthorLanguages");
                 });
 
             modelBuilder.Entity("Pages.Core.Entities.Blog", b =>
@@ -291,6 +389,9 @@ namespace Pages.App.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -299,6 +400,8 @@ namespace Pages.App.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TagId");
 
                     b.ToTable("Blogs");
                 });
@@ -324,6 +427,9 @@ namespace Pages.App.Migrations
                     b.Property<string>("Dimensions")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("GenreId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Image")
                         .IsRequired()
@@ -358,6 +464,8 @@ namespace Pages.App.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("GenreId");
 
                     b.HasIndex("LanguageId");
 
@@ -420,6 +528,93 @@ namespace Pages.App.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.ChapterCommit", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.ToTable("ChapterCommits");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.Country", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Countries");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.Genre", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Genres");
                 });
 
             modelBuilder.Entity("Pages.Core.Entities.Language", b =>
@@ -486,6 +681,96 @@ namespace Pages.App.Migrations
                     b.ToTable("Messages");
                 });
 
+            modelBuilder.Entity("Pages.Core.Entities.Setting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CopyImage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CopyText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Logo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("WhatLearImage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Settings");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.Social", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int?>("AuthorId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Icon")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("SettingId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
+
+                    b.HasIndex("SettingId");
+
+                    b.ToTable("Socials");
+                });
+
             modelBuilder.Entity("Pages.Core.Entities.Sponsor", b =>
                 {
                     b.Property<int>("Id")
@@ -545,6 +830,63 @@ namespace Pages.App.Migrations
                     b.ToTable("Subscribes");
                 });
 
+            modelBuilder.Entity("Pages.Core.Entities.Tag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tags");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.WhatLearn", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("SettingId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SettingId");
+
+                    b.ToTable("WhatLearns");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -596,6 +938,66 @@ namespace Pages.App.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Pages.Core.Entities.Author", b =>
+                {
+                    b.HasOne("Pages.Core.Entities.Country", "Country")
+                        .WithMany("Authors")
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Country");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.AuthoreGenre", b =>
+                {
+                    b.HasOne("Pages.Core.Entities.Author", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Pages.Core.Entities.Genre", "Genre")
+                        .WithMany()
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+
+                    b.Navigation("Genre");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.AuthorLanguage", b =>
+                {
+                    b.HasOne("Pages.Core.Entities.ALanguage", "ALanguage")
+                        .WithMany("AuthorLanguage")
+                        .HasForeignKey("ALanguageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Pages.Core.Entities.Author", "Author")
+                        .WithMany("AuthorLanguage")
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ALanguage");
+
+                    b.Navigation("Author");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.Blog", b =>
+                {
+                    b.HasOne("Pages.Core.Entities.Tag", "Tags")
+                        .WithMany("Blogs")
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Tags");
+                });
+
             modelBuilder.Entity("Pages.Core.Entities.Book", b =>
                 {
                     b.HasOne("Pages.Core.Entities.Category", "Category")
@@ -603,6 +1005,10 @@ namespace Pages.App.Migrations
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("Pages.Core.Entities.Genre", null)
+                        .WithMany("Books")
+                        .HasForeignKey("GenreId");
 
                     b.HasOne("Pages.Core.Entities.Language", "Language")
                         .WithMany("Books")
@@ -634,9 +1040,55 @@ namespace Pages.App.Migrations
                     b.Navigation("Book");
                 });
 
+            modelBuilder.Entity("Pages.Core.Entities.ChapterCommit", b =>
+                {
+                    b.HasOne("Pages.Core.Entities.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.Social", b =>
+                {
+                    b.HasOne("Pages.Core.Entities.Author", "Author")
+                        .WithMany("Socials")
+                        .HasForeignKey("AuthorId");
+
+                    b.HasOne("Pages.Core.Entities.Setting", "Setting")
+                        .WithMany("Socials")
+                        .HasForeignKey("SettingId");
+
+                    b.Navigation("Author");
+
+                    b.Navigation("Setting");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.WhatLearn", b =>
+                {
+                    b.HasOne("Pages.Core.Entities.Setting", "Setting")
+                        .WithMany("whatLearns")
+                        .HasForeignKey("SettingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Setting");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.ALanguage", b =>
+                {
+                    b.Navigation("AuthorLanguage");
+                });
+
             modelBuilder.Entity("Pages.Core.Entities.Author", b =>
                 {
+                    b.Navigation("AuthorLanguage");
+
                     b.Navigation("BookAuthors");
+
+                    b.Navigation("Socials");
                 });
 
             modelBuilder.Entity("Pages.Core.Entities.Book", b =>
@@ -649,9 +1101,31 @@ namespace Pages.App.Migrations
                     b.Navigation("Books");
                 });
 
+            modelBuilder.Entity("Pages.Core.Entities.Country", b =>
+                {
+                    b.Navigation("Authors");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.Genre", b =>
+                {
+                    b.Navigation("Books");
+                });
+
             modelBuilder.Entity("Pages.Core.Entities.Language", b =>
                 {
                     b.Navigation("Books");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.Setting", b =>
+                {
+                    b.Navigation("Socials");
+
+                    b.Navigation("whatLearns");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.Tag", b =>
+                {
+                    b.Navigation("Blogs");
                 });
 #pragma warning restore 612, 618
         }

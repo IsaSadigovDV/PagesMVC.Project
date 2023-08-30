@@ -11,7 +11,7 @@ namespace Pages.App.Areas.Admin.Controllers
 {
 
     [Area("Admin")]
-    [Authorize(Roles = "SuperAdmin")]
+    //[Authorize(Roles = "SuperAdmin")]
     public class AdminController : Controller
     {
         private readonly PagesDbContext _context;

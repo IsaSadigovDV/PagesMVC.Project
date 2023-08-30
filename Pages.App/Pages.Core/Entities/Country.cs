@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Pages.Core.Entities
 {
-    internal class Country
+    public class Country:BaseModel
     {
+        public string Name { get; set; }
+        public List<Author>? Authors { get; set; }
+
     }
 }

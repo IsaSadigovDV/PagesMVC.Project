@@ -48,18 +48,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/HP/Desktop/BookBackend/Pages.App/Pages.App/areas/Admin/Views/Author/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQWRtaW5cVmlld3NcQXV0aG9yXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/HP/Desktop/BookBackend/Pages.App/Pages.App/areas/Admin/Views/Author/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQWRtaW5cVmlld3NcQXV0aG9yXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/HP/Desktop/BookBackend/Pages.App/Pages.App/areas/Admin/Views/Author/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQWRtaW5cVmlld3NcQXV0aG9yXFVwZGF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/HP/Desktop/BookBackend/Pages.App/Pages.App/areas/Admin/Views/Blog/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQWRtaW5cVmlld3NcQmxvZ1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -126,6 +114,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/HP/Desktop/BookBackend/Pages.App/Pages.App/areas/Admin/Views/Subscribe/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQWRtaW5cVmlld3NcU3Vic2NyaWJlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/BookBackend/Pages.App/Pages.App/areas/Admin/Views/Tag/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQWRtaW5cVmlld3NcVGFnXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/BookBackend/Pages.App/Pages.App/areas/Admin/Views/Tag/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQWRtaW5cVmlld3NcVGFnXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Desktop/BookBackend/Pages.App/Pages.App/areas/Admin/Views/Tag/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YXJlYXNcQWRtaW5cVmlld3NcVGFnXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/HP/Desktop/BookBackend/Pages.App/Pages.App/areas/Admin/Views/_ViewImports.cshtml]

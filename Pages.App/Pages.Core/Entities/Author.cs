@@ -15,6 +15,11 @@ namespace Pages.Core.Entities
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public List<BookAuthor>? BookAuthors { get; set; }
+        public int CountryId { get; set; }
+        public Country? Country { get; set; }
+        public List<AuthorLanguage>? AuthorLanguage { get; set; }
+        public int PublicationDate { get; set; }
+        public List<Social>?  Socials { get; set; }
 
         [NotMapped]
         public IFormFile? file { get; set; }

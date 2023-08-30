@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Pages.Core.Entities
 {
-    internal class Tag
+    public class Tag : BaseModel
     {
+        public string Name { get; set; }
+        public List<Blog>? Blogs { get; set; }
     }
 }

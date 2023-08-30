@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "iFWtTpmnIys9qUxxxBGE5/Lm7zFOYWMX7qfcHBHb1SvY6PmlQ94st5UC8pekyKxZJfZafauUPHr8qzFULMU02g==",
+  "dgSpecHash": "+B8/HdZXoZ3ZEsefwlF3Pf/Vmq+qhF6KfTKfPi63nKLKU9EHsl4ypv91Z3HgbjvL2tnLLHaXI/JBGRWD25p5/w==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.Core\\Pages.Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.authentication.cookies\\2.2.0\\microsoft.aspnetcore.authentication.cookies.2.2.0.nupkg.sha512",
@@ -24,6 +25,7 @@
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.21\\microsoft.entityframeworkcore.6.0.21.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.21\\microsoft.entityframeworkcore.abstractions.6.0.21.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.21\\microsoft.entityframeworkcore.analyzers.6.0.21.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.21\\microsoft.entityframeworkcore.design.6.0.21.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.21\\microsoft.entityframeworkcore.relational.6.0.21.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",

@@ -9,7 +9,7 @@ using System.Data;
 namespace Pages.App.areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Admin,SuperAdmin")]
+    //[Authorize(Roles = "Admin,SuperAdmin")]
     public class LanguageController : Controller
     {
         private readonly PagesDbContext _context;

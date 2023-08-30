@@ -1,70 +1,46 @@
 ﻿@using Pages.Core.Entities;
-  @model AppUser;
-  <!-- Banner Area Start -->
-<div class="banner-area-wrapper">
-    <div class="banner-area text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="banner-content-wrapper">
-                        <div class="banner-content">
-                            <h2>info</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+@model AppUser;
+ 
+<link rel="stylesheet" href="~/Css/login.css" />
+<link rel="stylesheet" href="~/Css/home.css" />
+
+<!-- Login start -->
+<div class="login-container d-flex center">
+	<div class="bg-light-gray d-flex f-dir-column">
+		<div class="col-md-6 col-md-offset-3 text-center">
+			<div class="login">
+				<div class="blue protected-form-heading">
+					<div class="login-text">
+						<h2 class="blue center">Info</h2>
+						<span class="gray">Info.</span>
+					</div>
+					<div class="login-form">
+						<form  method="post">
+							<div class="text text-danger" style="color:red" asp-validation-summary="ModelOnly"></div>
+
+                            <div class="form-outline flex-fill mb-0">
+                                <input type="text" placeholder="Name" asp-for="Name" class="form-control" />
+                                <span class="text text-danger" asp-validation-for="Name"></span>
+                            </div>
+                            <div class="form-outline flex-fill mb-0">
+                                <input type="text" placeholder="Surname" asp-for="Surname" class="form-control" />
+                                <span class="text text-danger" asp-validation-for="Surname"></span>
+                            </div>
+							
+                            <div class="form-outline flex-fill mb-0">
+                                <input type="email" placeholder="Email" asp-for="Email" class="form-control" />
+                                <span class="text text-danger" asp-validation-for="Email"></span>
+                            </div>
+                            <div class="form-outline flex-fill mb-0">
+                                <input type="text" placeholder="UserName" asp-for="UserName" class="form-control" />
+                                <span class="text text-danger" asp-validation-for="UserName"></span>
+                            </div>
+                            <a asp-controller="account" asp-action="update" class="default-btn">Update</a>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<!-- Banner Area End -->
-<!-- Register start -->
-<div class="register-area pt-150 pb-150">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center">
-                <div class="login">
-                    <div class="login-form-container">
-                        <div class="login-text">
-                            <h2>info</h2>
-                        </div>
-                        <div class="login-form">
-                            <form  method="post">
-                                <div class="text text-danger" asp-validation-summary="ModelOnly"></div>
-                                <div class="d-flex flex-row align-items-center mb-4">
-                                    <div class="form-outline flex-fill mb-0">
-                                        <label class="form-label" asp-for="Name"></label>
-                                        <input disabled type="text" placeholder="Name"  asp-for="Name" class="form-control" />
-                                        <span class="text text-danger" asp-validation-for="Name"></span>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-row align-items-center mb-4">
-                                    <div class="form-outline flex-fill mb-0">
-                                        <label class="form-label" asp-for="Surname"></label>
-                                        <input disabled type="text" placeholder="Surname" asp-for="Surname" class="form-control" />
-                                        <span class="text text-danger" asp-validation-for="Surname"></span>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-row align-items-center mb-4">
-                                    <div class="form-outline flex-fill mb-0">
-                                        <label class="form-label" asp-for="Email"></label>
-                                        <input disabled type="email" placeholder="Email" asp-for="Email" class="form-control" />
-                                        <span class="text text-danger" asp-validation-for="Email"></span>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-row align-items-center mb-4">
-                                    <div class="form-outline flex-fill mb-0">
-                                        <label class="form-label" asp-for="UserName"></label>
-                                        <input disabled placeholder="UserName" asp-for="UserName" class="form-control" />
-                                        <span class="text text-danger" asp-validation-for="UserName"></span>
-                                    </div>
-                                </div>
-                                <a asp-controller="account" asp-action="update" class="default-btn">Update</a>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Register end --> 

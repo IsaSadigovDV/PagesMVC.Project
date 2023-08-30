@@ -10,7 +10,7 @@ using System.Data;
 namespace Pages.App.areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Admin,SuperAdmin")]
+    //[Authorize(Roles = "Admin,SuperAdmin")]
     public class BlogController : Controller
     {
         private readonly PagesDbContext _context;
@@ -22,24 +22,28 @@ namespace Pages.App.areas.Admin.Controllers
             _env = env;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            IEnumerable<Blog> blogs = await
-                    _context.Blogs
-                       .Where(x => !x.IsDeleted).ToListAsync();
+            int TotalCount = _context.Blogs.Where(x => !x.IsDeleted).Count();
+            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 5);
+            ViewBag.CurrentPage = page;
+            IEnumerable<Blog> blogs = await _context.Blogs.Where(x => !x.IsDeleted)
+                .Skip((page - 1) * 5).Take(5)
+                .ToListAsync();
             return View(blogs);
         }
 
         [HttpGet]
         public async Task<IActionResult> Create()
         {
+            ViewBag.Tags = await _context.Tags.Where(p => !p.IsDeleted).ToListAsync();
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Blog blog)
         {
-
+            ViewBag.Tags = await _context.Tags.Where(p => !p.IsDeleted).ToListAsync();
             if (!ModelState.IsValid)
             {
                 return View();
@@ -72,8 +76,10 @@ namespace Pages.App.areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
+            ViewBag.Tags = await _context.Tags.Where(p => !p.IsDeleted).ToListAsync();
             Blog? blog = await _context.Blogs
                            .Where(x => !x.IsDeleted && x.Id == id)
+                                .Include(x => x.Tags)
                                .FirstOrDefaultAsync();
 
             if (blog == null)
@@ -88,6 +94,7 @@ namespace Pages.App.areas.Admin.Controllers
         {
             Blog? Updateblog = await _context.Blogs
                       .Where(x => !x.IsDeleted && x.Id == id)
+                       .Include(x=>x.Tags)
                           .FirstOrDefaultAsync();
 
             if (blog == null)
@@ -119,19 +126,23 @@ namespace Pages.App.areas.Admin.Controllers
                            .CreateImage(_env.WebRootPath, "assets/img");
 
             }
+            else
+            {
+                blog.Image = Updateblog.Image;
+            }
 
             Updateblog.Description = blog.Description;
             Updateblog.Title = blog.Title;
+            Updateblog.Author = blog.Author;    
             Updateblog.UpdatedDate = DateTime.Now;
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
 
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Remove(int id)
         {
-            Blog? blog = await _context.Blogs
-                        .Where(x => !x.IsDeleted && x.Id == id)
+            Blog? blog = await _context.Blogs.Where(x => !x.IsDeleted && x.Id == id).Include(x => x.Tags)
                             .FirstOrDefaultAsync();
 
             if (blog == null)
