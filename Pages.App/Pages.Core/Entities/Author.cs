@@ -19,7 +19,7 @@ namespace Pages.Core.Entities
         public Country? Country { get; set; }
         public List<AuthorLanguage>? AuthorLanguage { get; set; }
         public int PublicationDate { get; set; }
-        public List<Social>?  Socials { get; set; }
+        public List<AuthorSocial> AuthorSocials { get; set; }
 
         [NotMapped]
         public IFormFile? file { get; set; }

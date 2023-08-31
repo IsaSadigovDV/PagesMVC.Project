@@ -1,0 +1,18 @@
+﻿@model Social
+
+<div class="container">
+	<form method="post" enctype="multipart/form-data">
+		<div class="form-group">
+			<label asp-for="@Model.Name">Title:</label>
+			<input type="text" class="form-control" asp-for="@Model.Name" />
+			<span asp-validation-for="Name" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="@Model.file">File:</label>
+			<input type="file" class="form-control" asp-for="@Model.file" />
+			<span asp-validation-for="file" class="text text-danger"></span>
+		</div>
+		@Html.AntiForgeryToken()
+		<button type="submit">Update</button>
+	</form>
+</div>

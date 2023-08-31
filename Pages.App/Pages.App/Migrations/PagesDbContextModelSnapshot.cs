@@ -364,6 +364,38 @@ namespace Pages.App.Migrations
                     b.ToTable("AuthorLanguages");
                 });
 
+            modelBuilder.Entity("Pages.Core.Entities.AuthorSocial", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("AuthorId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("SocialId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
+
+                    b.HasIndex("SocialId");
+
+                    b.ToTable("AuthorSocials");
+                });
+
             modelBuilder.Entity("Pages.Core.Entities.Blog", b =>
                 {
                     b.Property<int>("Id")
@@ -739,9 +771,6 @@ namespace Pages.App.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int?>("AuthorId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
@@ -763,8 +792,6 @@ namespace Pages.App.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AuthorId");
 
                     b.HasIndex("SettingId");
 
@@ -987,6 +1014,25 @@ namespace Pages.App.Migrations
                     b.Navigation("Author");
                 });
 
+            modelBuilder.Entity("Pages.Core.Entities.AuthorSocial", b =>
+                {
+                    b.HasOne("Pages.Core.Entities.Author", "Author")
+                        .WithMany("AuthorSocials")
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Pages.Core.Entities.Social", "Social")
+                        .WithMany("AuthorSocials")
+                        .HasForeignKey("SocialId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Author");
+
+                    b.Navigation("Social");
+                });
+
             modelBuilder.Entity("Pages.Core.Entities.Blog", b =>
                 {
                     b.HasOne("Pages.Core.Entities.Tag", "Tags")
@@ -1053,15 +1099,9 @@ namespace Pages.App.Migrations
 
             modelBuilder.Entity("Pages.Core.Entities.Social", b =>
                 {
-                    b.HasOne("Pages.Core.Entities.Author", "Author")
-                        .WithMany("Socials")
-                        .HasForeignKey("AuthorId");
-
                     b.HasOne("Pages.Core.Entities.Setting", "Setting")
                         .WithMany("Socials")
                         .HasForeignKey("SettingId");
-
-                    b.Navigation("Author");
 
                     b.Navigation("Setting");
                 });
@@ -1086,9 +1126,9 @@ namespace Pages.App.Migrations
                 {
                     b.Navigation("AuthorLanguage");
 
-                    b.Navigation("BookAuthors");
+                    b.Navigation("AuthorSocials");
 
-                    b.Navigation("Socials");
+                    b.Navigation("BookAuthors");
                 });
 
             modelBuilder.Entity("Pages.Core.Entities.Book", b =>
@@ -1121,6 +1161,11 @@ namespace Pages.App.Migrations
                     b.Navigation("Socials");
 
                     b.Navigation("whatLearns");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.Social", b =>
+                {
+                    b.Navigation("AuthorSocials");
                 });
 
             modelBuilder.Entity("Pages.Core.Entities.Tag", b =>
