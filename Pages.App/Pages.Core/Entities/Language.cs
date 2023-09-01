@@ -9,6 +9,7 @@ namespace Pages.Core.Entities
     public class Language:BaseModel
     {
         public string Name { get; set; }
-        public List<Book>? Books { get; set; }
+        public virtual List<BookLanguage>? BookLanguages { get; set; }
+        public virtual List<AuthorLanguage>? AuthorLanguages { get; set; }
     }
 }

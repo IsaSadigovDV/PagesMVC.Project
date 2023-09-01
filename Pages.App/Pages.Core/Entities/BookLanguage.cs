@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Pages.Core.Entities
 {
-    public class AuthorLanguage:BaseModel
+    public class BookLanguage:BaseModel
     {
-        public int AuthorId { get; set; }
-        public virtual Author Author { get; set; }
+        public int BookId { get; set; }
+        public virtual Book Book { get; set; }
         public int LanguageId { get; set; }
         public virtual Language Language { get; set; }
     }
