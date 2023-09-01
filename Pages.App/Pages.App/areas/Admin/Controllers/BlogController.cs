@@ -10,7 +10,7 @@ using System.Data;
 namespace Pages.App.areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize(Roles = "Admin,SuperAdmin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class BlogController : Controller
     {
         private readonly PagesDbContext _context;
@@ -28,6 +28,7 @@ namespace Pages.App.areas.Admin.Controllers
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 5);
             ViewBag.CurrentPage = page;
             IEnumerable<Blog> blogs = await _context.Blogs.Where(x => !x.IsDeleted)
+                .Include(x=>x.Tags)
                 .Skip((page - 1) * 5).Take(5)
                 .ToListAsync();
             return View(blogs);

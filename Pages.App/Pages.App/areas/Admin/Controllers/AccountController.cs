@@ -223,7 +223,31 @@ namespace Pages.App.Areas.Admin.Controllers
             return RedirectToAction(nameof(Info));
         }
 
-  
+        //public async Task<IActionResult> AdminCreate()
+        //{
+        //    AppUser SuperAdmin = new AppUser
+        //    {
+        //        Name = "SuperAdmin",
+        //        Surname = "SuperAdmin",
+        //        Email = "superadmin@pages.com",
+        //        UserName = "SuperAdmin",
+        //        EmailConfirmed = true
+        //    };
+        //    await _userManager.CreateAsync(SuperAdmin, "Admin123.");
+        //    AppUser Admin = new AppUser
+        //    {
+        //        Name = "Admin",
+        //        Surname = "Admin",
+        //        Email = "admin@pages.com",
+        //        UserName = "Admin",
+        //        EmailConfirmed = true
+        //    };
+        //    await _userManager.CreateAsync(Admin, "Admin123.");
+
+        //    await _userManager.AddToRoleAsync(SuperAdmin, "SuperAdmin");
+        //    await _userManager.AddToRoleAsync(Admin, "Admin");
+        //    return Json("ok");
+        //}
 
     }
 }

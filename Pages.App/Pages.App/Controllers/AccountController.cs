@@ -120,11 +120,11 @@ namespace Pages.App.Controllers
                 ModelState.AddModelError("", "Username or password is not correct ");
                 return View(loginVM);
             }
-            if (!await _userManager.IsInRoleAsync(appUser, "User"))
-            {
-                ModelState.AddModelError("", "Access Failed");
-                return View(loginVM);
-            }
+            //if (!await _userManager.IsInRoleAsync(appUser, "User"))
+            //{
+            //    ModelState.AddModelError("", "Access Failed");
+            //    return View(loginVM);
+            //}
             var result = await _signInManager.PasswordSignInAsync(appUser, loginVM.Password, loginVM.RememberMe, true);
             if (!result.Succeeded)
             {
@@ -285,5 +285,25 @@ namespace Pages.App.Controllers
 
             return RedirectToAction(nameof(Info));
         }
+
+        //public async Task<IActionResult> AddRole()
+        //{
+        //    IdentityRole role = new IdentityRole
+        //    {
+        //        Name = "User"
+        //    };
+        //    IdentityRole role1 = new IdentityRole
+        //    {
+        //        Name = "Admin"
+        //    };
+        //    IdentityRole role2 = new IdentityRole
+        //    {
+        //        Name = "SuperAdmin"
+        //    };
+        //    await _roleManager.CreateAsync(role);
+        //    await _roleManager.CreateAsync(role1);
+        //    await _roleManager.CreateAsync(role2);
+        //    return RedirectToAction("index", "home");
+        //}
     }
 }

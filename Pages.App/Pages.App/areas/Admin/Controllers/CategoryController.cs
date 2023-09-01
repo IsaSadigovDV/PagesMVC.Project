@@ -8,7 +8,7 @@ using System.Data;
 namespace Pages.App.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize(Roles = "Admin,SuperAdmin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class CategoryController : Controller
     {
         private readonly PagesDbContext _context;
