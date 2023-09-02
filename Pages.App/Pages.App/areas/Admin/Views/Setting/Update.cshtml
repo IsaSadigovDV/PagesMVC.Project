@@ -1,0 +1,48 @@
+﻿@model Setting
+
+<div class="container">
+	<form method="post" enctype="multipart/form-data">
+		<div class="form-group">
+			<label asp-for="Address">Address:</label>
+			<input type="text" class="form-control" asp-for="Address" />
+			<span asp-validation-for="Address" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="Mail">Mail:</label>
+			<input type="email" class="form-control" asp-for="Mail" />
+			<span asp-validation-for="Mail" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="Phone">Phone:</label>
+			<input class="form-control" asp-for="Phone" />
+			<span asp-validation-for="Phone" class="text text-danger"></span>
+		</div>	
+		<div class="form-group">
+			<label asp-for="CopyText"> CopyText:</label>
+			<input class="form-control" asp-for="CopyText" />
+			<span asp-validation-for="CopyText" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="Logo">Logo:</label>
+			<input class="form-control" asp-for="Logo" />
+			<span asp-validation-for="Logo" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="CopyImage">CopyImage:</label>
+			<input class="form-control" asp-for="CopyImage" />
+			<span asp-validation-for="CopyImage" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="WhatLearImage">WhatLearImage:</label>
+			<input class="form-control" asp-for="WhatLearImage" />
+			<span asp-validation-for="WhatLearImage" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="@Model.file">File:</label>
+			<input type="file" class="form-control" asp-for="@Model.file" />
+			<span asp-validation-for="file" class="text text-danger"></span>
+		</div>
+		@Html.AntiForgeryToken()
+		<button type="submit">Create</button>
+	</form>
+</div>
