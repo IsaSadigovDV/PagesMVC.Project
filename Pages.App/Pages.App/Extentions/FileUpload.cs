@@ -12,5 +12,13 @@
             }
             return FileName;
         }
-    }
+		static public string ToJsonArray(this int[] array)
+		{
+			if (array == null || array.Length == 0)
+			{
+				return "[]";
+			}
+			return $"[{string.Join(",", array)}]";
+		}
+	}
 }

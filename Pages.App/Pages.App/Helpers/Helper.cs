@@ -1,6 +1,6 @@
 ﻿namespace Pages.App.Helpers
 {
-    public class Helper
+    public  class Helper
     {
         public static bool IsImage(IFormFile file)
         {
@@ -19,5 +19,17 @@
                 File.Delete(fullPath);
             }
         }
-    }
+
+
+	
+
+		//static public string ToJsonArray(this int[] array)
+		//{
+		//    if (array == null || array.Length == 0)
+		//    {
+		//        return "[]";
+		//    }
+		//    return $"[{string.Join(",", array)}]";
+		//}
+	}
 }

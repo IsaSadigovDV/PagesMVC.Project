@@ -1,0 +1,52 @@
+﻿@model Author
+
+<div class="container">
+	<form method="post" enctype="multipart/form-data">
+		<div class="form-group">
+			<label asp-for="Name">Name:</label>
+			<input type="text" class="form-control" asp-for="Name" />
+			<span asp-validation-for="Name" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="FormFile"></label>
+			<input accept="image/*" type="file" class="form-control" asp-for="FormFile">
+			<span class="text text-danger" asp-validation-for="FormFile"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="AuthorLanguages">Author language</label>
+			<select asp-for="AuthorLanguages" class="form-select" aria-label="Default select example">
+				<option value="0" selected">Select one of them</option>
+				@foreach (var item in ViewBag.AuthorLanguages)
+				{
+					<option value="@item.Id">@item.Name</option>
+				}
+			</select>
+			<span asp-validation-for="AuthorLanguages" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="AuthoreGenres">Author language</label>
+			<select asp-for="AuthoreGenres" class="form-select" aria-label="Default select example">
+				<option value="0" selected">Select one of them</option>
+				@foreach (var item in ViewBag.AuthoreGenres)
+				{
+					<option value="@item.Id">@item.Name</option>
+				}
+			</select>
+			<span asp-validation-for="AuthoreGenres" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="AuthorSocials">Author language</label>
+			<select asp-for="AuthorSocials" class="form-select" aria-label="Default select example">
+				<option value="0" selected">Select one of them</option>
+				@foreach (var item in ViewBag.AuthorSocials)
+				{
+					<option value="@item.Id">@item.Name</option>
+				}
+			</select>
+			<span asp-validation-for="AuthorSocials" class="text text-danger"></span>
+		</div>
+
+		@Html.AntiForgeryToken()
+		<button type="submit">Create</button>
+	</form>
+</div>

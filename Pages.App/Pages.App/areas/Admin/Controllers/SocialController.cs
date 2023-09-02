@@ -59,11 +59,7 @@ namespace Pages.App.Areas.Admin.Controllers
                 ModelState.AddModelError("file", "Size of Image must less than 1 mb!!!");
                 return View(Social);
             }
-            if (Social.SettingId== 0)
-            {
-                ModelState.AddModelError("", "Teacher or Setting Id must be selected");
-                return View(Social);
-            }
+          
             Social.Icon = Social.file.CreateImage(_env.WebRootPath, "assets/img");
             Social.CreatedDate = DateTime.Now;
             await _context.AddAsync(Social);
