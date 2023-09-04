@@ -7,6 +7,7 @@
                 <th scope="col">Name:</th>
                 <th scope="col">Language:</th>
                 <th scope="col">Genre:</th>
+                <th scope="col">Category:</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -17,7 +18,9 @@
                 <tr>
                     <th scope="row">@item.Id</th>
                     <th>@item.Name</th>
-                    <th>@item.BookLanguages</th>
+                    <th>@item.language.ToJsonArray()</th>
+                    <th>@item.Genre.Name</th>
+                    <th>@item.Category.Name</th>
                     <td>
                         <a asp-controller="book" asp-action="update" asp-route-id="@item.Id">
                             <i class="fas fa-edit text text-primary"></i>

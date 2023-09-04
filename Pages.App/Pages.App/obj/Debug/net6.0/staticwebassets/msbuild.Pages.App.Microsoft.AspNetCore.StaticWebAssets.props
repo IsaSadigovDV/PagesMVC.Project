@@ -1776,6 +1776,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\74336f09-6689-4258-ac86-66e8dfd542c8article1.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\8673ec9e-34d7-4b6f-ae90-eff2e791bf7e947f858a-77e7-4c64-8ce5-de741de51552article6.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pages.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pages.App</BasePath>
+      <RelativePath>assets/img/8673ec9e-34d7-4b6f-ae90-eff2e791bf7e947f858a-77e7-4c64-8ce5-de741de51552article6.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\8673ec9e-34d7-4b6f-ae90-eff2e791bf7e947f858a-77e7-4c64-8ce5-de741de51552article6.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\89b9d7ad-d299-4bf7-8764-76a324a14611book2.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Pages.App</SourceId>
@@ -1839,6 +1855,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\a0a52e5f-4176-40da-9365-360f2644d96carticle1.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\a37cd191-cca3-438a-9db3-4a375576773aa0a52e5f-4176-40da-9365-360f2644d96carticle1.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pages.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pages.App</BasePath>
+      <RelativePath>assets/img/a37cd191-cca3-438a-9db3-4a375576773aa0a52e5f-4176-40da-9365-360f2644d96carticle1.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\a37cd191-cca3-438a-9db3-4a375576773aa0a52e5f-4176-40da-9365-360f2644d96carticle1.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\a437acb2-0f60-41a8-82d4-0729151e09e2Photo1.png))">
       <SourceType>Package</SourceType>
@@ -2271,6 +2303,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\dashed-line.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\db07f400-dc06-4899-9f34-843b182ca7d3about-author-img.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pages.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pages.App</BasePath>
+      <RelativePath>assets/img/db07f400-dc06-4899-9f34-843b182ca7d3about-author-img.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\db07f400-dc06-4899-9f34-843b182ca7d3about-author-img.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\dots.png))">
       <SourceType>Package</SourceType>

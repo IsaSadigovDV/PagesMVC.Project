@@ -434,6 +434,9 @@ namespace Pages.App.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("GenreId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Image")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -464,6 +467,8 @@ namespace Pages.App.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("GenreId");
 
                     b.ToTable("Books");
                 });
@@ -498,38 +503,6 @@ namespace Pages.App.Migrations
                     b.HasIndex("BookId");
 
                     b.ToTable("BookAuthors");
-                });
-
-            modelBuilder.Entity("Pages.Core.Entities.BookGenre", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("BookId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("GenreId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BookId");
-
-                    b.HasIndex("GenreId");
-
-                    b.ToTable("BookGenres");
                 });
 
             modelBuilder.Entity("Pages.Core.Entities.BookLanguage", b =>
@@ -1076,7 +1049,15 @@ namespace Pages.App.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Pages.Core.Entities.Genre", "Genre")
+                        .WithMany("Books")
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Category");
+
+                    b.Navigation("Genre");
                 });
 
             modelBuilder.Entity("Pages.Core.Entities.BookAuthor", b =>
@@ -1096,25 +1077,6 @@ namespace Pages.App.Migrations
                     b.Navigation("Author");
 
                     b.Navigation("Book");
-                });
-
-            modelBuilder.Entity("Pages.Core.Entities.BookGenre", b =>
-                {
-                    b.HasOne("Pages.Core.Entities.Book", "Book")
-                        .WithMany("BookGenres")
-                        .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Pages.Core.Entities.Genre", "Genre")
-                        .WithMany()
-                        .HasForeignKey("GenreId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Book");
-
-                    b.Navigation("Genre");
                 });
 
             modelBuilder.Entity("Pages.Core.Entities.BookLanguage", b =>
@@ -1182,8 +1144,6 @@ namespace Pages.App.Migrations
                 {
                     b.Navigation("BookAuthors");
 
-                    b.Navigation("BookGenres");
-
                     b.Navigation("BookLanguages");
                 });
 
@@ -1200,6 +1160,8 @@ namespace Pages.App.Migrations
             modelBuilder.Entity("Pages.Core.Entities.Genre", b =>
                 {
                     b.Navigation("AuthoreGenres");
+
+                    b.Navigation("Books");
                 });
 
             modelBuilder.Entity("Pages.Core.Entities.Language", b =>

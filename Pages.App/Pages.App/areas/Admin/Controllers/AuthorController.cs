@@ -78,10 +78,10 @@ namespace Pages.App.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Author author, int[] language, int[] genre, int[] social)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(author);
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return View(author);
+            //}
             if (author.FormFile == null)
             {
                 ModelState.AddModelError("FormFile", "The filed image is required");

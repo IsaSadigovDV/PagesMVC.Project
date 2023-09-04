@@ -24,25 +24,48 @@ namespace Pages.App.Areas.Admin.Controllers
             _env = env;
         }
 
-        public async Task<IActionResult> Index(int page = 1)
-        {
-            int TotalCount = _context.Books.Where(x => !x.IsDeleted).Count();
-            ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
-            ViewBag.CurrentPage = page;
+		public async Task<IActionResult> Index(int page = 1)
+		{
+			int TotalCount = _context.Books.Where(x => !x.IsDeleted).Count();
+			ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
+			ViewBag.CurrentPage = page;
 
-            IEnumerable<Book> Books = await _context.Books.Where(x => !x.IsDeleted)
-                .Include(x => x.BookAuthors)
-                .ThenInclude(x => x.Author)
-                .Include(x => x.BookLanguages)
-                .ThenInclude(x => x.Language)
-                .Include(x => x.Genre)
-                .Skip((page - 1) * 5).Take(5)
-                .ToListAsync();
-            return View(Books);
-        }
+			IEnumerable<Book> Books = await _context.Books.Where(x => !x.IsDeleted)
+				.Include(x => x.BookAuthors)
+				.ThenInclude(x => x.Author)
+				.Include(x => x.BookLanguages)
+				.ThenInclude(x => x.Language)
+				.Where(x => !x.IsDeleted)
+				.Skip((page - 1) * 5).Take(5)
+				.ToListAsync();
+
+			Books = Books.Join(
+				_context.Genres,
+				book => book.GenreId,
+				genre => genre.Id,
+				(book, genre) =>
+				{
+					book.Genre = genre; 
+					return book;
+				})
+				.ToList();
+
+			Books = Books.Join(
+				_context.Categories,
+				book => book.CategoryId,
+				category => category.Id,
+				(book, category) =>
+				{
+                    book.Category = category;
+					return book;
+				})
+				.ToList();
+
+			return View(Books);
+		}
 
 
-        [HttpGet]
+		[HttpGet]
         public async Task<IActionResult> Details(int id)
         {
             Book? book = await _context.Books.Where(x => x.Id == id && !x.IsDeleted)
@@ -50,7 +73,7 @@ namespace Pages.App.Areas.Admin.Controllers
                 .ThenInclude(x => x.Author)
                 .Include(x => x.BookLanguages)
                 .ThenInclude(x => x.Language)
-                .Include(x => x.Genre)
+               .Include(x => x.GenreId)
                 .FirstOrDefaultAsync();
             if (book == null)
             {
@@ -63,10 +86,10 @@ namespace Pages.App.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            ViewBag.Language = new SelectList(_context.Languages.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Genre = new SelectList(_context.Genres.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Author = new SelectList(_context.Authors.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Category = new SelectList(_context.Categories.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
+			ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Author = new SelectList(_context.Authors.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Category = new SelectList(_context.Categories.Where(x => !x.IsDeleted ).ToList(), "Id", "Name");
             return View();
         }
 
@@ -121,10 +144,10 @@ namespace Pages.App.Areas.Admin.Controllers
             await _context.AddAsync(book);
             await _context.SaveChangesAsync();
 
-            ViewBag.Language = new SelectList(_context.Languages.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Genre = new SelectList(_context.Genres.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Author = new SelectList(_context.Authors.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Category = new SelectList(_context.Categories.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
+            ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Author = new SelectList(_context.Authors.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Category = new SelectList(_context.Categories.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
 
             return RedirectToAction(nameof(Index));
         }
@@ -134,21 +157,22 @@ namespace Pages.App.Areas.Admin.Controllers
         public async Task<IActionResult> Update(int id)
         {
             Book? book = await _context.Books.Where(x => x.Id == id && !x.IsDeleted)
-                .Include(x => x.BookAuthors)
+                .Include(x => x.BookAuthors) 
                 .ThenInclude(x => x.Author)
                 .Include(x => x.BookLanguages)
                 .ThenInclude(x => x.Language)
-                .Include(x => x.Genre)
+              .Include(x => x.GenreId)
+              .Include(x=>x.CategoryId)
                 .FirstOrDefaultAsync();
             if (book == null)
             {
                 return NotFound();
             }
 
-            ViewBag.Language = new SelectList(_context.Languages.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Genre = new SelectList(_context.Genres.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Author = new SelectList(_context.Authors.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Category = new SelectList(_context.Categories.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
+            ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted ).ToList(), "Id", "Name");
+            ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted ).ToList(), "Id", "Name");
+            ViewBag.Author = new SelectList(_context.Authors.Where(x => !x.IsDeleted ).ToList(), "Id", "Name");
+            ViewBag.Category = new SelectList(_context.Categories.Where(x => !x.IsDeleted ).ToList(), "Id", "Name");
 
             return View(book);
         }
@@ -158,12 +182,14 @@ namespace Pages.App.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Update(int id, Book book, int[] language, int[] genre, int[] author)
         {
+
             Book? updatedBook = await _context.Books.Where(x => x.Id == id && !x.IsDeleted)
                 .Include(x => x.BookAuthors)
                 .ThenInclude(x => x.Author)
                 .Include(x => x.BookLanguages)
                 .ThenInclude(x => x.Language)
-                .Include(x => x.Genre)
+              .Include(x => x.GenreId)
+              .Include(x=>x.CategoryId)
              .FirstOrDefaultAsync();
             if (book == null)
             {
@@ -288,10 +314,10 @@ namespace Pages.App.Areas.Admin.Controllers
 
             await _context.SaveChangesAsync();
 
-            ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id", "Text");
-            ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Text");
-            ViewBag.Author = new SelectList(_context.Authors.Where(x => !x.IsDeleted).ToList(), "Id", "Text");
-            ViewBag.Category = new SelectList(_context.Categories.Where(x => !x.IsDeleted).ToList(), "Id", "Text");
+            ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Author = new SelectList(_context.Authors.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Category = new SelectList(_context.Categories.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
 
             return RedirectToAction(nameof(Index));
         }
