@@ -19,7 +19,6 @@ namespace Pages.App.Context
         public DbSet<AuthorSocial> AuthorSocials { get; set; }
         public DbSet<Book> Books { get; set; }
         public DbSet<BookAuthor> BookAuthors { get; set; }
-        public DbSet<BookGenre> BookGenres { get; set; }
         public DbSet<BookLanguage> BookLanguages { get; set; }
         public DbSet<ChapterCommit> ChapterCommits { get; set; }
         public DbSet<Country> Countries { get; set; }

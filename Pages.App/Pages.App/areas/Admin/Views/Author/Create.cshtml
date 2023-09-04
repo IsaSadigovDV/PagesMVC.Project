@@ -14,19 +14,18 @@
 		</div>
 
 		<div class="form-group row">
-			<label asp-for="AuthorLanguages" class="col-sm-2 col-form-label">Language</label>
+			<label asp-for="language" class="col-sm-2 col-form-label">Language</label>
 			<div class="col-sm-10">
-				<select multiple name="language asp-items="ViewBag.Language" class="select2" selected-value="@Model?.AuthorLanguages.Select(x => x.LanguageId).ToArray()">
+				<select multiple name="language" asp-items="ViewBag.Language" class="select2" selected-value="@Model?.language.ToJsonArray()">
+					<option disabled selected>---Choose---</option>
 				</select>
-				<option disabled selected>---Choose---</option>
-				</select>
+				 
 			</div>
 		</div>
 		<div class="form-group row">
 			<label asp-for="AuthoreGenres" class="col-sm-2 col-form-label">Genre</label>
 			<div class="col-sm-10">
-				<select multiple name="genre" asp-items="ViewBag.Genre" class="select2" selected-value="@Model?.AuthoreGenres.Select(x => x.GenreId).ToArray()">
-				</select>
+				<select multiple name="genre" asp-items="ViewBag.Genre" class="select2" selected-value="@Model?.genre.ToJsonArray()">
 					<option disabled selected>---Choose---</option>
 				</select>
 			</div>
@@ -34,8 +33,7 @@
 		<div class="form-group row">
 			<label asp-for="AuthorSocials" class="col-sm-2 col-form-label">Social</label>
 			<div class="col-sm-10">
-				<select multiple name="social asp-items="ViewBag.Social" class="select2" selected-value="@Model?.AuthorSocials.Select(x => x.SocialId).ToArray()">
-				</select>
+				<select multiple name="social" asp-items="ViewBag.Social" class="select2" selected-value="@Model?.social.ToJsonArray()">
 					<option disabled selected>---Choose---</option>
 				</select>
 			</div>

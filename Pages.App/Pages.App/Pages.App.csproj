@@ -18,6 +18,7 @@
     <Folder Include="areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Admin\Views\Sponsor\" />
     <Folder Include="Areas\Admin\Views\Subscribe\" />
+    <Folder Include="wwwroot\assets\lib\" />
   </ItemGroup>
 
   <ItemGroup>

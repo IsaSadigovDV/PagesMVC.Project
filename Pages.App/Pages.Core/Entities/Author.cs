@@ -22,6 +22,14 @@ namespace Pages.Core.Entities
 
         [NotMapped]
         public IFormFile? FormFile { get; set; }
+        [NotMapped]
+        public int[] language { get; set; }
+
+        [NotMapped]
+        public int[] social { get; set; }
+
+        [NotMapped]
+        public int[] genre { get; set; }
 
     }
 }

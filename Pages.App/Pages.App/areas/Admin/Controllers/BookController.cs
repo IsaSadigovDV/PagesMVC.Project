@@ -35,8 +35,7 @@ namespace Pages.App.Areas.Admin.Controllers
                 .ThenInclude(x => x.Author)
                 .Include(x => x.BookLanguages)
                 .ThenInclude(x => x.Language)
-                .Include(x => x.BookGenres)
-                .ThenInclude(x => x.Genre)
+                .Include(x => x.Genre)
                 .Skip((page - 1) * 5).Take(5)
                 .ToListAsync();
             return View(Books);
@@ -51,8 +50,7 @@ namespace Pages.App.Areas.Admin.Controllers
                 .ThenInclude(x => x.Author)
                 .Include(x => x.BookLanguages)
                 .ThenInclude(x => x.Language)
-                .Include(x => x.BookGenres)
-                .ThenInclude(x => x.Genre)
+                .Include(x => x.Genre)
                 .FirstOrDefaultAsync();
             if (book == null)
             {
@@ -106,16 +104,7 @@ namespace Pages.App.Areas.Admin.Controllers
                     book.BookLanguages.Add(languageItem);
                 }
             }
-            book.BookGenres = new List<BookGenre>();
-            if (genre != null)
-            {
-                foreach (var expectedId in genre)
-                {
-                    var genreItem = new BookGenre();
-                    genreItem.GenreId = expectedId;
-                    book.BookGenres.Add(genreItem);
-                }
-            }
+         
             book.BookAuthors = new List<BookAuthor>();
             if (author != null)
             {
@@ -149,8 +138,7 @@ namespace Pages.App.Areas.Admin.Controllers
                 .ThenInclude(x => x.Author)
                 .Include(x => x.BookLanguages)
                 .ThenInclude(x => x.Language)
-                .Include(x => x.BookGenres)
-                .ThenInclude(x => x.Genre)
+                .Include(x => x.Genre)
                 .FirstOrDefaultAsync();
             if (book == null)
             {
@@ -175,8 +163,7 @@ namespace Pages.App.Areas.Admin.Controllers
                 .ThenInclude(x => x.Author)
                 .Include(x => x.BookLanguages)
                 .ThenInclude(x => x.Language)
-                .Include(x => x.BookGenres)
-                .ThenInclude(x => x.Genre)
+                .Include(x => x.Genre)
              .FirstOrDefaultAsync();
             if (book == null)
             {
@@ -247,47 +234,6 @@ namespace Pages.App.Areas.Admin.Controllers
                 }
             }
 
-            if (genre == null && updatedBook.BookGenres.Any())
-            {
-                foreach (var genreItem in updatedBook.BookGenres)
-                {
-                    _context.BookGenres.Remove(genreItem);
-                }
-            }
-            else if (genre != null)
-            {
-                var expectedIds = _context.BookGenres.Where(x => x.BookId == updatedBook.Id).Select(x => x.GenreId).ToList()
-                                    .Except(genre).ToArray();
-
-                if (expectedIds.Length > 0)
-                {
-                    foreach (var expectedId in expectedIds)
-                    {
-                        var genreItem = _context.BookGenres.FirstOrDefault(x => x.GenreId == expectedId
-                                                     && x.BookId == updatedBook.Id);
-                        if (genreItem != null)
-                        {
-                            _context.BookGenres.Remove(genreItem);
-                        }
-                    }
-                }
-
-                var newExpectedIds = genre.Except(_context.BookGenres.Where(x => x.BookId == updatedBook.Id).Select(x => x.GenreId).ToList())
-                    .ToArray();
-
-                if (newExpectedIds.Length > 0)
-                {
-                    foreach (var expectedId in newExpectedIds)
-                    {
-                        var genreItem = new BookGenre();
-                        genreItem.GenreId = expectedId;
-                        genreItem.BookId = updatedBook.Id;
-
-                        await _context.BookGenres.AddAsync(genreItem);
-                    }
-                }
-            }
-
             if (author == null && updatedBook.BookAuthors.Any())
             {
                 foreach (var authorItem in updatedBook.BookAuthors)
@@ -337,14 +283,15 @@ namespace Pages.App.Areas.Admin.Controllers
             updatedBook.PaperCount = book.PaperCount;
             updatedBook.Dimensions = book.Dimensions;
             updatedBook.CategoryId = book.CategoryId;
+            updatedBook.GenreId = book.GenreId;
             updatedBook.UpdatedDate = DateTime.Now.AddHours(4);
 
             await _context.SaveChangesAsync();
 
-            ViewBag.Language = new SelectList(_context.Languages.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Genre = new SelectList(_context.Genres.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Author = new SelectList(_context.Authors.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Category = new SelectList(_context.Categories.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
+            ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id", "Text");
+            ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Text");
+            ViewBag.Author = new SelectList(_context.Authors.Where(x => !x.IsDeleted).ToList(), "Id", "Text");
+            ViewBag.Category = new SelectList(_context.Categories.Where(x => !x.IsDeleted).ToList(), "Id", "Text");
 
             return RedirectToAction(nameof(Index));
         }
@@ -361,18 +308,13 @@ namespace Pages.App.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var language = await _context.BookLanguages.Where(x => x.BookId == book.Id && x.IsDeleted == null).ToListAsync();
-            var genre = await _context.BookGenres.Where(x => x.BookId == book.Id && x.IsDeleted == null).ToListAsync();
-            var author = await _context.BookAuthors.Where(x => x.BookId == book.Id && x.IsDeleted == null).ToListAsync();
+            var language = await _context.BookLanguages.Where(x => x.BookId == book.Id && !x.IsDeleted).ToListAsync();
+            var author = await _context.BookAuthors.Where(x => x.BookId == book.Id && !x.IsDeleted).ToListAsync();
 
             book.IsDeleted = true;
             foreach (var item in language)
             {
                 _context.BookLanguages.Remove(item);
-            }
-            foreach (var item in genre)
-            {
-                _context.BookGenres.Remove(item);
             }
             foreach (var item in author)
             {

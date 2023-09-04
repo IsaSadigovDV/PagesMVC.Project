@@ -40,13 +40,14 @@ namespace Pages.App.Areas.Admin.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Create(Genre genre)
 		{
-			if (!ModelState.IsValid)
-			{
-				return View(genre);
-			}
+			//if (!ModelState.IsValid)
+			//{
+			//	return View(genre);
+			//}
 			genre.CreatedDate = DateTime.Now.AddHours(4);
-			await _context.AddAsync(genre);
+			 _context.Genres.Add(genre);
 			await _context.SaveChangesAsync();
+
 			return RedirectToAction(nameof(Index));
 		}
 

@@ -36,15 +36,16 @@ namespace Pages.App.Areas.Admin.Controllers
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Social Social)
         {
             ViewBag.Settings = await _context.Settings.Where(x => !x.IsDeleted).ToListAsync();
-			if (!ModelState.IsValid)
-            {
-                return View(Social);
-            }
+			//if (!ModelState.IsValid)
+   //         {
+   //             return View(Social);
+   //         }
             if(Social.file== null)
             {
                 ModelState.AddModelError("file", "Image must be added");

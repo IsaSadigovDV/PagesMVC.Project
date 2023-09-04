@@ -9,6 +9,7 @@ namespace Pages.Core.Entities
     public class Genre:BaseModel
     {
         public string Name { get; set; }
+        public List<Book> Books { get; set; }
         public virtual List<AuthoreGenre> AuthoreGenres { get; set; }
 
     }

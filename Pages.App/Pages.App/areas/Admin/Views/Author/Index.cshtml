@@ -18,9 +18,9 @@
                 <tr>
                     <th scope="row">@item.Id</th>
                     <th>@item.Name</th>
-                    <th>@item.AuthorLanguages</th>
-                    <th>@item.AuthoreGenres</th>
-                    <th>@item.AuthorSocials</th>
+                    <th>@item.language.ToJsonArray()</th>
+                    <th>@item.genre.ToJsonArray()</th>
+                    <th>@item.social.ToJsonArray()</th>
                     <td>
                         <a asp-controller="author" asp-action="update" asp-route-id="@item.Id">
                             <i class="fas fa-edit text text-primary"></i>

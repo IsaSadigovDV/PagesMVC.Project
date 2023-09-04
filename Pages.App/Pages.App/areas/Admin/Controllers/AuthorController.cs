@@ -30,14 +30,14 @@ namespace Pages.App.Areas.Admin.Controllers
             ViewBag.CurrentPage = page;
 
             IEnumerable<Author> Authors = await _context.Authors.Where(x => !x.IsDeleted)
-                .Include(x => x.BookAuthors)
-                .ThenInclude(x => x.Book)
-                .Include(x => x.AuthorLanguages)
-                .ThenInclude(x => x.Language)
-                .Include(x => x.AuthoreGenres)
-                .ThenInclude(x => x.Genre)
-                .Include(x => x.AuthorSocials)
-                .ThenInclude(x => x.Social)
+                //.Include(x => x.BookAuthors)
+                //.ThenInclude(x => x.Book)
+                //.Include(x => x.AuthorLanguages)
+                //.ThenInclude(x => x.Language)
+                //.Include(x => x.AuthoreGenres)
+                //.ThenInclude(x => x.GenreId)
+                //.Include(x => x.AuthorSocials)
+                //.ThenInclude(x => x.Social)   
                 .Skip((page - 1) * 5).Take(5)
                 .ToListAsync();
             return View(Authors);
@@ -47,14 +47,14 @@ namespace Pages.App.Areas.Admin.Controllers
         public async Task<IActionResult> Details(int id)
         {
             Author? author = await _context.Authors.Where(x => x.Id == id && !x.IsDeleted)
-                .Include(x => x.BookAuthors)
-                .ThenInclude(x => x.Book)
-                .Include(x => x.AuthorLanguages)
-                .ThenInclude(x => x.Language)
-                .Include(x => x.AuthoreGenres)
-                .ThenInclude(x => x.Genre)
-                .Include(x => x.AuthorSocials)
-                .ThenInclude(x => x.Social)
+                //.Include(x => x.BookAuthors)
+                //.ThenInclude(x => x.Book)
+                //.Include(x => x.AuthorLanguages)
+                //.ThenInclude(x => x.Language)
+                //.Include(x => x.AuthoreGenres)
+                //.ThenInclude(x => x.GenreId)
+                //.Include(x => x.AuthorSocials)
+                //.ThenInclude(x => x.Social)
                 .FirstOrDefaultAsync();
             if (author == null)
             {
@@ -67,9 +67,9 @@ namespace Pages.App.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            ViewBag.Language = new SelectList(_context.Languages.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Genre = new SelectList(_context.Genres.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Social = new SelectList(_context.Socials.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
+            ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id","Name");
+            ViewBag.Genre = new SelectList(_context.Genres.Where(x =>!x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Social = new SelectList(_context.Socials.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
 
             return View();
         }
@@ -134,9 +134,9 @@ namespace Pages.App.Areas.Admin.Controllers
             await _context.AddAsync(author);
             await _context.SaveChangesAsync();
 
-            ViewBag.Language = new SelectList(_context.Languages.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Genre = new SelectList(_context.Genres.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Social = new SelectList(_context.Socials.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
+            ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Social = new SelectList(_context.Socials.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
 
             return RedirectToAction(nameof(Index));
         }
@@ -151,7 +151,7 @@ namespace Pages.App.Areas.Admin.Controllers
                 .Include(x => x.AuthorLanguages)
                 .ThenInclude(x => x.Language)
                 .Include(x => x.AuthoreGenres)
-                .ThenInclude(x => x.Genre)
+                .ThenInclude(x => x.GenreId)
                 .Include(x => x.AuthorSocials)
                 .ThenInclude(x => x.Social)
                 .FirstOrDefaultAsync();
@@ -160,9 +160,9 @@ namespace Pages.App.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            ViewBag.Language = new SelectList(_context.Languages.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Genre = new SelectList(_context.Genres.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Social = new SelectList(_context.Socials.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
+            ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Social = new SelectList(_context.Socials.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
 
             return View(author);
         }
@@ -175,7 +175,7 @@ namespace Pages.App.Areas.Admin.Controllers
                 .Include(x => x.AuthorLanguages)
                 .ThenInclude(x => x.Language)
                 .Include(x => x.AuthoreGenres)
-                .ThenInclude(x => x.Genre)
+                .ThenInclude(x => x.GenreId)
                 .Include(x => x.AuthorSocials)
                 .ThenInclude(x => x.Social)
              .FirstOrDefaultAsync();
@@ -338,9 +338,9 @@ namespace Pages.App.Areas.Admin.Controllers
 
             await _context.SaveChangesAsync();
 
-            ViewBag.Language = new SelectList(_context.Languages.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Genre = new SelectList(_context.Genres.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
-            ViewBag.Social = new SelectList(_context.Socials.Where(x => x.IsDeleted == null).ToList(), "Id", "Text");
+            ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Social = new SelectList(_context.Socials.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
 
             return RedirectToAction(nameof(Index));
         }
@@ -356,9 +356,9 @@ namespace Pages.App.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var language = await _context.AuthorLanguages.Where(x => x.AuthorId == author.Id && x.IsDeleted == null).ToListAsync();
-            var genre = await _context.AuthoreGenres.Where(x => x.AuthorId == author.Id && x.IsDeleted == null).ToListAsync();
-            var social = await _context.AuthorSocials.Where(x => x.AuthorId == author.Id && x.IsDeleted == null).ToListAsync();
+            var language = await _context.AuthorLanguages.Where(x => x.AuthorId == author.Id && !x.IsDeleted).ToListAsync();
+            var genre = await _context.AuthoreGenres.Where(x => x.AuthorId == author.Id && !x.IsDeleted).ToListAsync();
+            var social = await _context.AuthorSocials.Where(x => x.AuthorId == author.Id && !x.IsDeleted).ToListAsync();
 
             author.IsDeleted = true;
             foreach (var item in language)
