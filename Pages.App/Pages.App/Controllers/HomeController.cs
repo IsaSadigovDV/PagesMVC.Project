@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Pages.App.Context;
+using Pages.App.ViewModels;
 using Pages.Core.Entities;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
@@ -18,7 +19,11 @@ namespace Pages.App.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View();
+            HomeVM homeVM = new HomeVM()
+            {
+                Sponsors = _context.Sponsors.Where(x => !x.IsDeleted).ToList()
+            };
+            return View(homeVM);
         }
 
         [HttpPost]

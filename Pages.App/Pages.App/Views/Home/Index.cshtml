@@ -1,4 +1,6 @@
-﻿@{
+﻿@model HomeVM
+
+@{
     ViewData["Title"] = "Home Page";
 }
 @if (!string.IsNullOrWhiteSpace((string)TempData["Email"]))
@@ -240,101 +242,7 @@
         <div class="trusted-brands blue d-flex space-around align-center">
             <div class="swiper brand-swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="d-flex trusted-card">
-                            <img class="trusted-brands-small"
-                                 src="../assets/img/Logo-amazen.png"
-                                 alt="Amazen logo" />
-                            <h3>Amazen Corp</h3>
-                            <p>
-                                A long established fact that a who looking at its layout.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="d-flex trusted-card">
-                            <img class="trusted-brands-small"
-                                 src="../assets/img/Logo-megan.png"
-                                 alt="Megan books logo" />
-                            <h3>Megan Books</h3>
-                            <p>
-                                A long established fact that a who looking at its layout.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="d-flex trusted-card">
-                            <img class="trusted-brands-small"
-                                 src="../assets/img/Logo-megan2.png"
-                                 alt="Los books logo" />
-                            <h3>Los Books</h3>
-                            <p>
-                                A long established fact that a who looking at its layout.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="d-flex trusted-card">
-                            <img class="trusted-brands-small"
-                                 src="../assets/img/Logo-urban.png"
-                                 alt="Urban lib logo" />
-                            <h3>Urban Lib</h3>
-                            <p>
-                                A long established fact that a who looking at its layout.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="d-flex trusted-card">
-                            <img class="trusted-brands-small"
-                                 src="../assets/img/Logo-amazen.png"
-                                 alt="Amazen logo" />
-                            <h3>Amazen Corp</h3>
-                            <p>
-                                A long established fact that a who looking at its layout.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="d-flex trusted-card">
-                            <img class="trusted-brands-small"
-                                 src="../assets/img/Logo-megan.png"
-                                 alt="Megan books logo" />
-                            <h3>Megan Books</h3>
-                            <p>
-                                A long established fact that a who looking at its layout.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="d-flex trusted-card">
-                            <img class="trusted-brands-small"
-                                 src="../assets/img/Logo-megan2.png"
-                                 alt="Los books logo" />
-                            <h3>Los Books</h3>
-                            <p>
-                                A long established fact that a who looking at its layout.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="d-flex trusted-card">
-                            <img class="trusted-brands-small"
-                                 src="../assets/img/Logo-urban.png"
-                                 alt="Urban lib logo" />
-                            <h3>Urban Lib</h3>
-                            <p>
-                                A long established fact that a who looking at its layout.
-                            </p>
-                        </div>
-                    </div>
+                    @await Html.PartialAsync("_sponsor",Model.Sponsors)
                 </div>
             </div>
         </div>
@@ -613,6 +521,7 @@
 </div>
 <!-- articles end -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 
 <script>

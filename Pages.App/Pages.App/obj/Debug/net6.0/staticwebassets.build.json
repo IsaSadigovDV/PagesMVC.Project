@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i3WAm7tTuQCf58QjQBzwul/dIATxjOPbsiC7T4Libmc=",
+  "Hash": "l/tymh++fBEIQCcdGSM0/wI7WvFXEO3uo0FkIQnlhsc=",
   "Source": "Pages.App",
   "BasePath": "_content/Pages.App",
   "Mode": "Default",
@@ -1904,6 +1904,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\30150bd5-0284-4a44-a8dc-7ca75a9ffbdb89b9d7ad-d299-4bf7-8764-76a324a14611book2.jpg"
     },
     {
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\301e50fc-ca97-4fc2-9dc5-9b55f4835184Logo-megan2.png",
+      "SourceId": "Pages.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
+      "BasePath": "_content/Pages.App",
+      "RelativePath": "assets/img/301e50fc-ca97-4fc2-9dc5-9b55f4835184Logo-megan2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\301e50fc-ca97-4fc2-9dc5-9b55f4835184Logo-megan2.png"
+    },
+    {
       "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\33da4172-8312-48f3-b1e0-8d0ce0617ec4book3.jpg",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
@@ -2004,6 +2021,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\74336f09-6689-4258-ac86-66e8dfd542c8article1.png"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\78b5b66e-2fd5-44d8-9d69-fcf8c59a42b333da4172-8312-48f3-b1e0-8d0ce0617ec4book3.jpg",
+      "SourceId": "Pages.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
+      "BasePath": "_content/Pages.App",
+      "RelativePath": "assets/img/78b5b66e-2fd5-44d8-9d69-fcf8c59a42b333da4172-8312-48f3-b1e0-8d0ce0617ec4book3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\78b5b66e-2fd5-44d8-9d69-fcf8c59a42b333da4172-8312-48f3-b1e0-8d0ce0617ec4book3.jpg"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\84062663-6d73-4c8b-aeba-75d5b4cb6b3darticle9.png",
@@ -2157,6 +2191,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\a437acb2-0f60-41a8-82d4-0729151e09e2Photo1.png"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\a924dd75-4159-4075-aa32-87e2963477d1Logo-urban.png",
+      "SourceId": "Pages.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
+      "BasePath": "_content/Pages.App",
+      "RelativePath": "assets/img/a924dd75-4159-4075-aa32-87e2963477d1Logo-urban.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\a924dd75-4159-4075-aa32-87e2963477d1Logo-urban.png"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\about-author-img.jpg",
@@ -2701,6 +2752,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\errorPage.png"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\f275b3d2-2084-45c4-a819-9c5557dd8343Logo-amazen.png",
+      "SourceId": "Pages.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
+      "BasePath": "_content/Pages.App",
+      "RelativePath": "assets/img/f275b3d2-2084-45c4-a819-9c5557dd8343Logo-amazen.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\f275b3d2-2084-45c4-a819-9c5557dd8343Logo-amazen.png"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\fcdf4ff6-5c93-416b-97f6-8b419ecda710article5.png",
