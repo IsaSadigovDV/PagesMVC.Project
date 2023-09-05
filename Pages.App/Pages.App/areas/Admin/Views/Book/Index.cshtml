@@ -20,8 +20,8 @@
                     <th scope="row">@item.Id</th>
                     <th>@item.Name</th>
                     <th>@item.language.ToJsonArray()</th>
-                    <th>@item.Genre.Name</th>
-                    <th>@item.Category.Name</th>
+                    <th>@item.GenreId</th>
+                    <th>@item.CategoryId</th>
                     <th><img style="width:100px;height:100px" src="~/assets/img/@item.Image" /></th>
                     <td>
                         <a asp-controller="book" asp-action="update" asp-route-id="@item.Id">

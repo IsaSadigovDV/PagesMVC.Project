@@ -5,6 +5,7 @@
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Text:</th>
+                <th scope="col">Setting:</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -15,6 +16,7 @@
                 <tr>
                     <th scope="row">@item.Id</th>
                     <th>@item.Text</th>
+                    <th>@item.SettingId</th>
                     <td>
                         <a asp-controller="whatlearn" asp-action="update" asp-route-id="@item.Id">
                             <i class="fas fa-edit text text-primary"></i>

@@ -5,6 +5,7 @@
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Name:</th>
+                <th scope="col">Setting:</th>
                 <th scope="col">Icon:</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
@@ -16,6 +17,7 @@
                 <tr>
                     <th scope="row">@item.Id</th>
                     <th>@item.Name</th>
+                    <th>@item.SettingId</th>
                     <th><img style="width:100px;height:100px" src="~/assets/img/@item.Icon" /></th>
                     <td>
                         <a asp-controller="social" asp-action="update" asp-route-id="@item.Id">

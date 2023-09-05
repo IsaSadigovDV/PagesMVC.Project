@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Pages.App.Context;
 using Pages.App.Extentions;
@@ -36,14 +37,15 @@ namespace Pages.App.Areas.Admin.Controllers
 		[HttpGet]
 		public async Task<IActionResult> Create()
 		{
-			return View();
+            return View();
 		}
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Create(Setting setting)
 		{
-			if (!ModelState.IsValid)
+         
+            if (!ModelState.IsValid)
 			{
 				return View(setting);
 			}
@@ -68,7 +70,10 @@ namespace Pages.App.Areas.Admin.Controllers
 			setting.CreatedDate = DateTime.Now;
 			await _context.AddAsync(setting);
 			await _context.SaveChangesAsync();
-			return RedirectToAction(nameof(Index));
+
+            ViewBag.Social = new SelectList(_context.Socials.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.WhatLearn = new SelectList(_context.WhatLearns.Where(x => !x.IsDeleted).ToList(), "Id", "Text");
+            return RedirectToAction(nameof(Index));
 		}
 
 		[HttpGet]
@@ -79,7 +84,7 @@ namespace Pages.App.Areas.Admin.Controllers
 			{
 				return NotFound();
 			}
-			return View(setting);
+            return View(setting);
 		}
 
 		[HttpPost]
@@ -119,7 +124,8 @@ namespace Pages.App.Areas.Admin.Controllers
 			updatedsetting.Logo = setting.Logo;
 			updatedsetting.UpdatedDate = DateTime.Now;
 			await _context.SaveChangesAsync();
-			return RedirectToAction(nameof(Index));
+
+            return RedirectToAction(nameof(Index));
 		}
 
 		public async Task<IActionResult> Remove(int id)

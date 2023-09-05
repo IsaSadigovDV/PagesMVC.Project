@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Pages.App.Context;
 using Pages.Core.Entities;
@@ -29,6 +30,7 @@ namespace Pages.App.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
+            ViewBag.Setting = new SelectList(_context.Settings.Where(x => !x.IsDeleted).ToList(), "Id");
             return View();
         }
 
@@ -43,6 +45,8 @@ namespace Pages.App.Areas.Admin.Controllers
             whatLearn.CreatedDate= DateTime.Now;
             await _context.AddAsync(whatLearn);
             await _context.SaveChangesAsync();
+            ViewBag.Setting = new SelectList(_context.Settings.Where(x => !x.IsDeleted).ToList(), "Id");
+
             return RedirectToAction(nameof(Index));
         }
         [HttpGet]
@@ -54,6 +58,8 @@ namespace Pages.App.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            ViewBag.Setting = new SelectList(_context.Settings.Where(x => !x.IsDeleted).ToList(), "Id");
+
             return View(whatLearn);
         }
 
@@ -73,7 +79,10 @@ namespace Pages.App.Areas.Admin.Controllers
             }
             updatedwhatlearn.Text = whatLearn.Text;
             updatedwhatlearn.UpdatedDate = DateTime.Now;
+            updatedwhatlearn.SettingId = whatLearn.SettingId;
             await _context.SaveChangesAsync();
+            ViewBag.Setting = new SelectList(_context.Settings.Where(x => !x.IsDeleted).ToList(), "Id" , "");
+
             return RedirectToAction(nameof(Index));
         }
 

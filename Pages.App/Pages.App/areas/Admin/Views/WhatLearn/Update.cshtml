@@ -7,6 +7,13 @@
 			<input type="text" class="form-control" asp-for="Text" />
 			<span asp-validation-for="Text" class="text text-danger"></span>
 		</div>
+		<div class="form-group">
+			<label asp-for="SettingId">Category:</label>
+			<select asp-for="SettingId" class="form-control" asp-items="ViewBag.Setting">
+				<option disabled selected>---Choose---</option>
+			</select>
+			<span asp-validation-for="SettingId" class="text text-danger"></span>
+		</div>
 		@Html.AntiForgeryToken()
 		<button type="submit">Update</button>
 	</form>

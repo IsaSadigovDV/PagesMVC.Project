@@ -18,11 +18,11 @@ namespace Pages.Core.Entities
         public DateTime PubslishDate { get; set; }
         public int PaperCount { get; set; }
         public string Dimensions { get; set; }
-        public string Image { get; set; }
+        public string? Image { get; set; }
         [NotMapped]
         public IFormFile? FormFile { get; set; }
         public List<BookAuthor>? BookAuthors { get; set; }
-        public virtual List<BookLanguage> BookLanguages { get; set; }
+        public  List<BookLanguage>? BookLanguages { get; set; }
         public int CategoryId { get; set; }
         public Category? Category { get; set; }
         public int GenreId { get; set; }

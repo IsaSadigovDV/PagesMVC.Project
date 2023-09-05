@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ORqhWxuNnNaUcsT2FIRjpwV2LYm+qCfzKaANzWwNdW8=",
+  "Hash": "i3WAm7tTuQCf58QjQBzwul/dIATxjOPbsiC7T4Libmc=",
   "Source": "Pages.App",
   "BasePath": "_content/Pages.App",
   "Mode": "Default",
@@ -1887,12 +1887,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\27b7177e-92a5-42d6-9917-38f30b6a68a8818a223b-365e-4811-bb1e-d48916dbc7ca947f858a-77e7-4c64-8ce5-de741de51552article6.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\307a9a90-a739-4f97-bf53-a886c2092384Author.jpg",
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\30150bd5-0284-4a44-a8dc-7ca75a9ffbdb89b9d7ad-d299-4bf7-8764-76a324a14611book2.jpg",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
       "BasePath": "_content/Pages.App",
-      "RelativePath": "assets/img/307a9a90-a739-4f97-bf53-a886c2092384Author.jpg",
+      "RelativePath": "assets/img/30150bd5-0284-4a44-a8dc-7ca75a9ffbdb89b9d7ad-d299-4bf7-8764-76a324a14611book2.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1901,7 +1901,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\307a9a90-a739-4f97-bf53-a886c2092384Author.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\30150bd5-0284-4a44-a8dc-7ca75a9ffbdb89b9d7ad-d299-4bf7-8764-76a324a14611book2.jpg"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\33da4172-8312-48f3-b1e0-8d0ce0617ec4book3.jpg",
@@ -2006,23 +2006,6 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\74336f09-6689-4258-ac86-66e8dfd542c8article1.png"
     },
     {
-      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\818a223b-365e-4811-bb1e-d48916dbc7ca947f858a-77e7-4c64-8ce5-de741de51552article6.png",
-      "SourceId": "Pages.App",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
-      "BasePath": "_content/Pages.App",
-      "RelativePath": "assets/img/818a223b-365e-4811-bb1e-d48916dbc7ca947f858a-77e7-4c64-8ce5-de741de51552article6.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\818a223b-365e-4811-bb1e-d48916dbc7ca947f858a-77e7-4c64-8ce5-de741de51552article6.png"
-    },
-    {
       "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\84062663-6d73-4c8b-aeba-75d5b4cb6b3darticle9.png",
       "SourceId": "Pages.App",
       "SourceType": "Discovered",
@@ -2072,6 +2055,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\89b9d7ad-d299-4bf7-8764-76a324a14611book2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\8e07bb23-2ef0-4863-beec-0f7ef7e70e6384062663-6d73-4c8b-aeba-75d5b4cb6b3darticle9.png",
+      "SourceId": "Pages.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
+      "BasePath": "_content/Pages.App",
+      "RelativePath": "assets/img/8e07bb23-2ef0-4863-beec-0f7ef7e70e6384062663-6d73-4c8b-aeba-75d5b4cb6b3darticle9.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\8e07bb23-2ef0-4863-beec-0f7ef7e70e6384062663-6d73-4c8b-aeba-75d5b4cb6b3darticle9.png"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\947f858a-77e7-4c64-8ce5-de741de51552article6.png",
@@ -2701,6 +2701,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\errorPage.png"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\fcdf4ff6-5c93-416b-97f6-8b419ecda710article5.png",
+      "SourceId": "Pages.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
+      "BasePath": "_content/Pages.App",
+      "RelativePath": "assets/img/fcdf4ff6-5c93-416b-97f6-8b419ecda710article5.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\fcdf4ff6-5c93-416b-97f6-8b419ecda710article5.png"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\home-icon.svg",

@@ -3,9 +3,16 @@
 <div class="container">
 	<form method="post" enctype="multipart/form-data">
 		<div class="form-group">
-			<label asp-for="@Model.Name">Title:</label>
+			<label asp-for="@Model.Name">Name:</label>
 			<input type="text" class="form-control" asp-for="@Model.Name" />
 			<span asp-validation-for="Name" class="text text-danger"></span>
+		</div>
+		<div class="form-group">
+			<label asp-for="SettingId">SettingId:</label>
+			<select asp-for="SettingId" class="form-control" asp-items="ViewBag.Setting">
+				<option disabled selected>---Choose---</option>
+			</select>
+			<span asp-validation-for="SettingId" class="text text-danger"></span>
 		</div>
 		<div class="form-group">
 			<label asp-for="@Model.file">File:</label>

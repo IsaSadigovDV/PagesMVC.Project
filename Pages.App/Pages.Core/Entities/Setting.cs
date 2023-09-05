@@ -20,7 +20,7 @@ namespace Pages.Core.Entities
         public string CopyImage { get; set; }
 
         public string WhatLearImage { get; set; }
-        public List<WhatLearn>? whatLearns { get; set; }
+        public List<WhatLearn>?  whatLearns { get; set; }
 
         public List<Social>? Socials { get; set; }
         [NotMapped]

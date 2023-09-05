@@ -30,36 +30,36 @@ namespace Pages.App.Areas.Admin.Controllers
 			ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
 			ViewBag.CurrentPage = page;
 
-			IEnumerable<Book> Books = await _context.Books.Where(x => !x.IsDeleted)
-				.Include(x => x.BookAuthors)
-				.ThenInclude(x => x.Author)
-				.Include(x => x.BookLanguages)
-				.ThenInclude(x => x.Language)
-				.Where(x => !x.IsDeleted)
-				.Skip((page - 1) * 5).Take(5)
-				.ToListAsync();
+            IEnumerable<Book> Books = await _context.Books.Where(x => !x.IsDeleted)
+                //	.Include(x => x.BookAuthors)
+                //	.ThenInclude(x => x.Author)
+                //	.Include(x => x.BookLanguages)
+                //	.ThenInclude(x => x.Language)
+                //	.Where(x => !x.IsDeleted)
+                //	.Skip((page - 1) * 5).Take(5)
+                //	.ToListAsync();
 
-			Books = Books.Join(
-				_context.Genres,
-				book => book.GenreId,
-				genre => genre.Id,
-				(book, genre) =>
-				{
-					book.Genre = genre; 
-					return book;
-				})
-				.ToList();
+                //Books = Books.Join(
+                //	_context.Genres,
+                //	book => book.GenreId,
+                //	genre => genre.Id,
+                //	(book, genre) =>
+                //	{
+                //		book.Genre = genre; 
+                //		return book;
+                //	})
+                //	.ToList();
 
-			Books = Books.Join(
-				_context.Categories,
-				book => book.CategoryId,
-				category => category.Id,
-				(book, category) =>
-				{
-                    book.Category = category;
-					return book;
-				})
-				.ToList();
+                //Books = Books.Join(
+                //	_context.Categories,
+                //	book => book.CategoryId,
+                //	category => category.Id,
+                //	(book, category) =>
+                //	{
+                //                 book.Category = category;
+                //		return book;
+                //	})
+                .ToListAsync();
 
 			return View(Books);
 		}
@@ -69,11 +69,11 @@ namespace Pages.App.Areas.Admin.Controllers
         public async Task<IActionResult> Details(int id)
         {
             Book? book = await _context.Books.Where(x => x.Id == id && !x.IsDeleted)
-                .Include(x => x.BookAuthors)
-                .ThenInclude(x => x.Author)
-                .Include(x => x.BookLanguages)
-                .ThenInclude(x => x.Language)
-               .Include(x => x.GenreId)
+               // .Include(x => x.BookAuthors)
+               // .ThenInclude(x => x.Author)
+               // .Include(x => x.BookLanguages)
+               // .ThenInclude(x => x.Language)
+               //.Include(x => x.GenreId)
                 .FirstOrDefaultAsync();
             if (book == null)
             {
@@ -97,10 +97,10 @@ namespace Pages.App.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Book book, int[] language, int[] genre, int[] author)
         {
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return View(book);
-        //    }
+            if (!ModelState.IsValid)
+            {
+                return View(book);
+            }
             if (book.FormFile == null)
             {
                 ModelState.AddModelError("FormFile", "The filed image is required");
@@ -117,6 +117,7 @@ namespace Pages.App.Areas.Admin.Controllers
                 ModelState.AddModelError("FormFile", "The file size can not than more 1 mb");
                 return View();
             }
+
             book.BookLanguages = new List<BookLanguage>();
             if (language != null)
             {
@@ -138,9 +139,8 @@ namespace Pages.App.Areas.Admin.Controllers
                     book.BookAuthors.Add(authorItem);
                 }
             }
-            book.Image = book.FormFile.CreateImage(_env.WebRootPath, "assets/img");
+            book.Image = book.FormFile.CreateImage(_env.WebRootPath, "assets/img/");
             book.CreatedDate = DateTime.Now.AddHours(4);
-
             await _context.AddAsync(book);
             await _context.SaveChangesAsync();
 
@@ -157,12 +157,12 @@ namespace Pages.App.Areas.Admin.Controllers
         public async Task<IActionResult> Update(int id)
         {
             Book? book = await _context.Books.Where(x => x.Id == id && !x.IsDeleted)
-                .Include(x => x.BookAuthors) 
-                .ThenInclude(x => x.Author)
-                .Include(x => x.BookLanguages)
-                .ThenInclude(x => x.Language)
-              .Include(x => x.GenreId)
-              .Include(x=>x.CategoryId)
+              //  .Include(x => x.BookAuthors) 
+              //  .ThenInclude(x => x.Author)
+              //  .Include(x => x.BookLanguages)
+              //  .ThenInclude(x => x.Language)
+              //.Include(x => x.GenreId)
+              //.Include(x=>x.CategoryId)
                 .FirstOrDefaultAsync();
             if (book == null)
             {
@@ -184,12 +184,12 @@ namespace Pages.App.Areas.Admin.Controllers
         {
 
             Book? updatedBook = await _context.Books.Where(x => x.Id == id && !x.IsDeleted)
-                .Include(x => x.BookAuthors)
-                .ThenInclude(x => x.Author)
-                .Include(x => x.BookLanguages)
-                .ThenInclude(x => x.Language)
-              .Include(x => x.GenreId)
-              .Include(x=>x.CategoryId)
+              //  .Include(x => x.BookAuthors)
+              //  .ThenInclude(x => x.Author)
+              //  .Include(x => x.BookLanguages)
+              //  .ThenInclude(x => x.Language)
+              //.Include(x => x.GenreId)
+              //.Include(x=>x.CategoryId)
              .FirstOrDefaultAsync();
             if (book == null)
             {
