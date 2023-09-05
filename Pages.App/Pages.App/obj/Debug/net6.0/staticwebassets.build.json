@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Y03ReAEQZ6qZ8/ouU/vE+x4hupaNt72D2eHaphZ2nrc=",
+  "Hash": "DPPthGpuYjZm1GtUMXuoKxbTeM01mN9a9bFeC8PgJe8=",
   "Source": "Pages.App",
   "BasePath": "_content/Pages.App",
   "Mode": "Default",
@@ -2225,6 +2225,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\Author.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\bcedab57-7318-4a1b-bb90-e2180f46d9db947f858a-77e7-4c64-8ce5-de741de51552article6.png",
+      "SourceId": "Pages.App",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\",
+      "BasePath": "_content/Pages.App",
+      "RelativePath": "assets/img/bcedab57-7318-4a1b-bb90-e2180f46d9db947f858a-77e7-4c64-8ce5-de741de51552article6.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\bcedab57-7318-4a1b-bb90-e2180f46d9db947f858a-77e7-4c64-8ce5-de741de51552article6.png"
     },
     {
       "Identity": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\blog-img.png",
