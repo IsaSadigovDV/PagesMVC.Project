@@ -24,9 +24,9 @@ namespace Pages.Core.Entities
         public List<BookAuthor>? BookAuthors { get; set; }
         public virtual List<BookLanguage> BookLanguages { get; set; }
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public Category? Category { get; set; }
         public int GenreId { get; set; }
-        public Genre Genre { get; set; }
+        public Genre? Genre { get; set; }
         [NotMapped]
         public int[] language { get; set; }
         

@@ -7,6 +7,7 @@ using Pages.App.Extentions;
 using Pages.App.Helpers;
 using Pages.Core.Entities;
 using System.Data;
+using System.Reflection.Metadata;
 
 namespace Pages.App.Areas.Admin.Controllers
 {
@@ -70,6 +71,7 @@ namespace Pages.App.Areas.Admin.Controllers
             ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id","Name");
             ViewBag.Genre = new SelectList(_context.Genres.Where(x =>!x.IsDeleted).ToList(), "Id", "Name");
             ViewBag.Social = new SelectList(_context.Socials.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Country = new SelectList(_context.Countries.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
 
             return View();
         }
@@ -78,10 +80,10 @@ namespace Pages.App.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Author author, int[] language, int[] genre, int[] social)
         {
-            //if (!ModelState.IsValid)
-            //{
-            //    return View(author);
-            //}
+            if (!ModelState.IsValid)
+            {
+                return View(author);
+            }
             if (author.FormFile == null)
             {
                 ModelState.AddModelError("FormFile", "The filed image is required");
@@ -137,7 +139,9 @@ namespace Pages.App.Areas.Admin.Controllers
             ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             ViewBag.Social = new SelectList(_context.Socials.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Country = new SelectList(_context.Countries.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
 
+       
             return RedirectToAction(nameof(Index));
         }
 
@@ -146,14 +150,14 @@ namespace Pages.App.Areas.Admin.Controllers
         public async Task<IActionResult> Update(int id)
         {
             Author? author = await _context.Authors.Where(x => x.Id == id && !x.IsDeleted)
-                .Include(x => x.BookAuthors)
-                .ThenInclude(x => x.Book)
-                .Include(x => x.AuthorLanguages)
-                .ThenInclude(x => x.Language)
-                .Include(x => x.AuthoreGenres)
-                .ThenInclude(x => x.GenreId)
-                .Include(x => x.AuthorSocials)
-                .ThenInclude(x => x.Social)
+                //.Include(x => x.BookAuthors)
+                //.ThenInclude(x => x.Book)
+                //.Include(x => x.AuthorLanguages)
+                //.ThenInclude(x => x.Language)
+                //.Include(x => x.AuthoreGenres)
+                //.ThenInclude(x => x.GenreId)
+                //.Include(x => x.AuthorSocials)
+                //.ThenInclude(x => x.Social)
                 .FirstOrDefaultAsync();
             if (author == null)
             {
@@ -163,6 +167,7 @@ namespace Pages.App.Areas.Admin.Controllers
             ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             ViewBag.Social = new SelectList(_context.Socials.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Country = new SelectList(_context.Countries.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
 
             return View(author);
         }
@@ -172,12 +177,12 @@ namespace Pages.App.Areas.Admin.Controllers
         public async Task<IActionResult> Update(int id, Author author, int[] language, int[] genre, int[] social)
         {
             Author? updatedAuthor = await _context.Authors.Where(x => x.Id == id && !x.IsDeleted)
-                .Include(x => x.AuthorLanguages)
-                .ThenInclude(x => x.Language)
-                .Include(x => x.AuthoreGenres)
-                .ThenInclude(x => x.GenreId)
-                .Include(x => x.AuthorSocials)
-                .ThenInclude(x => x.Social)
+                //.Include(x => x.AuthorLanguages)
+                //.ThenInclude(x => x.Language)
+                //.Include(x => x.AuthoreGenres)
+                //.ThenInclude(x => x.GenreId)
+                //.Include(x => x.AuthorSocials)
+                //.ThenInclude(x => x.Social)
              .FirstOrDefaultAsync();
             if (author == null)
             {
@@ -187,6 +192,7 @@ namespace Pages.App.Areas.Admin.Controllers
             {
                 return View(updatedAuthor);
             }
+
             if (author.FormFile != null)
             {
                 if (!Helper.IsImage(author.FormFile))
@@ -200,12 +206,15 @@ namespace Pages.App.Areas.Admin.Controllers
                     return View();
                 }
 
-
                 Helper.RemoveImage(_env.WebRootPath, "assets/img", updatedAuthor.Image);
 
                 updatedAuthor.Image = author.FormFile
                            .CreateImage(_env.WebRootPath, "assets/img");
 
+            }
+            else
+            {
+                author.Image = updatedAuthor.Image;
             }
             if (language == null && updatedAuthor.AuthorLanguages.Any())
             {
@@ -334,6 +343,7 @@ namespace Pages.App.Areas.Admin.Controllers
             updatedAuthor.Description = author.Description;
             updatedAuthor.Email = author.Email;
             updatedAuthor.PhoneNumber = author.PhoneNumber;
+            updatedAuthor.CountryId = author.CountryId;
             updatedAuthor.UpdatedDate = DateTime.Now.AddHours(4);
 
             await _context.SaveChangesAsync();

@@ -489,12 +489,28 @@
       "PackagePath": "staticwebassets\\Js\\swiper.js"
     },
     {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\27b7177e-92a5-42d6-9917-38f30b6a68a8818a223b-365e-4811-bb1e-d48916dbc7ca947f858a-77e7-4c64-8ce5-de741de51552article6.png",
+      "PackagePath": "staticwebassets\\assets\\img\\27b7177e-92a5-42d6-9917-38f30b6a68a8818a223b-365e-4811-bb1e-d48916dbc7ca947f858a-77e7-4c64-8ce5-de741de51552article6.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\307a9a90-a739-4f97-bf53-a886c2092384Author.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\307a9a90-a739-4f97-bf53-a886c2092384Author.jpg"
+    },
+    {
       "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\33da4172-8312-48f3-b1e0-8d0ce0617ec4book3.jpg",
       "PackagePath": "staticwebassets\\assets\\img\\33da4172-8312-48f3-b1e0-8d0ce0617ec4book3.jpg"
     },
     {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\3d8ae435-2242-403d-adf1-44930fba883e307a9a90-a739-4f97-bf53-a886c2092384Author.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\3d8ae435-2242-403d-adf1-44930fba883e307a9a90-a739-4f97-bf53-a886c2092384Author.jpg"
+    },
+    {
       "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\4c8e0dc4-2848-4801-ba0b-2a32e71815d3welcome.png",
       "PackagePath": "staticwebassets\\assets\\img\\4c8e0dc4-2848-4801-ba0b-2a32e71815d3welcome.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\6356afd3-a94c-4847-bd31-5a08d07db8734c8e0dc4-2848-4801-ba0b-2a32e71815d3welcome.png",
+      "PackagePath": "staticwebassets\\assets\\img\\6356afd3-a94c-4847-bd31-5a08d07db8734c8e0dc4-2848-4801-ba0b-2a32e71815d3welcome.png"
     },
     {
       "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\6366fad1-e8c5-4392-aecd-b5b9f8a10d7aarticle8.png",
@@ -503,6 +519,14 @@
     {
       "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\74336f09-6689-4258-ac86-66e8dfd542c8article1.png",
       "PackagePath": "staticwebassets\\assets\\img\\74336f09-6689-4258-ac86-66e8dfd542c8article1.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\818a223b-365e-4811-bb1e-d48916dbc7ca947f858a-77e7-4c64-8ce5-de741de51552article6.png",
+      "PackagePath": "staticwebassets\\assets\\img\\818a223b-365e-4811-bb1e-d48916dbc7ca947f858a-77e7-4c64-8ce5-de741de51552article6.png"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\84062663-6d73-4c8b-aeba-75d5b4cb6b3darticle9.png",
+      "PackagePath": "staticwebassets\\assets\\img\\84062663-6d73-4c8b-aeba-75d5b4cb6b3darticle9.png"
     },
     {
       "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\8673ec9e-34d7-4b6f-ae90-eff2e791bf7e947f858a-77e7-4c64-8ce5-de741de51552article6.png",

@@ -8,6 +8,7 @@
                 <th scope="col">Language:</th>
                 <th scope="col">Genre:</th>
                 <th scope="col">Social:</th>
+                <th scope="col">Image:</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
             </tr>
@@ -21,6 +22,7 @@
                     <th>@item.language.ToJsonArray()</th>
                     <th>@item.genre.ToJsonArray()</th>
                     <th>@item.social.ToJsonArray()</th>
+                    <th><img style="width:100px;height:100px" src="~/assets/img/@item?.Image" /></th>
                     <td>
                         <a asp-controller="author" asp-action="update" asp-route-id="@item.Id">
                             <i class="fas fa-edit text text-primary"></i>

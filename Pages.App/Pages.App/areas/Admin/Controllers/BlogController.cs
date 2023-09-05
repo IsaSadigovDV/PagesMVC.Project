@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Pages.App.Context;
 using Pages.App.Extentions;
@@ -37,14 +38,14 @@ namespace Pages.App.areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            ViewBag.Tags = await _context.Tags.Where(p => !p.IsDeleted).ToListAsync();
+           ViewBag.Tags = new SelectList(_context.Tags.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Blog blog)
         {
-            ViewBag.Tags = await _context.Tags.Where(p => !p.IsDeleted).ToListAsync();
+           ViewBag.Tags = new SelectList(_context.Tags.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             if (!ModelState.IsValid)
             {
                 return View();
@@ -67,7 +68,7 @@ namespace Pages.App.areas.Admin.Controllers
                 return View();
             }
 
-            blog.Image = blog.FormFile.CreateImage(_env.WebRootPath, "assets/img");
+            blog.Image = blog.FormFile.CreateImage(_env.WebRootPath, "assets/img/");
             blog.CreatedDate = DateTime.Now;
             await _context.AddAsync(blog);
             await _context.SaveChangesAsync();
@@ -77,7 +78,7 @@ namespace Pages.App.areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
-            ViewBag.Tags = await _context.Tags.Where(p => !p.IsDeleted).ToListAsync();
+           ViewBag.Tags = new SelectList(_context.Tags.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             Blog? blog = await _context.Blogs
                            .Where(x => !x.IsDeleted && x.Id == id)
                                 .Include(x => x.Tags)

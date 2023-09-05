@@ -18,7 +18,9 @@ namespace Pages.Core.Entities
         public List<BookAuthor>? BookAuthors { get; set; }
         public List<AuthorLanguage>? AuthorLanguages { get; set; }
         public List<AuthoreGenre>? AuthoreGenres { get; set; }
-        public List<AuthorSocial> AuthorSocials { get; set; }
+        public List<AuthorSocial>? AuthorSocials { get; set; }
+        public int CountryId { get; set; }
+        public Country? Country { get; set; }
 
         [NotMapped]
         public IFormFile? FormFile { get; set; }

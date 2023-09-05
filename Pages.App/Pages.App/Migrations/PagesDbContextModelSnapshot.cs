@@ -236,7 +236,7 @@ namespace Pages.App.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int?>("CountryId")
+                    b.Property<int>("CountryId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedDate")
@@ -968,9 +968,13 @@ namespace Pages.App.Migrations
 
             modelBuilder.Entity("Pages.Core.Entities.Author", b =>
                 {
-                    b.HasOne("Pages.Core.Entities.Country", null)
+                    b.HasOne("Pages.Core.Entities.Country", "Country")
                         .WithMany("Authors")
-                        .HasForeignKey("CountryId");
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Country");
                 });
 
             modelBuilder.Entity("Pages.Core.Entities.AuthoreGenre", b =>

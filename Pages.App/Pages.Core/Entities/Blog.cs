@@ -15,7 +15,7 @@ namespace Pages.Core.Entities
         public string Author { get; set; }
         public string Description { get; set; }
         public int TagId { get; set; }
-        public Tag Tags { get; set; }
+        public Tag? Tags { get; set; }
         [NotMapped]
         public IFormFile? FormFile { get; set; }
 

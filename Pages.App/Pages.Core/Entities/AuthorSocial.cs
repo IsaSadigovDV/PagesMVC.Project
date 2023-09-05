@@ -9,9 +9,9 @@ namespace Pages.Core.Entities
     public class AuthorSocial:BaseModel
     {
         public int AuthorId { get; set; }
-        public Author Author { get; set; }  
+        public Author? Author { get; set; }  
 
         public int SocialId { get; set; }
-        public Social Social { get; set; }
+        public Social? Social { get; set; }
     }
 }
