@@ -9,7 +9,7 @@
 <!-- Articles txt section start -->
 <div class="bg-blue">
     <div class="nav container d-flex">
-        <h1 class="unique-text">Articles</h1>
+        <h1 class="unique-text">Blogs</h1>
         <p class="gray w-400">
             There are many variations of passages of Lorem Ipsum available, have
             suffered alteration in some form.
@@ -23,20 +23,24 @@
         <div class="article-img-container d-flex">
             <!-- start of cards -->
             <div class="article-card d-flex">
-              @foreach (var item in Model.Take(3))
-                {
-                    <img src="../assets/img/@item.Image" alt="girl reading book" />
-                    <div class="article-text-container">
-                        <h4>@item.Title</h4>
-                        <h5 class="gray">
-                            @item.Description
-                        </h5>
-                        <div class="d-flex space-between align-center article-card-details">
-                            <h6><a class="blue" href="#">Read more</a></h6>
-                            <h6>Author - 23.05.2022</h6>
-                        </div>
-                    </div>
-                }
+                @await Html.PartialAsync("_Blog",Model)
+                <div class="col-md-12">
+                    <ul class="pagination">
+                        <li><a class=" page-link" asp-controller="blog" asp-action="index" asp-route-page="1">«</a></li>
+                        @for (int j = 1; j <= ViewBag.TotalPage; j++)
+                        {
+                            @if (j == ViewBag.CurrentPage)
+                            {
+                                <li class="page-item active"><a class=" page-link" asp-controller="blog" asp-action="index" asp-route-page="@j">@j</a></li>
+                            }
+                            else
+                            {
+                                <li class="page-item"><a class=" page-link" asp-controller="blog" asp-action="index" asp-route-page="@j">@j</a></li>
+                            }
+                        }
+                        <li><a class="page-link" asp-controller="blog" asp-action="index" asp-route-page="@ViewBag.TotalPage">»</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

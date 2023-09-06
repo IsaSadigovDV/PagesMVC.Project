@@ -9,6 +9,6 @@ namespace Pages.Core.Entities
     public class Tag : BaseModel
     {
         public string Name { get; set; }
-        public List<Blog>? Blogs { get; set; }
+        public List<Blog>? Blogs { get; set; }  
     }
 }

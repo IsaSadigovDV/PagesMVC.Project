@@ -17,15 +17,54 @@ namespace Pages.App.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index( int page =1)
+        public async Task<IActionResult> Index(int? id, int page =1)
         {
             int TotalCount = _context.Blogs.Where(x => !x.IsDeleted).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 4);
             ViewBag.CurrentPage = page;
 
-            IEnumerable<Blog> blogs = await _context.Blogs.Where(x => !x.IsDeleted).Skip((page - 1) * 12)
-                .Take(12).ToListAsync();
-            return View(blogs);
+            ViewBag.Tags = await _context.Tags.Where(x => !x.IsDeleted).ToListAsync();
+
+            if (id == null)
+            {
+                IEnumerable<Blog> blogs = await _context.Blogs.Where(x => !x.IsDeleted)
+                    .Include(x=>x.Tags)
+                    .Skip((page - 1) * 12)
+            .Take(12).ToListAsync();
+                return View(blogs);
+            }
+            else
+            {
+                IEnumerable<Blog> blogs = await _context.Blogs.Where(x => !x.IsDeleted).Skip((page - 1) * 12)
+           .Take(12).ToListAsync();
+                return View(blogs);
+            }
         }
+
+
+        public async Task<IActionResult> Detail(int id)
+        {
+          
+            ViewBag.Blogs = await _context.Blogs.Where(x => !x.IsDeleted)
+                     .Include(x => x.Tags)
+                     .Take(3)
+                    .ToListAsync();
+            Blog? blog = await _context.Blogs.Where(x => !x.IsDeleted)
+                 .Include(x => x.Tags)
+                    .FirstOrDefaultAsync();
+
+            if (blog is null)
+            {
+                return NotFound();
+            }
+            BlogVM blogVM = new BlogVM
+            {
+                Blog = blog
+            };
+
+            return View(blogVM);
+        }
+
+
     }
 }

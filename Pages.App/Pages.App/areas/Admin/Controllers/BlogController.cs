@@ -28,6 +28,7 @@ namespace Pages.App.areas.Admin.Controllers
             int TotalCount = _context.Blogs.Where(x => !x.IsDeleted).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 5);
             ViewBag.CurrentPage = page;
+
             IEnumerable<Blog> blogs = await _context.Blogs.Where(x => !x.IsDeleted)
                 .Include(x=>x.Tags)
                 .Skip((page - 1) * 5).Take(5)
@@ -36,7 +37,7 @@ namespace Pages.App.areas.Admin.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Create()
+        public  IActionResult Create()
         {
            ViewBag.Tags = new SelectList(_context.Tags.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             return View();

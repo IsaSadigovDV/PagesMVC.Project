@@ -1,0 +1,100 @@
+﻿@model BlogVM
+
+<!-- Single blog txt section start -->
+<div class="bg-blue">
+    <div class="nav container d-flex">
+        <h1 class="unique-text">Single Blog</h1>
+    </div>
+</div>
+<!-- Single blog txt section end -->
+<!-- single blog start -->
+<div class="container single-blog-container d-flex f-dir-column">
+    <div class="blog-image">
+        <img src="~/assets/img/@Model.Blog.Image" alt="girl reading a book" />
+    </div>
+    <div>
+        <h5 class="blue">@Model.Blog.CreatedDate.Month/ @Model.Blog.CreatedDate.Day, @Model.Blog.CreatedDate.Year  / @Model.Blog.Tags.Name</h5>
+        <p class="gray">
+            @Model.Blog.Description
+        </p>
+    </div>
+    <div>
+        <h3 class="blue">The perfect book for all</h3>
+        <p class="gray">
+            It is a long established fact that a reader will be distracted by the
+            readable content of a page when looking at its layout. The point of
+            using Lorem Ipsum is that it has less normal distribution of letters,
+            as opposed.
+        </p>
+    </div>
+    <div class="blue bulleted-list">
+        <p class="bulleted">
+            It has roots in a piece of classical Latin literature from 45 BC,
+        </p>
+        <p class="bulleted">To generate Lorem Ipsum which looks reasonable</p>
+        <p class="bulleted">
+            The first line of Lorem Ipsum, "Lorem ipsum” dolor sit amet
+        </p>
+    </div>
+    <div class="bg-blue quote">
+        <img class="quote-1" src="../assets/img/quote.png" alt="quote vector" />
+        <img class="quote-2" src="../assets/img/quote.png" alt="quote vector" />
+        <p>
+            “Crowdsource term sheet freemium beta stealth responsive web design
+            niche market rock star channels.”
+        </p>
+    </div>
+    <div>
+        <h3 class="blue">The perfect book for all</h3>
+        <p class="gray">
+            It is a long established fact that a reader will be distracted by the
+            readable content of a page when looking at its layout. The point of
+            using Lorem Ipsum is that it has less normal distribution of letters,
+            as opposed.
+        </p>
+        <ol class="blue ol-list">
+            <li>
+                It has roots in a piece of classical Latin literature from 45 BC,
+            </li>
+            <li>To generate Lorem Ipsum which looks reasonable</li>
+            <li>The first line of Lorem Ipsum, "Lorem ipsum” dolor sit amet</li>
+            <li>Be standard chunk of Lorem used since the 1500s</li>
+        </ol>
+    </div>
+
+    <div class="form-container">
+        <h3>Leave comment</h3>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
+            mollitia.
+        </p>
+
+        <form class="comment-form" method="post">
+            <label for="name">
+                <p>Name</p>
+
+                <input type="text" name="name" id="name" />
+            </label>
+
+            <label for="email">
+                <p>Email</p>
+
+                <input type="email" name="email" id="email" />
+            </label>
+
+            <label for="subject">
+                <p>Subject</p>
+
+                <input type="text" name="subject" id="subject" />
+            </label>
+
+            <p>Message</p>
+
+            <textarea name="message" id="message" cols="20" rows="5"></textarea>
+
+            <a><button class="reply-btn" data-text="send">Send message</button></a>
+        </form>
+    </div>
+</div>
+<!-- single blog end -->

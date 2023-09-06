@@ -2,21 +2,43 @@
 
 @foreach (var item in Model)
 {
-    <div class="swiper-slide">
-        <div class="d-flex trusted-card">
-            <a asp-action="index" asp-controller="sponsor" asp-route-id="@item.Id"> 
-                <img class="trusted-brands-small"
-                 src="~/assets/img/@item.Image"
-                 alt="Amazen logo" />
-                <h3>
-                    @item.Title/h3>
-                    <p>
-                        @item.Description
-                   </p>
-            </a>
-        </div>
-    </div>
+	<div class="swiper-slide">
+		<div class="d-flex trusted-card">
+		
+				<img class="trusted-brands-small"
+				 src="~/assets/img/@item.Image"
+				 alt="Amazen logo" />
+				<h3>
+					@item.Title
+				</h3>
+
+				<p>
+					@item.Description
+				</p>
+			
+		</div>
+	</div>
 }
 
+@foreach (var item in Model)
+{
+	<div class="swiper-slide">
+		<div class="d-flex trusted-card">
+			<a asp-action="index" asp-controller="sponsor" asp-route-id="@item.Id">
 
+			</a>
+			<img class="trusted-brands-small"
+			 src="~/assets/img/@item.Image"
+			 alt="Amazen logo" />
+			<h3>
+				@item.Title
+			</h3>
+
+			<p>
+				@item.Description
+			</p>
+
+		</div>
+	</div>
+}
 

@@ -309,74 +309,6 @@
     </div>
 </div>
 <!-- what you`ll learn end -->
-<!-- the chapter includes start -->
-<div class="bg-light-blue blue">
-    <div class="container">
-        <h2 class="includes-text">The Chapter Includes</h2>
-        <div class="chapters d-flex align-center">
-            <div class="chapter-card">
-                <h3>Chapter- 01 Get Started Intro</h3>
-                <h4 class="gray">
-                    Making this the first true value generator on the Internet. It of
-                    over 200 Latin words, combined with a handful.
-                </h4>
-                <div class="chapters-details d-flex align-center">
-                    <h5 class="bulleted gray"><b class="blue">Pages: </b>85pages</h5>
-                    <h5 class="bulleted gray">
-                        <b class="blue">Length: </b>1 hour 15 mins
-                    </h5>
-                </div>
-            </div>
-            <div class="chapter-card">
-                <h3>Chapter- 02 Create a Massive Content</h3>
-                <h4 class="gray">
-                    Making this the first true value generator on the Internet. It of
-                    over 200 Latin words, combined with a handful.
-                </h4>
-                <div class="chapters-details d-flex align-center">
-                    <h5 class="bulleted gray"><b class="blue">Pages: </b>85pages</h5>
-                    <h5 class="bulleted gray">
-                        <b class="blue">Length: </b>1 hour 15 mins
-                    </h5>
-                </div>
-            </div>
-            <div class="chapter-card">
-                <h3>Chapter- 03 Maintaining the Creative Arcs</h3>
-                <h4 class="gray">
-                    Making this the first true value generator on the Internet. It of
-                    over 200 Latin words, combined with a handful.
-                </h4>
-                <div class="chapters-details d-flex align-center">
-                    <h5 class="bulleted gray"><b class="blue">Pages: </b>85pages</h5>
-                    <h5 class="bulleted gray">
-                        <b class="blue">Length: </b>1 hour 15 mins
-                    </h5>
-                </div>
-            </div>
-            <div class="chapter-card">
-                <h3>Chapter- 04 The Conclusion</h3>
-                <h4 class="gray">
-                    Making this the first true value generator on the Internet. It of
-                    over 200 Latin words, combined with a handful.
-                </h4>
-                <div class="chapters-details d-flex align-center">
-                    <h5 class="bulleted gray"><b class="blue">Pages: </b>85pages</h5>
-                    <h5 class="bulleted gray">
-                        <b class="blue">Length: </b>1 hour 15 mins
-                    </h5>
-                </div>
-            </div>
-        </div>
-        <div class="free-trial d-flex center">
-            <button class="btn">Start a 15-Days Free Trail</button>
-            <h6 class="gray">Short description about each chapter</h6>
-            <h6 class="gray">
-                <a class="blue" href="#">Have any questions?</a> Contact us
-            </h6>
-        </div>
-    </div>
-</div>
-<!-- chapter includes end -->
 <!-- what readers say start -->
 <div class="rating-section">
     <div class="d-flex container space-between blue reader-rating-cont">
@@ -468,54 +400,7 @@
     <div class="container d-flex align-center articles-container">
         <h3 class="article-text">Articles & Resources</h3>
         <div class="article-img-container d-flex">
-            <div class="article-card d-flex">
-                <img src="../assets/img/article1.png" alt="girl reading book" />
-                <div class="article-text-container">
-                    <h4>
-                        "Energy efficiency" hidroterapiya və ya üzgüçülük təklif edir
-                    </h4>
-                    <h5 class="gray">
-                        The point of using Lorem Ipsum hiter of that using making it
-                        look like others readable will get end.
-                    </h5>
-                    <div class="d-flex space-between align-center article-card-details">
-                        <h6><a class="blue" href="#">Read More</a></h6>
-                        <h6>Author - 07.07.2023</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="article-card d-flex">
-                <img src="../assets/img/article2.png" alt="girl reading book" />
-                <div class="article-text-container">
-                    <h4>
-                        "Energy efficiency" hidroterapiya və ya üzgüçülük təklif edir
-                    </h4>
-                    <h5 class="gray">
-                        The point of using Lorem Ipsum hiter of that using making it
-                        look like others readable will get end.
-                    </h5>
-                    <div class="d-flex space-between align-center article-card-details">
-                        <h6><a class="blue" href="#">Read More</a></h6>
-                        <h6>Author - 07.07.2023</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="article-card d-flex">
-                <img src="../assets/img/article3.png" alt="girl reading book" />
-                <div class="article-text-container">
-                    <h4>
-                        "Energy efficiency" hidroterapiya və ya üzgüçülük təklif edir
-                    </h4>
-                    <h5 class="gray">
-                        The point of using Lorem Ipsum hiter of that using making it
-                        look like others readable will get end.
-                    </h5>
-                    <div class="d-flex space-between align-center article-card-details">
-                        <h6><a class="blue" href="#">Read More</a></h6>
-                        <h6>Author - 07.07.2023</h6>
-                    </div>
-                </div>
-            </div>
+            @await Html.PartialAsync("_Blog",Model.Blogs)
         </div>
     </div>
 </div>
@@ -583,5 +468,7 @@
             })
         }
     }
+
+
 
 </script>
