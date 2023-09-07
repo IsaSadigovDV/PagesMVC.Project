@@ -4,7 +4,7 @@
 {
     <div>
         <h1>
-            asdas
+           yoxdu yetka sen ol
         </h1>
     </div>
 }
@@ -14,9 +14,9 @@ else
     {
 
         <div class="article-card d-flex">
-            @*<a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id">*@
-                <img src="~/assets/img/@item.Image" alt="girl reading book" />
-            @*</a>*@
+            <a asp-action="detail" asp-controller="blog" asp-route-id="@item.Id" >
+                <img style="width:300px" src="~/assets/img/@item.Image" alt="girl reading book" />
+            </a>
             <div class="article-text-container">
                 <h4>
                     @item.Title

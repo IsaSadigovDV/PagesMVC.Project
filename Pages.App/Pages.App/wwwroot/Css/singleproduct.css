@@ -405,6 +405,60 @@ span a {
 }
 /* questions end */
 
+
+/* Comment section start */
+
+.form-container {
+  margin: 50px auto;
+}
+
+.form-container h3,
+.comment-form p {
+  color: #1b3764;
+}
+
+.form-container > p {
+  color: #969aa0;
+  margin-bottom: 35px;
+}
+
+.comment-form label {
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+.comment-form p {
+  margin: 0 0 10px 0;
+}
+
+.comment-form label input,
+.comment-form textarea {
+  width: calc(100% - 20px);
+  font-size: 17px;
+  color: #1b3764;
+  padding: 10px;
+  border: 1px solid #969aa0;
+  border-radius: 4px;
+  outline: none;
+}
+
+.comment-form textarea {
+  resize: vertical;
+}
+
+.comment-form button {
+  margin-top: 30px;
+  background-color: #1b3764;
+  color: #f4f8ff;
+  padding: 8px 20px;
+  border: 1px solid #1b3764;
+  border-radius: 5px;
+}
+
+/* Comment section end */
+
+
 /* payments-shipping start */
 
 .bg-orange {

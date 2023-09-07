@@ -21,7 +21,8 @@ namespace Pages.App.Controllers
         {
             HomeVM homeVM = new HomeVM()
             {
-                Sponsors = _context.Sponsors.Where(x => !x.IsDeleted).ToList()
+                Sponsors = _context.Sponsors.Where(x => !x.IsDeleted).ToList(),
+                Blogs = _context.Blogs.Where(x => !x.IsDeleted).ToList()
             };
             return View(homeVM);
         }
