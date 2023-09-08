@@ -1840,6 +1840,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\36039836-67b8-4263-91e7-588998e4704bLogo-megan2.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\36f7bec4-f27d-44f3-96aa-434abb4a70d81adea5e7-60cb-4986-88e7-81e15d82f19633da4172-8312-48f3-b1e0-8d0ce0617ec4book3.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pages.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pages.App</BasePath>
+      <RelativePath>assets/img/36f7bec4-f27d-44f3-96aa-434abb4a70d81adea5e7-60cb-4986-88e7-81e15d82f19633da4172-8312-48f3-b1e0-8d0ce0617ec4book3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\36f7bec4-f27d-44f3-96aa-434abb4a70d81adea5e7-60cb-4986-88e7-81e15d82f19633da4172-8312-48f3-b1e0-8d0ce0617ec4book3.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\3d8ae435-2242-403d-adf1-44930fba883e307a9a90-a739-4f97-bf53-a886c2092384Author.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Pages.App</SourceId>
@@ -1871,6 +1887,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\4103db37-b56f-4883-b83a-b7090ca85dba33da4172-8312-48f3-b1e0-8d0ce0617ec4book3.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\47ccaa1b-9697-44fb-8737-e8f974a08c58Tales-of-Mystery-Terror-new-cover-Dec-22-694x1024.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pages.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pages.App</BasePath>
+      <RelativePath>assets/img/47ccaa1b-9697-44fb-8737-e8f974a08c58Tales-of-Mystery-Terror-new-cover-Dec-22-694x1024.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\47ccaa1b-9697-44fb-8737-e8f974a08c58Tales-of-Mystery-Terror-new-cover-Dec-22-694x1024.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\4c8e0dc4-2848-4801-ba0b-2a32e71815d3welcome.png))">
       <SourceType>Package</SourceType>
@@ -2719,6 +2751,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\d5816095-b7ef-4f34-83cc-a64e75a88c17a37cd191-cca3-438a-9db3-4a375576773aa0a52e5f-4176-40da-9365-360f2644d96carticle1.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\d985d46a-efbd-457a-aeed-5958f907cd07TheHound.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Pages.App</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Pages.App</BasePath>
+      <RelativePath>assets/img/d985d46a-efbd-457a-aeed-5958f907cd07TheHound.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\d985d46a-efbd-457a-aeed-5958f907cd07TheHound.webp))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\img\dashed-line.png))">
       <SourceType>Package</SourceType>
