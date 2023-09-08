@@ -41,11 +41,10 @@ namespace Pages.App.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Social Social)
         {
-            ViewBag.Settings = await _context.Settings.Where(x => !x.IsDeleted).ToListAsync();
-			//if (!ModelState.IsValid)
-   //         {
-   //             return View(Social);
-   //         }
+			if (!ModelState.IsValid)
+            {
+                return View(Social);
+            }
             if(Social.file== null)
             {
                 ModelState.AddModelError("file", "Image must be added");
@@ -72,7 +71,6 @@ namespace Pages.App.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Update (int id)
         {
-			ViewBag.Settings = await _context.Settings.Where(x => !x.IsDeleted).ToListAsync();
 			Social? social = await _context.Socials.Where(x => x.Id == id && !x.IsDeleted)
                 .FirstOrDefaultAsync();
 
@@ -87,7 +85,6 @@ namespace Pages.App.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Update(int id, Social social)
         {
-			ViewBag.Settings = await _context.Settings.Where(x => !x.IsDeleted).ToListAsync();
 			Social? updatedsocial = await _context.Socials.Where(x=>x.Id == id&& !x.IsDeleted)
                 .FirstOrDefaultAsync();
             

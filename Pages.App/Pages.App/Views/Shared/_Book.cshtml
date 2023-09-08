@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Book>
+
+@foreach(var item in Model){
+    <div class="swiper-slide">
+        <div class="d-flex blue books-sec-cont">
+            <a asp-action="detail" asp-controller="book" asp-route-id="@item.Id">
+                <img class="books-small"
+                 src="~/assets/img/@item.Image"
+                 alt="Atomic one`s book cover" />
+            </a>
+            <div class="books-small-text">
+                <h3>@item.Name</h3>
+                <p>
+                    @item.Description
+                </p>
+                <div class="d-flex blue books-pages-cont">
+                    <div class="bulleted">
+                        <h4>Pages:</h4>
+                        <p class="gray">@item.PaperCount pages</p>
+                    </div>
+                    <div class="bulleted">
+                        <h4>Category:</h4>
+                        <p class="gray">@item.CategoryId</p>
+                    </div>
+                </div>
+                <button class="btn-no-bg">
+                    <a asp-action="detail" asp-controller="book" asp-route-id="@item.Id" class="blue">Order Today</a>
+                </button>
+            </div>
+        </div>
+    </div>
+}
+
+@foreach (var item in Model)
+{
+    <div class="swiper-slide">
+        <div class="d-flex blue books-sec-cont">
+            <a asp-action="detail" asp-controller="book" asp-route-id="@item.Id">
+                <img class="books-small"
+                 src="~/assets/img/@item.Image"
+                 alt="Atomic one`s book cover" />
+            </a>
+            <div class="books-small-text">
+                <h3>@item.Name</h3>
+                <p>
+                    @item.Description
+                </p>
+                <div class="d-flex blue books-pages-cont">
+                    <div class="bulleted">
+                        <h4>Pages:</h4>
+                        <p class="gray">@item.PaperCount pages</p>
+                    </div>
+                    <div class="bulleted">
+                        <h4>Category:</h4>
+                        <p class="gray">@item.CategoryId</p>
+                    </div>
+                </div>
+                <button class="btn-no-bg">
+                    <a asp-action="detail" asp-controller="book" asp-route-id="@item.Id" class="blue">Order Today</a>
+                </button>
+            </div>
+        </div>
+    </div>
+}

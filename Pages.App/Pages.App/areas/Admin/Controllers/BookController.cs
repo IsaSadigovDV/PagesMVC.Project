@@ -31,35 +31,17 @@ namespace Pages.App.Areas.Admin.Controllers
 			ViewBag.CurrentPage = page;
 
             IEnumerable<Book> Books = await _context.Books.Where(x => !x.IsDeleted)
-                //	.Include(x => x.BookAuthors)
-                //	.ThenInclude(x => x.Author)
-                //	.Include(x => x.BookLanguages)
-                //	.ThenInclude(x => x.Language)
-                //	.Where(x => !x.IsDeleted)
-                //	.Skip((page - 1) * 5).Take(5)
-                //	.ToListAsync();
-
-                //Books = Books.Join(
-                //	_context.Genres,
-                //	book => book.GenreId,
-                //	genre => genre.Id,
-                //	(book, genre) =>
-                //	{
-                //		book.Genre = genre; 
-                //		return book;
-                //	})
-                //	.ToList();
-
-                //Books = Books.Join(
-                //	_context.Categories,
-                //	book => book.CategoryId,
-                //	category => category.Id,
-                //	(book, category) =>
-                //	{
-                //                 book.Category = category;
-                //		return book;
-                //	})
-                .ToListAsync();
+                    .Include(x => x.BookAuthors)
+                    .ThenInclude(x => x.Author)
+                    .Include(x => x.BookLanguages)
+                    .ThenInclude(x => x.Language)
+                     .Include(x => x.BookAuthors)
+                     .ThenInclude(x => x.Author)
+                    .Include(x=>x.Genre)
+                    .Include(x=>x.Category)
+                    .Where(x => !x.IsDeleted)
+                    .Skip((page - 1) * 5).Take(5)
+                    .ToListAsync();
 
 			return View(Books);
 		}
@@ -69,11 +51,14 @@ namespace Pages.App.Areas.Admin.Controllers
         public async Task<IActionResult> Details(int id)
         {
             Book? book = await _context.Books.Where(x => x.Id == id && !x.IsDeleted)
-               // .Include(x => x.BookAuthors)
-               // .ThenInclude(x => x.Author)
-               // .Include(x => x.BookLanguages)
-               // .ThenInclude(x => x.Language)
-               //.Include(x => x.GenreId)
+                .Include(x => x.BookAuthors)
+                .ThenInclude(x => x.Author)
+                .Include(x => x.BookLanguages)
+                .ThenInclude(x => x.Language)
+                .Include(x=>x.BookAuthors)
+                .ThenInclude(x=>x.Author)
+               .Include(x => x.Genre)
+               .Include(x=>x.Category)
                 .FirstOrDefaultAsync();
             if (book == null)
             {
@@ -148,6 +133,8 @@ namespace Pages.App.Areas.Admin.Controllers
             ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             ViewBag.Author = new SelectList(_context.Authors.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             ViewBag.Category = new SelectList(_context.Categories.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.BookAuthors = new SelectList(_context.BookAuthors.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+
 
             return RedirectToAction(nameof(Index));
         }
@@ -157,12 +144,14 @@ namespace Pages.App.Areas.Admin.Controllers
         public async Task<IActionResult> Update(int id)
         {
             Book? book = await _context.Books.Where(x => x.Id == id && !x.IsDeleted)
-              //  .Include(x => x.BookAuthors) 
-              //  .ThenInclude(x => x.Author)
-              //  .Include(x => x.BookLanguages)
-              //  .ThenInclude(x => x.Language)
-              //.Include(x => x.GenreId)
-              //.Include(x=>x.CategoryId)
+                .Include(x => x.BookAuthors)
+                .ThenInclude(x => x.Author)
+                .Include(x => x.BookLanguages)
+                .ThenInclude(x => x.Language)
+                  .Include(x => x.BookAuthors)
+                .ThenInclude(x => x.Author)
+              .Include(x => x.Genre)
+              .Include(x=>x.Category)
                 .FirstOrDefaultAsync();
             if (book == null)
             {
@@ -174,6 +163,7 @@ namespace Pages.App.Areas.Admin.Controllers
             ViewBag.Author = new SelectList(_context.Authors.Where(x => !x.IsDeleted ).ToList(), "Id", "Name");
             ViewBag.Category = new SelectList(_context.Categories.Where(x => !x.IsDeleted ).ToList(), "Id", "Name");
 
+
             return View(book);
         }
 
@@ -184,12 +174,14 @@ namespace Pages.App.Areas.Admin.Controllers
         {
 
             Book? updatedBook = await _context.Books.Where(x => x.Id == id && !x.IsDeleted)
-              //  .Include(x => x.BookAuthors)
-              //  .ThenInclude(x => x.Author)
-              //  .Include(x => x.BookLanguages)
-              //  .ThenInclude(x => x.Language)
-              //.Include(x => x.GenreId)
-              //.Include(x=>x.CategoryId)
+                .Include(x => x.BookAuthors)
+                .ThenInclude(x => x.Author)
+                .Include(x => x.BookLanguages)
+                .ThenInclude(x => x.Language)
+                  .Include(x => x.BookAuthors)
+                .ThenInclude(x => x.Author)
+              .Include(x => x.Genre)
+              .Include(x=>x.Category)
              .FirstOrDefaultAsync();
             if (book == null)
             {
@@ -308,8 +300,8 @@ namespace Pages.App.Areas.Admin.Controllers
             updatedBook.Publisher = book.Publisher;
             updatedBook.PaperCount = book.PaperCount;
             updatedBook.Dimensions = book.Dimensions;
-            updatedBook.CategoryId = book.CategoryId;
             updatedBook.GenreId = book.GenreId;
+            updatedBook.CategoryId = book.CategoryId;
             updatedBook.UpdatedDate = DateTime.Now.AddHours(4);
 
             await _context.SaveChangesAsync();
@@ -318,6 +310,7 @@ namespace Pages.App.Areas.Admin.Controllers
             ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             ViewBag.Author = new SelectList(_context.Authors.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             ViewBag.Category = new SelectList(_context.Categories.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+
 
             return RedirectToAction(nameof(Index));
         }

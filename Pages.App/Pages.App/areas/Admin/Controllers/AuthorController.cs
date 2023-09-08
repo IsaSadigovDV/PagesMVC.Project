@@ -165,6 +165,7 @@ namespace Pages.App.Areas.Admin.Controllers
             }
 
             ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+
             ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             ViewBag.Social = new SelectList(_context.Socials.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             ViewBag.Country = new SelectList(_context.Countries.Where(x => !x.IsDeleted).ToList(), "Id", "Name");

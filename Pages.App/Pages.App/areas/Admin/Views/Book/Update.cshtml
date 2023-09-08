@@ -60,8 +60,17 @@
 			<span asp-validation-for="GenreId" class="text text-danger"></span>
 		</div>
 		<div class="form-group">
-			<label asp-for="CategoryId">Genre:</label>
-			<select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Category">
+			<label asp-for="author" class="col-sm-2 col-form-label">Authors:</label>
+			<div class="col-sm-10">
+				<select multiple name="author" class="form-control select2" asp-for="author" asp-items="ViewBag.Auhtor">
+					<option value="">---Choose---</option>
+				</select>
+				<span asp-validation-for="author" class="text text-danger"></span>
+			</div>
+		</div>
+		<div class="form-group">
+			<label asp-for="CategoryId">Category:</label>
+			<select asp-for="GenreId" class="form-control" asp-items="ViewBag.Category">
 				<option disabled selected>---Choose---</option>
 			</select>
 			<span asp-validation-for="CategoryId" class="text text-danger"></span>
