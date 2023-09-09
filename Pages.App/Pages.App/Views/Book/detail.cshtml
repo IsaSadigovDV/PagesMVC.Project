@@ -1,4 +1,7 @@
-﻿<!-- my store section start -->
+﻿@model BookVM
+<link rel="stylesheet" href="~/Css/singleproduct.css" />
+<link rel="stylesheet" href="~/Css/home.css" />
+<!-- my store section start -->
 <div class="bg-blue">
     <div class="nav container d-flex">
         <h1 class="unique-text">My Store</h1>
@@ -11,17 +14,14 @@
 <!-- my store section end -->
 <!-- single book start -->
 <section class="d-flex single-book center">
-    <div class="single-book-container bg-light-blue">
-        <img src="../assets/img/Book-sm1.png" alt="" />
+    <div class="single-book-container bg-light-blue" style="max-width:328px; max-height:fit-content">
+        <img style="max-width:inherit" src="~/assets/img/@Model.Book.Image" alt="" />
     </div>
     <div class="single-book-description d-flex f-dir-column">
-        <h2 class="blue">The Atomic One`s</h2>
-        <h2 class="yellow">$30.00 USD</h2>
+        <h2 class="blue">@Model.Book.Name</h2>
+        <h2 class="yellow">$@Model.Book.Price USD</h2>
         <p class="gray">
-            Making this the first true generator on the Internet. It uses a
-            dictionary of over 200 Latin words, combined with a handful of model
-            sentence structures, to generate Lorem Ipsum which looks reasonable.
-            The generated Lorem Ipsum.
+            @Model.Book.Description
         </p>
 
         <div>
@@ -30,32 +30,41 @@
                     <span class="detailTitle"><a class="gray" href="">Publisher</a></span>
                     <span class="detailDot">:</span>
                     <span>
-                        <a href="" class="gray">Learning Private Limited (1 January 2021)</a>
+                        <a href="" class="gray">@Model.Book.Publisher</a>
                     </span>
                 </li>
 
                 <li>
                     <span class="detailTitle"><a class="gray" href="">Language</a></span>
                     <span class="detailDot">:</span>
-                    <span><a class="gray" href="">English</a></span>
+                    <span>
+                        <a class="gray" href="">
+                            @foreach (var lang in Model.Book.BookLanguages.Where(x => x.BookId == Model.Book.Id))
+                            {
+
+                                @String.Concat(lang.Language.Name," ")
+                                ;
+                            }
+                        </a>
+                    </span>
                 </li>
 
                 <li>
                     <span class="detailTitle"><a href="" class="gray">Paperback</a></span>
                     <span class="detailDot">:</span>
-                    <span><a class="gray" href="">212</a> pages</span>
+                    <span><a class="gray" href="">@Model.Book.PaperCount</a> pages</span>
                 </li>
 
                 <li>
                     <span class="detailTitle"><a class="gray" href="">ISBN-10</a></span>
                     <span class="detailDot">:</span>
-                    <a href="" class="gray">9788120345799</a>
+                    <a href="" class="gray">@Model.Book.CategoryId</a>
                 </li>
 
                 <li>
                     <span class="detailTitle"><a href="" class="gray">Dimensions</a></span>
                     <span class="detailDot">:</span>
-                    <span><a class="gray" href="">20 x 14 x 4 cm</a></span>
+                    <span><a class="gray" href="">@Model.Book.Dimensions cm</a></span>
                 </li>
             </ul>
         </div>
@@ -68,12 +77,6 @@
     </div>
 </section>
 <!-- single book end -->
-<!-- product description buttons start -->
-<div class="product-btn-container container d-flex center">
-    <button class="btn-bg-blue">PRODUCT DESCRIPTION</button>
-    <button class="btn-bg-light-blue">ADDITIONAL INFO</button>
-</div>
-<!-- product description buttons end -->
 <!-- questions start -->
 <div class="pad-50">
     <div class="questions-container container d-flex space-between">
@@ -102,21 +105,21 @@
 <div class="payments bg-orange blue">
     <div class="container secure-payment-etc d-flex space-between">
         <div class="secure icon-text-container d-flex f-dir-column">
-            <img src="../assets/img/secure.svg" alt="security icon" />
+            <img src="~/assets/img/secure.svg" alt="security icon" />
             <h4>Secure Payments</h4>
             <p>
                 There are many variations of passages of alteration in some form.
             </p>
         </div>
         <div class="shipping icon-text-container d-flex f-dir-column">
-            <img src="../assets/img/shipping.svg" alt="shipping icon" />
+            <img src="~/assets/img/shipping.svg" alt="shipping icon" />
             <h4>Free Shipping</h4>
             <p>
                 There are many variations of passages of alteration in some form.
             </p>
         </div>
         <div class="satisfaction icon-text-container d-flex f-dir-column">
-            <img src="../assets/img/satisfaction.svg" alt="lighting icon" />
+            <img src="~/assets/img/satisfaction.svg" alt="lighting icon" />
             <h4>100% Satisfactions</h4>
             <p>
                 There are many variations of passages of alteration in some form.

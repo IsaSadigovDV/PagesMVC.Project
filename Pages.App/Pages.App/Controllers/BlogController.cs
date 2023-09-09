@@ -30,13 +30,13 @@ namespace Pages.App.Controllers
                 IEnumerable<Blog> blogs = await _context.Blogs.Where(x => !x.IsDeleted)
                     .Include(x => x.Tags)
                     .Skip((page - 1) * 12)
-            .Take(12).ToListAsync();
+            .Take(3).ToListAsync();
                 return View(blogs);
             }
             else
             {
                 IEnumerable<Blog> blogs = await _context.Blogs.Where(x => !x.IsDeleted).Skip((page - 1) * 12)
-           .Take(12).ToListAsync();
+           .Take(3).ToListAsync();
                 return View(blogs);
             }
         }
@@ -45,11 +45,11 @@ namespace Pages.App.Controllers
         public async Task<IActionResult> Detail(int id)
         {
           
-            ViewBag.Blogs = await _context.Blogs.Where(x => !x.IsDeleted)
+            ViewBag.Blogs = await _context.Blogs.Where(x=>x.Id == id && !x.IsDeleted)
                      .Include(x => x.Tags)
                      .Take(3)
                     .ToListAsync();
-            Blog? blog = await _context.Blogs.Where(x => !x.IsDeleted)
+            Blog? blog = await _context.Blogs.Where(x => x.Id == id && !x.IsDeleted)
                  .Include(x => x.Tags)
                     .FirstOrDefaultAsync();
 

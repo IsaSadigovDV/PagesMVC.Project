@@ -1,5 +1,45 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@model IEnumerable<Author>
+
+@foreach(var item in Model){
+	
+<div class="container blue d-flex space-between author-section">
+    <div>
+        <img class="author-image"
+             src="~/assets/img/@item.Image"
+             alt="Author John Abraham" />
+     </div>
+
+    <div class="about-author-section">
+        <h2 class="about-author-underline blue">About Author</h2>
+        <p class="gray">
+           @item.Description
+        </p>
+        <div class="yellow-border-section d-flex space-between">
+            <div class="border-right-yellow">
+                <h2>02</h2>
+                <p class="gray">Books Published</p>
+            </div>
+            <div class="border-right-yellow">
+                <h2>4.5</h2>
+                <p class="gray">User Reviews</p>
+            </div>
+            <div>
+                    <h2>
+                        @foreach (var genr in item.AuthoreGenres.Where(x => x.GenreId == item.Id))
+                        {
+
+                            @String.Concat(genr.Author.Name," ")
+                            ;
+                        }
+                    </h2>
+                <p class="gray">Genre</p>
+            </div>
+        </div>
+        <div class="visit-card-container">
+            <img class="visit-card"
+                 src="../assets/img/visit-card.png"
+                 alt="visit card" />
+        </div>
+    </div>
+</div>
 }

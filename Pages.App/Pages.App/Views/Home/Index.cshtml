@@ -78,7 +78,7 @@
         <div class="d-flex space-between books-section">
             <div class="swiper book-swiper">
                 <div class="swiper-wrapper">
-                    @await Html.PartialAsync("_book",Model.Books)
+                    @await Html.PartialAsync("_Book",Model.Books)
                 </div>
             </div>
         </div>
@@ -87,42 +87,7 @@
 <!-- author`s books end -->
 <!-- about author start -->
 <div class="bg-light-blue">
-    <div class="container blue d-flex space-between author-section">
-        <div>
-            <img class="author-image"
-                 src="../assets/img/Author.jpg"
-                 alt="Author John Abraham" />
-        </div>
-
-        <div class="about-author-section">
-            <h2 class="about-author-underline blue">About Author</h2>
-            <p class="gray">
-                All the Lorem Ipsum generators on the Internet tend to repeated
-                predefined chunks as necessary, making this the first true value
-                generator on the Internet. It uses a dictionary of over 200 Latin
-                words, combined with a handful.
-            </p>
-            <div class="yellow-border-section d-flex space-between">
-                <div class="border-right-yellow">
-                    <h2>02</h2>
-                    <p class="gray">Books Published</p>
-                </div>
-                <div class="border-right-yellow">
-                    <h2>4.5</h2>
-                    <p class="gray">User Reviews</p>
-                </div>
-                <div>
-                    <h2>04</h2>
-                    <p class="gray">Best seller awards</p>
-                </div>
-            </div>
-            <div class="visit-card-container">
-                <img class="visit-card"
-                     src="../assets/img/visit-card.png"
-                     alt="visit card" />
-            </div>
-        </div>
-    </div>
+    @await Html.PartialAsync("_Author",Model.Authors)
 </div>
 <!-- about author end -->
 <!-- trusted by the best start -->

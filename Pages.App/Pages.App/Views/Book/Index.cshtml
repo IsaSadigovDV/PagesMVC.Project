@@ -1,4 +1,12 @@
-﻿  <!-- my store section start -->
+﻿@using Pages.Core.Entities;
+<link rel="stylesheet" href="~/Css/store.css">
+<link rel="stylesheet" href="~/Css/home.css">
+@model IEnumerable<Book>
+@{
+    int i = 0;
+}
+
+ <!-- my store section start -->
 <div class="bg-blue">
     <div class="nav container d-flex">
         <h1 class="unique-text">My Store</h1>
@@ -14,8 +22,8 @@
     <div class="container d-flex">
         <div class="search-container">
             <form class="search-form" action="">
-                <input class="search-bar " type="text" placeholder="Search.." name="search">
-                <button class="btn btn-bg-blue" type="submit">Submit</button>
+                <input class="search-bar searchInput " type="search" placeholder="Search.." name="search">
+                <button class="btn btn-bg-blue SearchButton" type="submit">Submit</button>
             </form>
         </div>
     </div>
@@ -23,129 +31,77 @@
 <!-- search section end -->
 <!-- author`s books start -->
 <div class="books-section">
-    <div class="container d-flex all-books">
-
-        <!-- 1 -->
-        <div class="d-flex blue books-sec-cont">
-
-            <div class="books-images bg-light-blue">
-                <img class="books-small"
-                     src="../assets/img/Book-sm-audio-atomic.png"
-                     alt="The dark light book cover" />
-            </div>
-            <div class="books-text-container d-flex">
-                <div class="d-flex space-between">
-                    <h3 class="blue">Atomic One`s</h3>
-                    <h3 class="yellow">$23.89</h3>
-                </div>
-                <p class="gray">
-                    Many variations of passages of Lorem Ipsum willing araise
-                    alteration in some form.
-                </p>
-                <h4 class="bulleted">Printed Books</h4>
-                <button class="btn-no-bg btn-small">Order Today</button>
-            </div>
-        </div>
-        <!-- 2 -->
-        <div class="d-flex blue books-sec-cont">
-            <div class="books-images bg-light-blue">
-                <img class="books-small"
-                     src="../assets/img/Book-sm-audio-atomic.png"
-                     alt="The dark light book cover" />
-            </div>
-            <div class="books-text-container d-flex">
-                <div class="d-flex space-between">
-                    <h3 class="blue">Atomic One`s</h3>
-                    <h3 class="yellow">$23.89</h3>
-                </div>
-                <p class="gray">
-                    Many variations of passages of Lorem Ipsum willing araise
-                    alteration in some form.
-                </p>
-                <h4 class="bulleted">Printed Books</h4>
-                <button class="btn-no-bg btn-small">Order Today</button>
-            </div>
-        </div>
-        <!-- 3 -->
-        <div class="d-flex blue books-sec-cont">
-            <div class="books-images bg-light-blue">
-                <img class="books-small"
-                     src="../assets/img/Book-sm-disc-atomic.png"
-                     alt="The dark light book cover" />
-            </div>
-            <div class="books-text-container d-flex">
-                <div class="d-flex space-between">
-                    <h3 class="blue">Atomic One`s</h3>
-                    <h3 class="yellow">$23.89</h3>
-                </div>
-                <p class="gray">
-                    Many variations of passages of Lorem Ipsum willing araise
-                    alteration in some form.
-                </p>
-                <h4 class="bulleted">Printed Books</h4>
-                <button class="btn-no-bg btn-small">Order Today</button>
-            </div>
-        </div>
-        <!-- 4 -->
-        <div class="d-flex blue books-sec-cont">
-            <div class="books-images bg-light-blue">
-                <img class="books-small"
-                     src="../assets/img/Book-sm-disc-light.png"
-                     alt="The dark light book cover" />
-            </div>
-            <div class="books-text-container d-flex">
-                <div class="d-flex space-between">
-                    <h3 class="blue">The Dark Light</h3>
-                    <h3 class="yellow">$23.89</h3>
-                </div>
-                <p class="gray">
-                    Many variations of passages of Lorem Ipsum willing araise
-                    alteration in some form.
-                </p>
-                <h4 class="bulleted">Printed Books</h4>
-                <button class="btn-no-bg btn-small">Order Today</button>
-            </div>
-        </div>
-        <!-- 5 -->
-        <div class="d-flex blue books-sec-cont">
-            <div class="books-images bg-light-blue">
-                <img class="books-small"
-                     src="../assets/img/Book-sm-audio-light.png"
-                     alt="The dark light book cover" />
-            </div>
-            <div class="books-text-container d-flex">
-                <div class="d-flex space-between">
-                    <h3 class="blue">The Dark Light</h3>
-                    <h3 class="yellow">$23.89</h3>
-                </div>
-                <p class="gray">
-                    Many variations of passages of Lorem Ipsum willing araise
-                    alteration in some form.
-                </p>
-                <h4 class="bulleted">Printed Books</h4>
-                <button class="btn-no-bg btn-small">Order Today</button>
-            </div>
-        </div>
-        <!-- 6 -->
-        <div class="d-flex blue books-sec-cont">
-            <div class="books-images bg-light-blue">
-                <img class="books-small"
-                     src="../assets/img/Book-sm-disc-light.png"
-                     alt="The dark light book cover" />
-            </div>
-            <div class="books-text-container d-flex">
-                <div class="d-flex space-between">
-                    <h3 class="blue">The Dark Light</h3>
-                    <h3 class="yellow">$23.89</h3>
-                </div>
-                <p class="gray">
-                    Many variations of passages of Lorem Ipsum willing araise
-                    alteration in some form.
-                </p>
-                <h4 class="bulleted">Printed Books</h4>
-                <button class="btn-no-bg btn-small">Order Today</button>
-            </div>
+    <div class="container d-flex all-books book_container">
+        @await Html.PartialAsync("_Book",Model)
+        <div class="col-md-12">
+            <ul class="pagination">
+                <li><a class=" page-link" asp-controller="book" asp-action="index" asp-route-page="1">«</a></li>
+                @for (int j = 1; j <= ViewBag.TotalPage; j++)
+                {
+                    @if (j == ViewBag.CurrentPage)
+                    {
+                        <li class="page-item active"><a class=" page-link" asp-controller="book" asp-action="index" asp-route-page="@j">@j</a></li>
+                    }
+                    else
+                    {
+                        <li class="page-item"><a class=" page-link" asp-controller="book" asp-action="index" asp-route-page="@j">@j</a></li>
+                    }
+                }
+                <li><a class="page-link" asp-controller="book" asp-action="index" asp-route-page="@ViewBag.TotalPage">»</a></li>
+            </ul>
         </div>
     </div>
 </div>
 <!-- author`s books end -->
+<script>
+    const submit = document.querySelector(".SearchButton");
+    const searchInput = document.querySelector(".searchInput");
+    const container = document.querySelector(".book_container");
+
+    searchInput.addEventListener("input", (e) => {
+        e.preventDefault();
+
+        if (searchInput.value == "") {
+            location.reload();
+        }
+
+        let href = `/book/search?search=${searchInput.value}`;
+
+        fetch(href)
+            .then((x) => x.json())
+            .then((x) => {
+                container.innerHTML = "";
+                x.forEach((item) => {
+                    let view = `
+                            <div class="swiper-slide">
+                                <div class="d-flex blue books-sec-cont">
+                                    <a asp-action="detail" asp-controller="book" asp-route-id="${item.Id}">
+                                        <img class="books-small" src="~/assets/img/${item.Image}" alt="Atomic ones book cover" />
+                                    </a>
+                                    <div class="books-small-text">
+                                        <h3>${item.Name}</h3>
+                                        <p style="height:72px;overflow:hidden;">
+                                            ${item.Description}
+                                        </p>
+                                        <div class="d-flex blue books-pages-cont">
+                                            <div class="bulleted">
+                                                <h4>Pages: </h4>
+                                                <p class="gray">${item.PaperCount} pages</p>
+                                            </div>
+                                            <div class="bulleted">
+                                                <h4>Language: </h4>
+                                            </div>
+                                        </div>
+                                        <button class="btn-no-bg">
+                                            <a asp-action="detail" asp-controller="book" asp-route-id="${item.Id}" class="blue">Order Today</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+
+                    container.innerHTML += view;
+                });
+            });
+    });
+</script>

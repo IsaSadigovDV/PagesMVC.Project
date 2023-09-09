@@ -23,7 +23,9 @@ namespace Pages.App.Controllers
             {
                 Sponsors = _context.Sponsors.Where(x => !x.IsDeleted).ToList(),
                 Blogs = _context.Blogs.Where(x => !x.IsDeleted).ToList(),
-                Books = _context.Books.Where(x => !x.IsDeleted).ToList()
+                Books = _context.Books.Where(x => !x.IsDeleted).Include(x => x.BookLanguages).ThenInclude(x => x.Language).ToList(),
+
+                Authors = _context.Authors.Where(x => !x.IsDeleted).Include(x=>x.AuthoreGenres).ThenInclude(x=>x.Genre).ToList()
             };
             return View(homeVM);
         }

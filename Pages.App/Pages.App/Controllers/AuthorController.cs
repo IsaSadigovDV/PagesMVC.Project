@@ -22,13 +22,13 @@ namespace Pages.App.Controllers
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 4);
             ViewBag.CurrentPage = page;
 
-            ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
-            ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
-            ViewBag.Category = new SelectList(_context.Categories.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Language = new SelectList(_context.Languages.Where(x => x.Id == id && !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Genre = new SelectList(_context.Genres.Where(x => x.Id == id && !x.IsDeleted).ToList(), "Id", "Name");
+            ViewBag.Category = new SelectList(_context.Categories.Where(x => x.Id == id && !x.IsDeleted).ToList(), "Id", "Name");
 
             if (id == null)
             {
-                IEnumerable<Author> authors = await _context.Authors.Where(x => !x.IsDeleted)
+                IEnumerable<Author> authors = await _context.Authors.Where(x=>x.Id==id && !x.IsDeleted)
                      .Include(x => x.BookAuthors)
                      .ThenInclude(x => x.Author)
                      .Include(x => x.AuthorLanguages)
@@ -51,7 +51,7 @@ namespace Pages.App.Controllers
 
         public async Task<IActionResult> Detail(int? id, int page = 1)
         {
-            ViewBag.Author = await _context.Authors.Where(x=>!x.IsDeleted)
+            ViewBag.Author = await _context.Authors.Where(x => x.Id == id && !x.IsDeleted)
                     .Include(x => x.BookAuthors)
                      .ThenInclude(x => x.Author)
                      .Include(x => x.AuthorLanguages)
@@ -63,7 +63,7 @@ namespace Pages.App.Controllers
                 .Take(3)
                 .ToListAsync();
 
-            Author? author = await _context.Authors.Where(x => !x.IsDeleted)
+            Author? author = await _context.Authors.Where(x => x.Id == id && !x.IsDeleted)
                  .Include(x => x.BookAuthors)
                      .ThenInclude(x => x.Author)
                      .Include(x => x.AuthorLanguages)
