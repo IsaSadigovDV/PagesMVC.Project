@@ -21,7 +21,7 @@
 <div class="search-section">
     <div class="container d-flex">
         <div class="search-container">
-            <form class="search-form" action="">
+            <form id="search" class="search-form" action="">
                 <input class="search-bar searchInput " type="search" placeholder="Search.." name="search">
                 <button class="btn btn-bg-blue SearchButton" type="submit">Submit</button>
             </form>
@@ -32,7 +32,7 @@
 <!-- author`s books start -->
 <div class="books-section">
     <div class="container d-flex all-books book_container">
-        @await Html.PartialAsync("_Book",Model)
+        @await Html.PartialAsync("_Book", Model)
         <div class="col-md-12">
             <ul class="pagination">
                 <li><a class=" page-link" asp-controller="book" asp-action="index" asp-route-page="1">«</a></li>
@@ -52,11 +52,13 @@
         </div>
     </div>
 </div>
+
 <!-- author`s books end -->
 <script>
     const submit = document.querySelector(".SearchButton");
     const searchInput = document.querySelector(".searchInput");
     const container = document.querySelector(".book_container");
+
 
     searchInput.addEventListener("input", (e) => {
         e.preventDefault();
@@ -64,44 +66,47 @@
         if (searchInput.value == "") {
             location.reload();
         }
-
         let href = `/book/search?search=${searchInput.value}`;
-
+        console.log(href)
         fetch(href)
-            .then((x) => x.json())
-            .then((x) => {
+            .then((response) => response.json())
+            .then((data) => {
                 container.innerHTML = "";
-                x.forEach((item) => {
+                data.forEach((item) => {
                     let view = `
-                            <div class="swiper-slide">
-                                <div class="d-flex blue books-sec-cont">
-                                    <a asp-action="detail" asp-controller="book" asp-route-id="${item.Id}">
-                                        <img class="books-small" src="~/assets/img/${item.Image}" alt="Atomic ones book cover" />
-                                    </a>
-                                    <div class="books-small-text">
-                                        <h3>${item.Name}</h3>
-                                        <p style="height:72px;overflow:hidden;">
-                                            ${item.Description}
-                                        </p>
-                                        <div class="d-flex blue books-pages-cont">
-                                            <div class="bulleted">
-                                                <h4>Pages: </h4>
-                                                <p class="gray">${item.PaperCount} pages</p>
-                                            </div>
-                                            <div class="bulleted">
-                                                <h4>Language: </h4>
-                                            </div>
+                    <div class="swiper-slide">
+                        <div class="d-flex blue books-sec-cont">
+                            <a href="/book/detail/${item.id}" class="blue">
+
+                                <img class="books-small" src="assets/img/${item.image}" alt="Atomic ones book cover" />
+                            </a>
+                            <div class="books-small-text">
+                                <h3>${item.name}</h3>
+                                <p style="height: 72px; overflow: hidden;">
+                                    ${item.description}
+                                </p>
+                                <div class="d-flex blue books-pages-cont">
+                                    <div class="bulleted">
+                                        <h4>Pages: </h4>
+                                        <p class="gray">${item.paperCount} pages</p>
+                                    </div>
+                                         <div class="bulleted">
+                                            <h4>Price: </h4>
+                                            <p class="gray">${item.price}USD </p>
                                         </div>
-                                        <button class="btn-no-bg">
-                                            <a asp-action="detail" asp-controller="book" asp-route-id="${item.Id}" class="blue">Order Today</a>
-                                        </button>
                                     </div>
                                 </div>
+                                <button class="btn-no-bg">
+                                    <a href="/book/detail/${item.id}" class="blue">Order Today</a>
+                                </button>
                             </div>
-                        `;
+                        </div>
+                    </div>
+                `;
 
                     container.innerHTML += view;
                 });
             });
+
     });
 </script>

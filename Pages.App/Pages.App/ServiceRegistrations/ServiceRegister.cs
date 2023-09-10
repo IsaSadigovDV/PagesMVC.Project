@@ -15,6 +15,7 @@ namespace Pages.App.ServiceRegistrations
             {
                 opt.UseSqlServer(configuration.GetConnectionString("Default"));
             });
+            services.AddScoped<IBasketService, BasketService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddIdentity<AppUser, IdentityRole>()
                 .AddDefaultTokenProviders()

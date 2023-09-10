@@ -136,17 +136,9 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, mollitia.
     </p>
 
-    <form class="comment-form">
+    <form class="comment-form" method="post" asp-action="postComment" asp-controller="Book">
         <label for="name">
-            <p>Name</p>
-
-            <input type="text" name="name" id="name" />
-        </label>
-
-        <label for="email">
-            <p>Email</p>
-
-            <input type="email" name="email" id="email" />
+            <input type="text"  hidden value="@Model.Book.Id" name="bookId" />
         </label>
 
         <label for="subject">
@@ -155,11 +147,11 @@
             <input type="text" name="subject" id="subject" />
         </label>
 
-        <p>Message</p>
+        <p>Body</p>
 
-        <textarea name="message" cols="20" rows="5"></textarea>
+        <textarea name="Body" cols="20" rows="5"></textarea>
 
-        <button>Send message</button>
+        <button type="submit">Send message</button>
     </form>
 </div>
 <!-- add comment section end -->

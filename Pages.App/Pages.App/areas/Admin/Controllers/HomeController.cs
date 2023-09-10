@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Pages.Core.Entities;
 using System.Data;
 
 namespace Pages.App.areas.Admin.Controllers

@@ -25,6 +25,9 @@ namespace Pages.App.Context
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Social> Socials { get; set; }
         public DbSet<WhatLearn> WhatLearns { get; set; }
+        public DbSet<Basket> Baskets { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
 
         public PagesDbContext(DbContextOptions<PagesDbContext> options) : base(options)

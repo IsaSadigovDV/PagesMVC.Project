@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Book>
 
 @foreach(var item in Model){
-    <div class="swiper-slide"style=" display: inline-block; width: 30%; margin: 10px; float: left;">
+    <div class="swiper-slide"style=" display: inline-block; width: 25%; margin: 10px; float: left;">
         <div class="d-flex blue books-sec-cont">
             <a asp-action="detail" asp-controller="book" asp-route-id="@item.Id">
                 <img class="books-small"
@@ -44,48 +44,3 @@
     </div>
 }
 
-@foreach (var item in Model)
-{
-    <div class="swiper-slide" style=" display: inline-block; width: 30%; margin: 10px; float: left;">
-        <div class="d-flex blue books-sec-cont">
-            <a asp-action="detail" asp-controller="book" asp-route-id="@item.Id">
-                <img class="books-small"
-                 src="~/assets/img/@item.Image"
-                 alt="Atomic one`s book cover" />
-            </a>
-            <div class="books-small-text">
-                <h3>@item.Name</h3>
-                <p style="height:72px;overflow:hidden;">
-                        @if (item.Description.Length <= 80)
-                        {
-                            @item.Description
-                        }
-                        else
-                        {
-                            @item.Description.Substring(0, 80)
-                        }
-                </p>
-                <div class="d-flex blue books-pages-cont">
-                    <div class="bulleted">
-                        <h4>Pages:</h4>
-                        <p class="gray">@item.PaperCount pages</p>
-                    </div>
-                    <div class="bulleted">
-                        <h4>Language:</h4>
-                        <p class="gray">
-                            @foreach (var lang in item.BookLanguages.Where(x => x.BookId == item.Id))
-                            {
-
-                                @String.Concat(lang.Language.Name," ")
-                                ;
-                            }
-                        </p>
-                    </div>
-                </div>
-                <button class="btn-no-bg">
-                    <a asp-action="detail" asp-controller="book" asp-route-id="@item.Id" class="blue">Order Today</a>
-                </button>
-            </div>
-        </div>
-    </div>
-}

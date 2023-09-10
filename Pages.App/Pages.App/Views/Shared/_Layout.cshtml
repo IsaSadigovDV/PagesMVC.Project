@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Store</title>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+@*    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />*@
     <link rel="stylesheet" href="~/Css/home.css" />
-
+	<link href="~/assets/lib/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <link rel="stylesheet"
           href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
     <link rel="stylesheet"
@@ -74,14 +74,14 @@
                             <i class="fa-regular fa-rectangle-xmark fa-lg"></i>
                         </div>
                     </div>
-                    <li><a href="">Home</a></li>
+                    <li><a asp-action="index" asp-controller="home">Home</a></li>
                     <li class="dropdown-wrapper">
                         <a href="">
                             Pages <i class="fa-solid fa-chevron-down fa-xs"></i>
                         </a>
 
                         <ul class="dropdown">
-                            <li><a href="./store.html">Books</a></li>
+                            <li><a asp-action="index" asp-controller="book">Books</a></li>
 
                             <li><a asp-action="index" asp-controller="blog">Blogs</a></li>
                         </ul>
@@ -249,7 +249,11 @@
         </div>
     </footer>
     <!-- footer end -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    @*<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>*@
+ 
+	<script src="~/assets/lib/swiper/swiper-bundle.js"></script>
+	<script src="~/assets/lib/swiper/swiper-bundle.min.js"></script>
+	<a href="~/assets/lib/swiper/swiper-bundle.min.js.map">~/assets/lib/swiper/swiper-bundle.min.js.map</a>
     <script src="../js/swiper.js"></script>
     <script src="../Js/home.js"></script>
 </body>

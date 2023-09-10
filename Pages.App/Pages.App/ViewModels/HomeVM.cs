@@ -8,5 +8,7 @@ namespace Pages.App.ViewModels
         public IEnumerable<Sponsor> Sponsors { get; set;}
         public IEnumerable<Book> Books { get; set;}
         public IEnumerable<Author> Authors { get; set;}
+        public IEnumerable<Comment> Comments { get; set; }
+
     }
 }

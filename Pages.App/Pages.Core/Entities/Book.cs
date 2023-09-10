@@ -32,7 +32,7 @@ namespace Pages.Core.Entities
         public int[] language { get; set; }
         [NotMapped]
         public int[] author { get; set; }
-        
+        public List<Comment>? Comments { get; set; }
 
     }
 }

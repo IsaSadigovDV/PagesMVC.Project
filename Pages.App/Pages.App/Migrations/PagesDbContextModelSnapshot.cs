@@ -370,6 +370,69 @@ namespace Pages.App.Migrations
                     b.ToTable("AuthorSocials");
                 });
 
+            modelBuilder.Entity("Pages.Core.Entities.Basket", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("Baskets");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.BasketItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("BasketId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BookCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BasketId");
+
+                    b.HasIndex("BookId");
+
+                    b.ToTable("BasketItems");
+                });
+
             modelBuilder.Entity("Pages.Core.Entities.Blog", b =>
                 {
                     b.Property<int>("Id")
@@ -560,6 +623,46 @@ namespace Pages.App.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Body")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("BookId");
+
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("Pages.Core.Entities.Country", b =>
@@ -998,6 +1101,36 @@ namespace Pages.App.Migrations
                     b.Navigation("Social");
                 });
 
+            modelBuilder.Entity("Pages.Core.Entities.Basket", b =>
+                {
+                    b.HasOne("Pages.Core.Entities.AppUser", "AppUser")
+                        .WithMany("Baskets")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.BasketItem", b =>
+                {
+                    b.HasOne("Pages.Core.Entities.Basket", "Basket")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("BasketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Pages.Core.Entities.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+
+                    b.Navigation("Book");
+                });
+
             modelBuilder.Entity("Pages.Core.Entities.Blog", b =>
                 {
                     b.HasOne("Pages.Core.Entities.Tag", "Tags")
@@ -1066,6 +1199,23 @@ namespace Pages.App.Migrations
                     b.Navigation("Language");
                 });
 
+            modelBuilder.Entity("Pages.Core.Entities.Comment", b =>
+                {
+                    b.HasOne("Pages.Core.Entities.AppUser", "AppUser")
+                        .WithMany("Comments")
+                        .HasForeignKey("AppUserId");
+
+                    b.HasOne("Pages.Core.Entities.Book", "Book")
+                        .WithMany("Comments")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Book");
+                });
+
             modelBuilder.Entity("Pages.Core.Entities.Social", b =>
                 {
                     b.HasOne("Pages.Core.Entities.Setting", "Setting")
@@ -1086,6 +1236,13 @@ namespace Pages.App.Migrations
                     b.Navigation("Setting");
                 });
 
+            modelBuilder.Entity("Pages.Core.Entities.AppUser", b =>
+                {
+                    b.Navigation("Baskets");
+
+                    b.Navigation("Comments");
+                });
+
             modelBuilder.Entity("Pages.Core.Entities.Author", b =>
                 {
                     b.Navigation("AuthorLanguages");
@@ -1097,11 +1254,18 @@ namespace Pages.App.Migrations
                     b.Navigation("BookAuthors");
                 });
 
+            modelBuilder.Entity("Pages.Core.Entities.Basket", b =>
+                {
+                    b.Navigation("BasketItems");
+                });
+
             modelBuilder.Entity("Pages.Core.Entities.Book", b =>
                 {
                     b.Navigation("BookAuthors");
 
                     b.Navigation("BookLanguages");
+
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("Pages.Core.Entities.Category", b =>

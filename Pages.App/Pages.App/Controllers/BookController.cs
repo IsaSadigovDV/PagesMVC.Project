@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Pages.App.Context;
+using Pages.App.Services.Interfaces;
 using Pages.App.ViewModels;
 using Pages.Core.Entities;
 
@@ -10,10 +13,15 @@ namespace Pages.App.Controllers
     public class BookController : Controller
     {
         private readonly PagesDbContext _context;
-
-        public BookController(PagesDbContext context)
+        private readonly IHttpContextAccessor _httpContext;
+        private readonly IBasketService _basketService;
+        private readonly UserManager<AppUser> _userManager;
+        public BookController(PagesDbContext context, IHttpContextAccessor httpContext, IBasketService basketService, UserManager<AppUser> userManager)
         {
             _context = context;
+            _httpContext = httpContext;
+            _basketService = basketService;
+            _userManager = userManager;
         }
         public async Task<IActionResult> Index(int? id, int page = 1, string? search = null)
         {
@@ -33,8 +41,8 @@ namespace Pages.App.Controllers
                      .ThenInclude(x => x.Author)
                      .Include(x => x.BookLanguages)
                      .ThenInclude(x => x.Language)
-                     .Include(x=>x.BookAuthors)
-                     .ThenInclude(x=>x.Author)
+                     .Include(x => x.BookAuthors)
+                     .ThenInclude(x => x.Author)
                     .Include(x => x.Genre)
                     .Skip((page - 1) * 12)
             .Take(12).ToListAsync();
@@ -52,9 +60,10 @@ namespace Pages.App.Controllers
             int TotalCount = _context.Books.Where(x => !x.IsDeleted && x.Name.Trim().ToLower().Contains(search.Trim().ToLower())).Count();
             ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 3);
             ViewBag.CurrentPage = page;
+
             List<Book> books = await _context.Books.Where(x => !x.IsDeleted && x.Name.Trim().ToLower().Contains(search.Trim().ToLower()))
-                     .Include(x => x.BookLanguages)
-                     .ThenInclude(x => x.Language)
+                    //.Include(x => x.BookLanguages)
+                    //.ThenInclude(x => x.Language)
                     .Skip((page - 1) * 3).Take(3)
                 .ToListAsync();
             return Json(books);
@@ -64,7 +73,7 @@ namespace Pages.App.Controllers
         public async Task<IActionResult> Detail(int id)
         {
 
-            ViewBag.Books = await _context.Books.Where(x => x.Id == id &&!x.IsDeleted)
+            ViewBag.Books = await _context.Books.Where(x => x.Id == id && !x.IsDeleted)
                       .Include(x => x.BookAuthors)
                      .ThenInclude(x => x.Author)
                      .Include(x => x.BookLanguages)
@@ -83,7 +92,7 @@ namespace Pages.App.Controllers
                      .ThenInclude(x => x.Author)
                     .Include(x => x.Genre)
                     .FirstOrDefaultAsync();
-
+            IEnumerable<Comment> comments = await _context.Comments.Where(x => x.BookId == id && !x.IsDeleted).ToListAsync();
             if (book is null)
             {
                 return NotFound();
@@ -96,6 +105,37 @@ namespace Pages.App.Controllers
             return View(bookVM);
         }
 
+        public async Task<IActionResult> AddBasket(int id)
+        {
+            await _basketService.AddBasket(id);
+            return Json(new { status = 200 });
+        }
+
+        public async Task<IActionResult> GetAllBaskets()
+        {
+            var result = await _basketService.GetAllBaskets();
+            return Json(result);
+        }
+        public async Task<IActionResult> RemoveBasket(int id)
+        {
+            await _basketService.Remove(id);
+            return RedirectToAction("index", "home");
+        }
+        [HttpPost]
+        [Authorize(Roles ="User")]
+        public async Task<IActionResult> PostComment(Comment comment)
+        {
+            AppUser appUser = await _userManager.FindByNameAsync(User.Identity.Name);
+            comment.AppUserId = appUser.Id;
+            comment.AppUser = appUser;
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            await _context.Comments.AddAsync(comment);
+            await _context.SaveChangesAsync();
+            return Redirect(Request.Headers["Referer"].ToString());
+        }
     }
 }
 
