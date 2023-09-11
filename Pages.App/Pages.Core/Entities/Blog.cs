@@ -16,6 +16,8 @@ namespace Pages.Core.Entities
         public string Description { get; set; }
         public int TagId { get; set; }
         public Tag? Tags { get; set; }
+        public List<Comment>? Comments { get; set; }
+
         [NotMapped]
         public IFormFile? FormFile { get; set; }
 

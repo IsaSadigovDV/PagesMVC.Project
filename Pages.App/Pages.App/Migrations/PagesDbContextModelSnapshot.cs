@@ -636,11 +636,14 @@ namespace Pages.App.Migrations
                     b.Property<string>("AppUserId")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int?>("BlogId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Body")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("BookId")
+                    b.Property<int?>("BookId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedDate")
@@ -659,6 +662,8 @@ namespace Pages.App.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AppUserId");
+
+                    b.HasIndex("BlogId");
 
                     b.HasIndex("BookId");
 
@@ -1205,13 +1210,17 @@ namespace Pages.App.Migrations
                         .WithMany("Comments")
                         .HasForeignKey("AppUserId");
 
+                    b.HasOne("Pages.Core.Entities.Blog", "Blog")
+                        .WithMany("Comments")
+                        .HasForeignKey("BlogId");
+
                     b.HasOne("Pages.Core.Entities.Book", "Book")
                         .WithMany("Comments")
-                        .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BookId");
 
                     b.Navigation("AppUser");
+
+                    b.Navigation("Blog");
 
                     b.Navigation("Book");
                 });
@@ -1257,6 +1266,11 @@ namespace Pages.App.Migrations
             modelBuilder.Entity("Pages.Core.Entities.Basket", b =>
                 {
                     b.Navigation("BasketItems");
+                });
+
+            modelBuilder.Entity("Pages.Core.Entities.Blog", b =>
+                {
+                    b.Navigation("Comments");
                 });
 
             modelBuilder.Entity("Pages.Core.Entities.Book", b =>

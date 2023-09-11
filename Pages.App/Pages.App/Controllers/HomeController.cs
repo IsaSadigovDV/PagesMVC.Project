@@ -27,9 +27,14 @@ namespace Pages.App.Controllers
                 Comments = _context.Comments.Where(x => !x.IsDeleted)
                 .OrderByDescending(c=>c.CreatedDate)
                 .Include(x=>x.AppUser)
+                .Include(x=>x.Blog)
+                .Include(c=>c.Book)
                 .Take(5)
                 .ToList(),
-                Authors = _context.Authors.Where(x => !x.IsDeleted).Include(x=>x.AuthoreGenres).ThenInclude(x=>x.Genre).ToList()
+                Authors = _context.Authors.Where(x => !x.IsDeleted)
+                .OrderByDescending(c=>c.CreatedDate)
+                .Take(1)
+                .Include(x=>x.AuthoreGenres).ThenInclude(x=>x.Genre).ToList()
             };
             return View(homeVM);
         }
