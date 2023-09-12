@@ -30,7 +30,7 @@ namespace Pages.App.Controllers
             {
                 IEnumerable<Author> authors = await _context.Authors.Where(x=>x.Id==id && !x.IsDeleted)
                      .Include(x => x.BookAuthors)
-                     .ThenInclude(x => x.Author)
+                     .ThenInclude(x => x.Book)
                      .Include(x => x.AuthorLanguages)
                      .ThenInclude(x => x.Language)
                      .Include(x=>x.AuthoreGenres)
