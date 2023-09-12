@@ -4,9 +4,11 @@
 	
 <div class="container blue d-flex space-between author-section">
     <div>
-        <img class="author-image"
-             src="~/assets/img/@item.Image"
-             alt="Author John Abraham" />
+            <a asp-action="detail" asp-controller="author" asp-route-id="@item.Id">
+                <img class="author-image"
+                 src="~/assets/img/@item.Image"
+                 alt="author" />
+            </a>
      </div>
 
     <div class="about-author-section">
@@ -24,14 +26,14 @@
                 <p class="gray">User Reviews</p>
             </div>
             <div>
-                    <h2>
+                  @*  <h2>
                         @foreach (var genr in item.AuthoreGenres.Where(x => x.GenreId == item.Id))
                         {
 
                             @String.Concat(genr.Author.Name," ")
                             ;
                         }
-                    </h2>
+                    </h2>*@
                 <p class="gray">Genre</p>
             </div>
         </div>

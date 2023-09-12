@@ -31,14 +31,12 @@ namespace Pages.App.Areas.Admin.Controllers
             ViewBag.CurrentPage = page;
 
             IEnumerable<Author> Authors = await _context.Authors.Where(x => !x.IsDeleted)
-                //.Include(x => x.BookAuthors)
-                //.ThenInclude(x => x.Book)
-                //.Include(x => x.AuthorLanguages)
-                //.ThenInclude(x => x.Language)
-                //.Include(x => x.AuthoreGenres)
-                //.ThenInclude(x => x.GenreId)
-                //.Include(x => x.AuthorSocials)
-                //.ThenInclude(x => x.Social)   
+                .Include(x => x.BookAuthors)
+                .ThenInclude(x => x.Book)
+                .Include(x => x.AuthorLanguages)
+                .ThenInclude(x => x.Language)
+                .Include(x => x.AuthoreGenres)
+                .ThenInclude(x => x.Genre)
                 .Skip((page - 1) * 5).Take(5)
                 .ToListAsync();
             return View(Authors);
@@ -48,14 +46,12 @@ namespace Pages.App.Areas.Admin.Controllers
         public async Task<IActionResult> Details(int id)
         {
             Author? author = await _context.Authors.Where(x => x.Id == id && !x.IsDeleted)
-                //.Include(x => x.BookAuthors)
-                //.ThenInclude(x => x.Book)
-                //.Include(x => x.AuthorLanguages)
-                //.ThenInclude(x => x.Language)
-                //.Include(x => x.AuthoreGenres)
-                //.ThenInclude(x => x.GenreId)
-                //.Include(x => x.AuthorSocials)
-                //.ThenInclude(x => x.Social)
+                .Include(x => x.BookAuthors)
+                .ThenInclude(x => x.Book)
+                .Include(x => x.AuthorLanguages)
+                .ThenInclude(x => x.Language)
+                .Include(x => x.AuthoreGenres)
+                .ThenInclude(x => x.Genre)
                 .FirstOrDefaultAsync();
             if (author == null)
             {
@@ -150,14 +146,12 @@ namespace Pages.App.Areas.Admin.Controllers
         public async Task<IActionResult> Update(int id)
         {
             Author? author = await _context.Authors.Where(x => x.Id == id && !x.IsDeleted)
-                //.Include(x => x.BookAuthors)
-                //.ThenInclude(x => x.Book)
-                //.Include(x => x.AuthorLanguages)
-                //.ThenInclude(x => x.Language)
-                //.Include(x => x.AuthoreGenres)
-                //.ThenInclude(x => x.GenreId)
-                //.Include(x => x.AuthorSocials)
-                //.ThenInclude(x => x.Social)
+                .Include(x => x.BookAuthors)
+                .ThenInclude(x => x.Book)
+                .Include(x => x.AuthorLanguages)
+                .ThenInclude(x => x.Language)
+                .Include(x => x.AuthoreGenres)
+                .ThenInclude(x => x.Genre)
                 .FirstOrDefaultAsync();
             if (author == null)
             {
@@ -178,12 +172,10 @@ namespace Pages.App.Areas.Admin.Controllers
         public async Task<IActionResult> Update(int id, Author author, int[] language, int[] genre, int[] social)
         {
             Author? updatedAuthor = await _context.Authors.Where(x => x.Id == id && !x.IsDeleted)
-                //.Include(x => x.AuthorLanguages)
-                //.ThenInclude(x => x.Language)
-                //.Include(x => x.AuthoreGenres)
-                //.ThenInclude(x => x.GenreId)
-                //.Include(x => x.AuthorSocials)
-                //.ThenInclude(x => x.Social)
+                .Include(x => x.AuthorLanguages)
+                .ThenInclude(x => x.Language)
+                .Include(x => x.AuthoreGenres)
+                .ThenInclude(x => x.Genre)
              .FirstOrDefaultAsync();
             if (author == null)
             {

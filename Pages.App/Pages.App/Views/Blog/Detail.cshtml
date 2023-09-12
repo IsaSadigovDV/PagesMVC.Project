@@ -13,8 +13,8 @@
 <!-- Single blog txt section end -->
 <!-- single blog start -->
 <div class="container single-blog-container d-flex f-dir-column">
-    <div class="blog-image">
-        <img src="~/assets/img/@Model.Blog.Image" alt="girl reading a book" />
+    <div class="blog-image" style="max-width:100%">
+        <img src="~/assets/img/@Model.Blog.Image" style="width:100%; height:500px" alt="girl reading a book" />
     </div>
     <div>
         <h5 class="blue">@Model.Blog.CreatedDate.Month/ @Model.Blog.CreatedDate.Day, @Model.Blog.CreatedDate.Year  / @Model.Blog.Tags.Name</h5>
@@ -41,8 +41,8 @@
         </p>
     </div>
     <div class="bg-blue quote">
-        <img class="quote-1" src="../assets/img/quote.png" alt="quote vector" />
-        <img class="quote-2" src="../assets/img/quote.png" alt="quote vector" />
+        <img class="quote-1" src="~/assets/img/quote.png" alt="quote vector" />
+        <img class="quote-2" src="~/assets/img/quote.png" alt="quote vector" />
         <p>
             “Crowdsource term sheet freemium beta stealth responsive web design
             niche market rock star channels.”
@@ -57,13 +57,23 @@
             as opposed.
         </p>
         <ol class="blue ol-list">
-            <li>
-                It has roots in a piece of classical Latin literature from 45 BC,
-            </li>
-            <li>To generate Lorem Ipsum which looks reasonable</li>
-            <li>The first line of Lorem Ipsum, "Lorem ipsum” dolor sit amet</li>
-            <li>Be standard chunk of Lorem used since the 1500s</li>
+     @*       @foreach (var comment in Model.Comments)
+            {
+                if (comment != null) // Add null check here
+                {
+                    <div class="reader-img-header">
+                        <div class="reader-card-header">
+                            <h2>@comment.AppUser.UserName</h2>
+                        </div>
+                    </div>
+                    <div class="reader-img-footer">
+                        <p class="message">@comment.Body</p>
+                    </div>
+                }
+            }*@
         </ol>
+
+
     </div>
 
     <div class="form-container container">

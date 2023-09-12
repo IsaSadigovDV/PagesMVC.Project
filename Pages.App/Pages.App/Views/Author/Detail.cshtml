@@ -1,4 +1,8 @@
-﻿<div class="bg-blue">
+﻿<link rel="stylesheet" href="~/Css/about.css" />
+<link rel="stylesheet" href="~/Css/home.css" />
+@model AuthorVM
+
+<div class="bg-blue">
     <div class="nav container d-flex">
         <h1 class="unique-text">About the Author</h1>
         <p class="gray w-400">
@@ -11,26 +15,27 @@
 <!-- about author light-blue start -->
 <section class="bg-light-blue">
     <div class="container d-flex f-dir-column align-center about">
-        <div class="author-img-container">
-            <img src="../assets/img/about-author-img.jpg" alt="dr.John Abraham" />
+        <div class="author-img-container" style="max-width:100&">
+            <img src="~/assets/img/@Model.Author.Image" style="width:100%; height:500px" alt="dr.John Abraham" />
         </div>
         <div class="d-flex space-between about-author-container">
             <div class="about-author-card bg-white blue">
                 <div class="d-flex space-between align-end">
-                    <h4>Country :</h4>
-                    <h5 class="gray w-100">United Kingdom</h5>
-                </div>
-                <div class="d-flex space-between align-end">
                     <h4>Language :</h4>
-                    <h5 class="gray w-100">English</h5>
+                    <h5 class="gray w-100">
+                        English
+                    </h5>
+
                 </div>
                 <div class="d-flex space-between align-end">
                     <h4>Genre :</h4>
-                    <h5 class="gray w-100">Historiography</h5>
+                    <h5 class="gray w-100">
+                       Historical
+                    </h5>
                 </div>
                 <div class="d-flex space-between align-end publication">
                     <h4 class="publication-date">Publication date:</h4>
-                    <h5 class="gray w-100">1991</h5>
+                    <h5 class="gray w-100">@Model.Author.CreatedDate.Year</h5>
                 </div>
                 <div class="d-flex align-center space-between">
                     <h4>Share us on:</h4>
@@ -49,17 +54,9 @@
                 </div>
             </div>
             <div class="about-author-text blue">
-                <h2>About Dr. John Abraham </h2>
+                <h2>About Dr. @Model.Author.Name </h2>
                 <h4 class="gray">
-                    All the Lorem Ipsum generators on the Internet tend to repeat
-                    predefined chunks as necessary, making this the first true
-                    generator on the Internet. It uses a dictionary of over 200 Latin
-                    words, that can combined with a handful of model sentence
-                    structures. All the Lorem Ipsum generators on the Internet tend to
-                    repeat predefined chunks as necessary, making this the first true
-                    generator on the Internet. It uses a dictionary of over 200 Latin
-                    words, that can combined with a handful of model sentence
-                    structures.
+                    @Model.Author.Description
                 </h4>
                 <button class="btn">
                     <a class="blue" href="#">Contact Now</a>
