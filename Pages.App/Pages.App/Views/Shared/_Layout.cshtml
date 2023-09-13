@@ -1,12 +1,16 @@
-﻿<!DOCTYPE html>
+﻿@inject Pages.App.Services.Interfaces.IBasketService basketservice
+@{
+    List<Pages.App.ViewModels.BasketItemViewModel> basketItemViewModels = await basketservice.GetAllBaskets();
+    decimal TotalPrice = 0;
+    int count = 0;
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Store</title>
-@*    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />*@
     <link rel="stylesheet" href="~/Css/home.css" />
 	<link href="~/assets/lib/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <link rel="stylesheet"
@@ -64,16 +68,18 @@
             <!-- navigation start -->
             <div class="d-flex pages-container align-center">
                 <ul class="d-flex pages-container align-center links">
-                    <div class="d-flex align-center hidden-logo logo-container">
-                        <i class="fa-solid fa-book-bookmark yellow fa-lg"></i>
-                        <h3>Pages</h3>
-                        <a class="cart-shop" href="#cart">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </a>
-                        <div id="close-menu">
-                            <i class="fa-regular fa-rectangle-xmark fa-lg"></i>
+                  <li>
+                        <div class="d-flex align-center hidden-logo logo-container">
+                            <i class="fa-solid fa-book-bookmark yellow fa-lg"></i>
+                            <h3>Pages</h3>
+                            <a class="cart-shop" href="#cart">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </a>
+                            <div id="close-menu">
+                                <i class="fa-regular fa-rectangle-xmark fa-lg"></i>
+                            </div>
                         </div>
-                    </div>
+                  </li>
                     <li><a asp-action="index" asp-controller="home">Home</a></li>
                     <li class="dropdown-wrapper">
                         <a href="">
@@ -86,10 +92,11 @@
                             <li><a asp-action="index" asp-controller="blog">Blogs</a></li>
                         </ul>
                     </li>
-                    <li><a asp-action="detail" asp-controller="author">About</a></li>
+                    <li><a asp-action="index" asp-controller="book">Books</a></li>
                     <li><a asp-action="index" asp-controller="blog">Blogs</a></li>
                     <li><a asp-action="index" asp-controller="contact">Contact</a></li>
-                    <div class="header-icons-container d-flex">
+                   <li>
+                        <div class="header-icons-container d-flex">
                         <a class="icons-border-bg-white"
                            target="_blank"
                            href="https://www.facebook.com/">
@@ -107,67 +114,61 @@
                             <i class="fa-brands i-blue fa-linkedin-in fa-sm"> </i>
                         </a>
                     </div>
+                   </li>
+
+                   <li>
                     <button class="btn menu-btn">
                         <a class="blue" href="#">Order Today</a>
                     </button>
+                   </li>
                 </ul>
-                <div class="cart-wrapper">
-                    <a class="cart-shop" href="#cart">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
+                
 
-                    <div class="cart-quick-view">
+          <div class="cart-wrapper">
+            <a class="cart-shop" href="#cart"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+            <div style="height:200px; overflow-y:scroll; width:200px" class="cart-quick-view listProducts">
+                @foreach (var item in basketItemViewModels)
+                                        {
+                                            {
+                                                TotalPrice += item.Price*item.Count;
+                                                count++;
+                                            }
                         <div class="d-flex align-center space-between cart-box">
-                            <div class="cart-box-image" style="max-width:40px">
-                                <img src="../assets/img/book2.jpg" style="width:100%" alt="" />
+                            <div class="cart-box-image">
+                                <img src="../assets/img/@item.Image" alt="" />
                             </div>
 
                             <div class="cart-box-info">
-                                <h5>Lorem, ipsum dolor.</h5>
+                                <h5>@item.Name</h5>
 
                                 <p class="d-flex">
-                                    <span class="cart-book-quantity">1</span>
+                                    <span class="cart-book-quantity">@item.Count</span>
                                     <span>x</span>
-                                    <span class="cart-book-price">19.99$</span>
+                                    <span class="cart-book-price">@item.Price $</span>
                                 </p>
                             </div>
 
-                            <button class="cart-remove-btn">✖</button>
+                                <div class="cart-remove-btn">
+                                    <a asp-controller="book" asp-action="RemoveBasket" asp-route-id="@item.BookId" class="btn-product-delete" data-id="">✖</a> 
+                                </div>
                         </div>
-                        <div class="d-flex align-center space-between cart-box">
-                            <div class="cart-box-image" style="max-width:40px">
-                                <img src="../assets/img/book2.jpg" style="width:100%" alt="" />
+                        }
+
+              <div class="d-flex align-center space-between cart-total-price">
+                            <div class="totalPrice">
+                                <div class="totalText">
+                                    <span id="totalCount">TOTAL :@count</span>
+                                </div>
+                                <div class="priceText">
+                                    <span>$</span>
+                                    <span id="totalPrice">@TotalPrice</span>
+                                </div>
                             </div>
-
-                            <div class="cart-box-info">
-                                <h5>Lorem, ipsum dolor.</h5>
-
-                                <p class="d-flex">
-                                    <span class="cart-book-quantity">1</span>
-                                    <span>x</span>
-                                    <span class="cart-book-price">19.99$</span>
-                                </p>
-                            </div>
-
-                            <button class="cart-remove-btn">✖</button>
-                        </div>
-                        <div class="d-flex align-center space-between cart-total-price">
-                            <p>Total price :</p>
-
-                            <p>47$</p>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="btn menu-btn">
-                    <a class="blue" href="#">Order Today</a>
-                     <div class="bag-count">
-                         @*<p>@count</p>*@
-                     </div>
-                </button>
-                <div class="menu" id="menu">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+              </div>
+            </div>
+          </div>
             </div>
         </div>
     </header>
@@ -296,11 +297,19 @@
         </div>
     </footer>
     <!-- footer end -->
-    @*<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>*@
- 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 	<script src="~/assets/lib/swiper/swiper-bundle.js"></script>
 	<script src="~/assets/lib/swiper/swiper-bundle.min.js"></script>
 	<a href="~/assets/lib/swiper/swiper-bundle.min.js.map">~/assets/lib/swiper/swiper-bundle.min.js.map</a>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/swiper.js"></script>
     <script src="../Js/home.js"></script>
 </body>

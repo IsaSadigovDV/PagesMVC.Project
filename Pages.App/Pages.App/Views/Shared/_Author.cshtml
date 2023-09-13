@@ -18,7 +18,7 @@
         </p>
         <div class="yellow-border-section d-flex space-between">
             <div class="border-right-yellow">
-                <h2>07</h2>
+                <h2>@item.BookAuthors.Where(x=>x.AuthorId==item.Id).Count()</h2>
                 <p class="gray">Books Published</p>
             </div>
             <div class="border-right-yellow">

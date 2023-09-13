@@ -28,7 +28,7 @@ namespace Pages.App.Controllers
 
             if (id == null)
             {
-                IEnumerable<Author> authors = await _context.Authors.Where(x=>x.Id==id && !x.IsDeleted)
+                     IEnumerable<Author> authors = await _context.Authors.Where(x=>x.Id==id && !x.IsDeleted)
                      .Include(x => x.BookAuthors)
                      .ThenInclude(x => x.Book)
                      .Include(x => x.AuthorLanguages)
@@ -42,6 +42,8 @@ namespace Pages.App.Controllers
             else
             {
                 IEnumerable<Author> authors = await _context.Authors.Where(x => !x.IsDeleted).Skip((page - 1) * 12)
+                     .Include(x => x.BookAuthors)
+                     .ThenInclude(x => x.Book)
            .Take(12).ToListAsync();
                 return View(authors);
             }

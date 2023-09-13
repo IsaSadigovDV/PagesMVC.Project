@@ -34,7 +34,10 @@ namespace Pages.App.Controllers
                 Authors = _context.Authors.Where(x => !x.IsDeleted)
                 .OrderByDescending(c=>c.CreatedDate)
                 .Take(1)
-                .Include(x=>x.AuthoreGenres).ThenInclude(x=>x.Genre).ToList()
+                .Include(x=>x.AuthoreGenres).ThenInclude(x=>x.Genre)
+                              .Include(x => x.BookAuthors)
+                     .ThenInclude(x => x.Book)
+                     .ToList()
             };
             return View(homeVM);
         }

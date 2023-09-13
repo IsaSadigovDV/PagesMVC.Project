@@ -75,9 +75,10 @@ namespace Pages.App.Services.Implementations
                         await _context.AddAsync(basketItem);
 
                     }
-                    await _context.SaveChangesAsync();
+                  
 
                 }
+                await _context.SaveChangesAsync();
             }
             else
             {
@@ -126,7 +127,6 @@ namespace Pages.App.Services.Implementations
                 AppUser appUser = await _usermanager.FindByNameAsync(_httpContext.HttpContext.User.Identity.Name);
                 Basket? basket = await _context.Baskets.Include(x => x.BasketItems.Where(y => !y.IsDeleted))
                                   .ThenInclude(x => x.Book)
-                                  .ThenInclude(x => x.Image)
                                   .Include(x => x.BasketItems)
                                   .ThenInclude(x => x.Book)
                                   .Where(x => !x.IsDeleted && x.AppUser.Id == appUser.Id).FirstOrDefaultAsync();
@@ -162,7 +162,6 @@ namespace Pages.App.Services.Implementations
                     {
                         Book? book = await _context.Books
                                           .Where(x => !x.IsDeleted && x.Id == item.BookId)
-                                           .Include(x => x.Image)
                                            .FirstOrDefaultAsync();
 
                         if (book != null)

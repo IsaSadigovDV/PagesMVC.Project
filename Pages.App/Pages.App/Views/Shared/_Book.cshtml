@@ -22,8 +22,8 @@
                 </p>
                 <div class="d-flex blue books-pages-cont">
                     <div class="bulleted">
-                        <h4>Pages:</h4>
-                        <p class="gray">@item.PaperCount pages</p>
+                        <h4>Price:</h4>
+                        <p class="gray">@item.Price pages</p>
                     </div>
                     <div class="bulleted">
                         <h4>Language:</h4>
@@ -36,11 +36,84 @@
                         </p>
                     </div>
                 </div>
-                <button class="btn-no-bg add-basket-product">
-                    <a asp-action="addbasket" asp-controller="book" asp-route-id="@item.Id" class="blue">Order Today</a>
-                </button>
+                    <a asp-action="addbasket" asp-controller="book" asp-route-id="@item.Id" class="blue baskets add-basket-product">Order Today</a>
             </div>
         </div>
     </div>
 }
 
+
+<script>
+
+    const products = document.querySelectorAll(".add-basket-product");
+    let listProducts = document.querySelector(".listProducts");
+    let totalPriceElement = document.getElementById("totalPrice");
+    let totalCountElement = document.getElementById("totalCount");
+
+    products.forEach(prod => {
+        prod.addEventListener("click", (e) => {
+            e.preventDefault();
+            let href = prod.getAttribute("href");
+            let totalPrice = 0;
+            let totalCount = 0;
+            fetch(href)
+                .then(x => x.json())
+                .then(x => {
+                    if (x.status == 200) {
+                        fetch("/book/getallbaskets")
+                            .then(res => res.json())
+                            .then(b => {
+                                    listProducts.innerHTML = ""
+
+                                b.forEach(basket => {
+                                    totalCount++;
+                                    totalPrice += basket.price * basket.count;
+                                    let basketView = `
+                  <div class="d-flex align-center space-between cart-box">
+                    <div class="cart-box-image">
+                          <img  src="/assets/img/${basket.image}" alt="" />
+                    </div>
+
+                    <div class="cart-box-info">
+                      <h5>${basket.name}</h5>
+
+                      <p class="d-flex">
+                        <span class="cart-book-quantity">${basket.count}</span>
+                        <span>x</span>
+                        <span class="cart-book-price">${basket.price}$</span>
+                      </p>
+                    </div>
+                    <button class="cart-remove-btn">✖</button>
+                  </div>
+                  `;
+                                    listProducts.innerHTML += basketView;
+                                })
+                                totalCountElement.innerHTML = totalCount;
+
+                                totalPriceElement.innerHTML = `${totalPrice.toFixed(2)} $`;
+
+                                const Toast = Swal.mixin({
+                                    toast: true,
+                                    position: 'top-end',
+                                    showConfirmButton: false,
+                                    timer: 3000,
+                                    timerProgressBar: true,
+                                    didOpen: (toast) => {
+                                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                                    }
+                                })
+
+                                Toast.fire({
+                                    icon: 'success',
+                                    title: 'Item added to basket successfully'
+                                })
+                            })
+                    }
+                })
+
+
+        })
+    })
+
+</script>
