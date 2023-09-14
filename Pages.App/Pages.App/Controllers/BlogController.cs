@@ -58,6 +58,7 @@ namespace Pages.App.Controllers
             Blog? blog = await _context.Blogs.Where(x => x.Id == id && !x.IsDeleted)
                  .Include(x => x.Tags)
                     .FirstOrDefaultAsync();
+            IEnumerable<Comment> comments = await _context.Comments.Where(x => x.BlogId == id && !x.IsDeleted).ToListAsync();
 
             if (blog is null)
             {
@@ -65,7 +66,9 @@ namespace Pages.App.Controllers
             }
             BlogVM blogVM = new BlogVM
             {
-                Blog = blog
+                Blog = blog,
+                Comments=comments
+                
             };
 
             return View(blogVM);

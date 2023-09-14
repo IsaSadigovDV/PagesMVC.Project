@@ -20,28 +20,28 @@
 <!-- aricles start -->
 <div class="bg-light-blue articles blue">
     <div class="container d-flex align-center articles-container">
+        @*<div class="article-img-container d-flex">*@
         <div class="article-img-container d-flex">
-            <div class="article-card d-flex">
                 @await Html.PartialAsync("_Blog",Model)
-                <div class="col-md-12">
-                    <ul class="pagination">
-                        <li><a class=" page-link" asp-controller="blog" asp-action="index" asp-route-page="1">«</a></li>
+                <div class="col-md-12" style="width:100%">
+                        <ul class="pagination" style="padding-left:0;width:100%;display:flex;justify-content:center;gap:15px">
+                    <li><a class="page-link" asp-controller="blog" asp-action="index" asp-route-page="1" style="display:inline-flex;align-items:center;justify-content:center;height:25px;width:25px;border:1px solid #1b3764;border-radius:3px;color:#1b3764;">«</a></li>
                         @for (int j = 1; j <= ViewBag.TotalPage; j++)
                         {
                             @if (j == ViewBag.CurrentPage)
                             {
-                                <li class="page-item active"><a class=" page-link" asp-controller="blog" asp-action="index" asp-route-page="@j">@j</a></li>
+                            <li class="page-item active"><a style="display:inline-flex;align-items:center;justify-content:center;height:25px;width:25px;border:1px solid #1b3764;border-radius:3px;color:#1b3764;" class=" page-link" asp-controller="blog" asp-action="index" asp-route-page="@j">@j</a></li>
                             }
                             else
                             {
-                                <li class="page-item"><a class=" page-link" asp-controller="blog" asp-action="index" asp-route-page="@j">@j</a></li>
+                            <li class="page-item"><a style="display:inline-flex;align-items:center;justify-content:center;height:25px;width:25px;border:1px solid #1b3764;border-radius:3px;color:#1b3764;" class=" page-link" asp-controller="blog" asp-action="index" asp-route-page="@j">@j</a></li>
                             }
                         }
-                        <li><a class="page-link" asp-controller="blog" asp-action="index" asp-route-page="@ViewBag.TotalPage">»</a></li>
+                    <li><a class="page-link" asp-controller="blog" asp-action="index" asp-route-page="@ViewBag.TotalPage" style="display:inline-flex;align-items:center;justify-content:center;height:25px;width:25px; border:1px solid #1b3764;border-radius:3px;color:#1b3764">»</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
+        @*</div>*@
     </div>
 </div>
 <!-- articles end -->

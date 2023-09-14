@@ -125,9 +125,7 @@
                 
 
           <div class="cart-wrapper">
-            <a class="cart-shop" href="#cart"
-              ><i class="fa-solid fa-cart-shopping"></i
-            ></a>
+          
             <div style="height:200px; overflow-y:scroll; width:200px" class="cart-quick-view listProducts">
                 @foreach (var item in basketItemViewModels)
                                         {
@@ -151,7 +149,7 @@
                             </div>
 
                                 <div class="cart-remove-btn">
-                                    <a asp-controller="book" asp-action="RemoveBasket" asp-route-id="@item.BookId" class="btn-product-delete" data-id="">✖</a> 
+                                    <a asp-controller="book" asp-action="RemoveBasket" asp-route-id="@item.BookId" class="btn-product-delete" style="color:red" data-id="">✖</a> 
                                 </div>
                         </div>
                         }
@@ -166,8 +164,12 @@
                                     <span id="totalPrice">@TotalPrice</span>
                                 </div>
                             </div>
+                          
               </div>
             </div>
+                    <a class="cart-shop" href="#cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
           </div>
             </div>
         </div>
@@ -301,14 +303,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
             integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 	<script src="~/assets/lib/swiper/swiper-bundle.js"></script>
 	<script src="~/assets/lib/swiper/swiper-bundle.min.js"></script>
-	<a href="~/assets/lib/swiper/swiper-bundle.min.js.map">~/assets/lib/swiper/swiper-bundle.min.js.map</a>
+	@*<a href="~/assets/lib/swiper/swiper-bundle.min.js.map">~/assets/lib/swiper/swiper-bundle.min.js.map</a>*@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/swiper.js"></script>
     <script src="../Js/home.js"></script>

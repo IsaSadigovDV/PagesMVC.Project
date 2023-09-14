@@ -56,27 +56,32 @@
             using Lorem Ipsum is that it has less normal distribution of letters,
             as opposed.
         </p>
-        <ol class="blue ol-list">
-     @*       @foreach (var comment in Model.Comments)
-            {
-                if (comment != null) // Add null check here
-                {
-                    <div class="reader-img-header">
-                        <div class="reader-card-header">
-                            <h2>@comment.AppUser.UserName</h2>
-                        </div>
-                    </div>
-                    <div class="reader-img-footer">
-                        <p class="message">@comment.Body</p>
-                    </div>
-                }
-            }*@
-        </ol>
-
-
+    </div>
+    <div class="pad-50">
+        <div class="questions-container container d-flex space-between">
+            <div class="comments-section">
+                <h3 style="color:#1b3764;">Comments</h3>
+                <ol class="blue" style="font-size:large; color:#1b3764">
+                    @if (Model.Blog.Comments != null)
+                    {
+                        @foreach (var comment in Model.Blog.Comments)
+                        {
+                            <li class="gray">
+                                <h4>@comment.Subject</h4>
+                                <p>@comment.Body</p>
+                            </li>
+                        }
+                    }
+                    else
+                    {
+                        <p>No comments available for this book.</p>
+                    }
+                </ol>
+            </div>
+        </div>
     </div>
 
-    <div class="form-container container">
+    <div class="form-container container" style="width:100%">
         <h3>Leave comment</h3>
 
         <p>

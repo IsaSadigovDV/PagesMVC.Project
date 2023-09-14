@@ -77,30 +77,32 @@
     </div>
 </section>
 <!-- single book end -->
-<!-- questions start -->
+<!-- Comments section start -->
 <div class="pad-50">
     <div class="questions-container container d-flex space-between">
-        <div class="questions-left">
-            <h4 class="blue">Do you offer discounts for education?</h4>
-            <p class="gray">
-                There are many variations of passages of Lorem Ipsum available, but
-                the majority have suffered alteration in some form, bypassed
-                injected humour, or randomised words which don't look even slightly
-                believable.
-            </p>
-        </div>
-        <div class="questions-right">
-            <h4 class="blue">Is this book for me?</h4>
-            <p class="gray">
-                If you are going to use a passage of Lorem Ipsum, you need to be
-                sure there isn't anything embarrassing hidden in the middle of text.
-                All the Lorem Ipsum generators on the Internet tend to repeat
-                predefined chunks as necessary.
-            </p>
+        <div class="comments-section">
+            <h3 style="color:#1b3764;">Comments</h3>
+            <ol class="blue" style="font-size:large; color:#1b3764">
+                @if (Model.Book.Comments != null)
+                {
+                    @foreach (var comment in Model.Book.Comments)
+                    {
+                        <li class="gray">
+                            <h4>@comment.Subject</h4>
+                            <p>@comment.Body</p>
+                        </li>
+                    }
+                }
+                else
+                {
+                    <p>No comments available for this book.</p>
+                }
+            </ol>
         </div>
     </div>
 </div>
-<!-- questions end -->
+
+<!-- Comments section end -->
 <!--payments-shipping start -->
 <div class="payments bg-orange blue">
     <div class="container secure-payment-etc d-flex space-between">

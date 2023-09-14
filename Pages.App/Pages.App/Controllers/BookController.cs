@@ -99,7 +99,9 @@ namespace Pages.App.Controllers
             }
             BookVM bookVM = new BookVM
             {
-                Book = book
+                Book = book,
+                Comments=comments
+                
             };
 
             return View(bookVM);
