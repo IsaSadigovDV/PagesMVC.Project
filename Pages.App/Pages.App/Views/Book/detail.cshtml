@@ -78,27 +78,28 @@
 </section>
 <!-- single book end -->
 <!-- Comments section start -->
-<div class="pad-50">
-    <div class="questions-container container d-flex space-between">
-        <div class="comments-section">
-            <h3 style="color:#1b3764;">Comments</h3>
-            <ol class="blue" style="font-size:large; color:#1b3764">
-                @if (Model.Book.Comments != null)
-                {
-                    @foreach (var comment in Model.Book.Comments)
-                    {
-                        <li class="gray">
-                            <h4>@comment.Subject</h4>
-                            <p>@comment.Body</p>
-                        </li>
-                    }
-                }
-                else
-                {
-                    <p>No comments available for this book.</p>
-                }
-            </ol>
-        </div>
+<div class="container comments-wrapper">
+
+    <div class="container comments-wrapper">
+        <h3 class="blue">Comments</h3>
+
+        @foreach (var comment in Model.Book.Comments)
+        {
+            <div class="single-commnet d-flex align-center">
+                <div class="user-image-box">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg"
+                     alt="" />
+                </div>
+
+                <div class="commnet-content">
+                    <h5>@comment.Subject</h5>
+
+                    <p>
+                        @comment.Body
+                    </p>
+                </div>
+            </div>
+        }
     </div>
 </div>
 

@@ -125,15 +125,19 @@
                 
 
           <div class="cart-wrapper">
+                    <a class="cart-shop">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
           
             <div style="height:200px; overflow-y:scroll; width:200px" class="cart-quick-view listProducts">
+                       
+
                 @foreach (var item in basketItemViewModels)
                                         {
-                                            {
-                                                TotalPrice += item.Price*item.Count;
-                                                count++;
-                                            }
-                        <div class="d-flex align-center space-between cart-box">
+                <div class="d-flex align-center space-between cart-box">
+                                                @{TotalPrice += item.Price*item.Count;
+
+                                                count++;}
                             <div class="cart-box-image">
                                 <img src="../assets/img/@item.Image" alt="" />
                             </div>
@@ -148,10 +152,11 @@
                                 </p>
                             </div>
 
-                                <div class="cart-remove-btn">
+                                <div class="cart-remove-btn removeicon">
                                     <a asp-controller="book" asp-action="RemoveBasket" asp-route-id="@item.BookId" class="btn-product-delete" style="color:red" data-id="">✖</a> 
                                 </div>
-                        </div>
+                    </div>
+
                         }
 
               <div class="d-flex align-center space-between cart-total-price">
@@ -166,12 +171,11 @@
                             </div>
                           
               </div>
+        
             </div>
-                    <a class="cart-shop" href="#cart">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
-          </div>
             </div>
+            </div>
+            
         </div>
     </header>
     <!-- navigation end -->

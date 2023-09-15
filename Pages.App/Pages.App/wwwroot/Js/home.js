@@ -1,16 +1,18 @@
-let menu = document.getElementById("menu");
-let links = document.querySelector(".links");
+////let menu = document.getElementById("menu");
+//let links = document.querySelector(".links");
 
-let menuClose = document.getElementById("close-menu");
+//let menuClose = document.getElementById("close-menu");
 
-menu.addEventListener("click", menuToggle);
+////menu.addEventListener("click", menuToggle);
 
-function menuToggle() {
-  links.classList.toggle("active");
-}
-menuClose.addEventListener("click", closeMenuToogle);
-function closeMenuToogle() {
-  links.classList.toggle("active");
-}
+//function menuToggle() {
+//  links.classList.toggle("active");
+//}
+//menuClose.addEventListener("click", closeMenuToogle);
+//function closeMenuToogle() {
+//  links.classList.toggle("active");
+//}
 
-console.log(links);
+//document.querySelector(".cart-shop").addEventListener("mouseover", () => {
+//    document.querySelector(".cart-wrapper").style.display = "block";
+//})

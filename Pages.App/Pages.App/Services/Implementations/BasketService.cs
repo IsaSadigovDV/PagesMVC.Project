@@ -58,9 +58,14 @@ namespace Pages.App.Services.Implementations
                 {
                     BasketItem? basketItem = await _context.BasketItems.FirstOrDefaultAsync(x => x.BookId == id);
 
-                    if (basketItem != null)
+                    if (basketItem != null && !basketItem.IsDeleted)
                     {
                         basketItem.BookCount++;
+                    }
+                    else if (basketItem != null && basketItem.IsDeleted)
+                    {
+                        basketItem.BookCount=1;
+                        basketItem.IsDeleted=false;
                     }
                     else
                     {

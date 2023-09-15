@@ -673,6 +673,10 @@
       "PackagePath": "staticwebassets\\assets\\img\\Book.png"
     },
     {
+      "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\DefaultUser.png",
+      "PackagePath": "staticwebassets\\assets\\img\\DefaultUser.png"
+    },
+    {
       "Id": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\wwwroot\\assets\\img\\Logo-amazen.png",
       "PackagePath": "staticwebassets\\assets\\img\\Logo-amazen.png"
     },

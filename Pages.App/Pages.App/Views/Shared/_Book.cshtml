@@ -2,7 +2,7 @@
 
 @foreach(var item in Model){
     <div class="swiper-slide"style=" display: inline-block; width: 25%; margin: 10px; float: left;">
-        <div class="d-flex blue books-sec-cont">
+        <div class="d-flex blue books-sec-cont" >
             <a asp-action="detail" asp-controller="book" asp-route-id="@item.Id">
                 <img class="books-small"
                  src="~/assets/img/@item.Image"
@@ -83,7 +83,9 @@
                         <span class="cart-book-price">${basket.price}$</span>
                       </p>
                     </div>
-                    <button class="cart-remove-btn">✖</button>
+                          <div class="cart-remove-btn removeicon">
+                                            <a href="/book/RemoveBasket/${basket.id}" class="btn-product-delete" style="color:red" data-id="">✖</a>
+                                 </div>
                   </div>
                   `;
                                     listProducts.innerHTML += basketView;
@@ -91,7 +93,18 @@
                                 totalCountElement.innerHTML = totalCount;
 
                                 totalPriceElement.innerHTML = `${totalPrice.toFixed(2)} $`;
-
+                                listProducts.innerHTML += ` <div class="d-flex align-center space-between cart-total-price">
+                            <div class="totalPrice">
+                                <div class="totalText">
+                                        <span id="totalCount">TOTAL :${totalCount}</span>
+                                </div>
+                                <div class="priceText">
+                                    <span>$</span>
+                                        <span id="totalPrice">${totalPrice}</span>
+                                </div>
+                            </div>
+                          
+              </div>`
                                 const Toast = Swal.mixin({
                                     toast: true,
                                     position: 'top-end',
@@ -115,5 +128,10 @@
 
         })
     })
-
+    ////document.querySelectorAll(".btn-product-delete").forEach(x=>{
+    ////    x.addEventListener("click",(e)=>{
+    ////        e.preventDefault();
+    ////        fetch(x.getAttribute("href");
+    ////})
+    ////}
 </script>
