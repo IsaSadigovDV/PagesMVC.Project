@@ -1,0 +1,107 @@
+﻿<link rel="stylesheet" href="~/Css/card.css">
+<link rel="stylesheet" href="~/Css/home.css">
+@model Basket
+@{
+    decimal TotalPrice = 0;
+    decimal TotalDiscount = 0;
+}
+
+<div class="bg-blue">
+    <div class="nav container d-flex">
+        <h1 class="unique-text">Card</h1>
+        <p class="gray w-400">
+            There are many variations of passages of Lorem Ipsum available, have
+            suffered alteration in some form.
+        </p>
+    </div>
+</div>
+
+<section class="card-section">
+    <div class="container d-flex cards-container" style="gap: 20px">
+        <div class="cards-wrapper">
+            @foreach (var item in Model.BasketItems)
+            {
+                TotalPrice += item.BookCount * (decimal)item.Book.Price;
+                <div class="single-card d-flex align-center">
+                    <div class="card-image">
+                        <img src="~/assets/img/@item.Book.Image" alt="" />
+                    </div>
+
+                    <div class="card-text d-flex space-between align-center">
+                        <p class="card-desc">
+                            <a>@item.Book.Name</a>
+                        </p>
+
+                        <div class="card-action-buttons d-flex align-center justify-center">
+                            <button class="decreaseCount" data-id="@item.BookId">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+
+                            <input class="book-count-input" type="number" value="@item.BookCount" min="0" max="50" readonly />
+
+                            <button class="increaseCount" data-id="@item.BookId">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+
+                        <p class="card-price"> @item.Book.Price $</p>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="card-checkout">
+            <h3>Card total</h3>
+            <div class="checkout-content">
+                <p>Total price</p>
+                <p id="totalPrice">@TotalPrice $</p>
+            </div>
+
+            <button>
+                <a href="#" style="color:black">Checkout</a>
+            </button>
+        </div>
+    </div>
+</section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.increaseCount').click(function () {
+                var bookId = $(this).data('id');
+                var inputElement = $(this).siblings('.book-count-input');
+                var currentValue = parseInt(inputElement.val());
+                inputElement.val(currentValue + 1);
+                updateTotalPrice();
+            });
+
+            $('.decreaseCount').click(function () {
+                var bookId = $(this).data('id');
+                var inputElement = $(this).siblings('.book-count-input');
+                var currentValue = parseInt(inputElement.val());
+                if (currentValue > 0) {
+                    inputElement.val(currentValue - 1);
+                    updateTotalPrice();
+                }
+            });
+
+        function updateTotalPrice() {
+            var totalPrice = 0;
+            $('.single-card').each(function () {
+                var bookCount = parseInt($(this).find('.book-count-input').val());
+                var bookPrice = parseFloat($(this).find('.card-price').text().replace('$', ''));
+                var itemTotalPrice = bookCount * bookPrice;
+                console.log(`Book Count: ${bookCount}, Book Price: ${bookPrice}, Item Total Price: ${itemTotalPrice}`);
+                totalPrice += itemTotalPrice;
+            });
+            console.log(`Total Price: ${totalPrice}`);
+
+            // Delay the update to ensure the DOM is ready
+            setTimeout(function () {
+                $('#totalPrice').text(totalPrice.toFixed(2) + ' $');
+            }, 100);
+        }
+
+
+        });
+    </script>

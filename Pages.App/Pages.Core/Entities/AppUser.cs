@@ -13,5 +13,6 @@ namespace Pages.Core.Entities
         public string Surname { get; set; }
         public List<Basket>? Baskets { get; set; }
         public List<Comment>? Comments { get; set; }
+        public List<Order>? Orders { get; set; }
     }
 }

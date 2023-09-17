@@ -57,38 +57,42 @@
             as opposed.
         </p>
     </div>
-    <div class="container comments-wrapper">
-        <div class="container comments-wrapper">
-            <h3 class="blue">Comments</h3>
+    <div class="comments-wrapper">
+        <h3 class="blue">Comments</h3>
+
+
+        @if (Model.Blog.Comments is not null)
+        {
 
             @foreach (var comment in Model.Blog.Comments)
             {
                 <div class="single-commnet d-flex align-center">
                     <div class="user-image-box">
                         <img src="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg"
-                         alt="" />
+                     alt="" />
                     </div>
 
                     <div class="commnet-content">
-                        <h5>@comment.Subject</h5>
-
-                        <p>
+                        <h5 class="blue">@comment.Subject</h5>
+                        <p class="gray">
                             @comment.Body
                         </p>
                     </div>
                 </div>
             }
-        </div>
+        }
+        else
+        {
+            <p class="blue">There is no comment yet</p>
+        }
+        
     </div>
+
 
 
 
     <div class="form-container container" style="width:100%">
         <h3>Leave comment</h3>
-
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, mollitia.
-        </p>
 
         <form class="comment-form" method="post" asp-action="postComment" asp-controller="Blog">
             <label for="name">

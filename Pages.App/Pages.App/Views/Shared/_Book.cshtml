@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Book>
 
 @foreach(var item in Model){
-    <div class="swiper-slide"style=" display: inline-block; width: 25%; margin: 10px; float: left;">
+    <div class="swiper-slide" style="display: inline-block; width: 25%; margin: 10px; float: left;">
         <div class="d-flex blue books-sec-cont" >
             <a asp-action="detail" asp-controller="book" asp-route-id="@item.Id">
                 <img class="books-small"
@@ -128,10 +128,10 @@
 
         })
     })
-    ////document.querySelectorAll(".btn-product-delete").forEach(x=>{
-    ////    x.addEventListener("click",(e)=>{
-    ////        e.preventDefault();
-    ////        fetch(x.getAttribute("href");
-    ////})
-    ////}
+    //document.querySelectorAll(".btn-product-delete").forEach(x=>{
+    //    x.addEventListener("click",(e)=>{
+    //        e.preventDefault();
+    //        fetch(x.getAttribute("href");
+    //})
+    //}
 </script>

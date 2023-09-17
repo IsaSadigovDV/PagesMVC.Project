@@ -83,23 +83,31 @@
     <div class="container comments-wrapper">
         <h3 class="blue">Comments</h3>
 
-        @foreach (var comment in Model.Book.Comments)
-        {
-            <div class="single-commnet d-flex align-center">
-                <div class="user-image-box">
-                    <img src="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg"
-                     alt="" />
-                </div>
+        @if(Model.Book.Comments is not null){
+            
+            @foreach(var comment in Model.Book.Comments)
+            {
+                <div class="single-commnet d-flex align-center">
+                    <div class="user-image-box">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/009/734/564/small/default-avatar-profile-icon-of-social-media-user-vector.jpg"
+                         alt="" />
+                    </div>
 
-                <div class="commnet-content">
-                    <h5>@comment.Subject</h5>
-
-                    <p>
-                        @comment.Body
-                    </p>
+                    <div class="commnet-content">
+                        <h5 class="blue">@comment.Subject</h5>
+                        <p class="gray">
+                            @comment.Body
+                        </p>
+                    </div>
                 </div>
-            </div>
+            }
         }
+        else{
+            <p class="blue">There is no comment yet</p>
+        }
+
+       
+
     </div>
 </div>
 

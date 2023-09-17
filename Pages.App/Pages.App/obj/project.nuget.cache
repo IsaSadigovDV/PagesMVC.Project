@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "MC6v31HPa88+A051zd9JweGmsm2D87pGMK6FnI8809KT2Ljyrn0BWITEb8KpPS7/jislmzxTdy2Q21vOUXXYMQ==",
+  "dgSpecHash": "TPGtMpmZ+TPLuVZoYSKsE7ilASDr+9Kv+v5cs7VVTfREvNl5RieLCC6ntkIXAKU8Gyqzc8nD6FcgCtfheKggVA==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Desktop\\BookBackend\\Pages.App\\Pages.App\\Pages.App.csproj",
   "expectedPackageFiles": [
@@ -136,7 +136,7 @@
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\nuget.common\\6.6.1\\nuget.common.6.6.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\nuget.configuration\\6.6.1\\nuget.configuration.6.6.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\nuget.dependencyresolver.core\\6.6.1\\nuget.dependencyresolver.core.6.6.1.nupkg.sha512",

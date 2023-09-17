@@ -32,7 +32,7 @@
 <!-- author`s books start -->
 <div class="books-section">
     <div class="container d-flex all-books book_container">
-        @await Html.PartialAsync("_Book", Model)
+            @await Html.PartialAsync("_Book", Model)
         <div class="col-md-12">
             <ul class="pagination">
                 <li><a class=" page-link" asp-controller="book" asp-action="index" asp-route-page="1">«</a></li>

@@ -28,6 +28,8 @@ namespace Pages.App.Context
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems  { get; set; }
 
 
         public PagesDbContext(DbContextOptions<PagesDbContext> options) : base(options)

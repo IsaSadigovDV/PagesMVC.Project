@@ -81,6 +81,7 @@ namespace Pages.App.Controllers
                        .Include(x => x.BookAuthors)
                      .ThenInclude(x => x.Author)
                     .Include(x => x.Genre)
+                    .Include(x=>x.Comments)
                      .Take(3)
                     .ToListAsync();
             Book? book = await _context.Books.Where(x => x.Id == id && !x.IsDeleted)
@@ -93,6 +94,7 @@ namespace Pages.App.Controllers
                     .Include(x => x.Genre)
                     .FirstOrDefaultAsync();
             IEnumerable<Comment> comments = await _context.Comments.Where(x => x.BookId == id && !x.IsDeleted).ToListAsync();
+
             if (book is null)
             {
                 return NotFound();
@@ -100,7 +102,7 @@ namespace Pages.App.Controllers
             BookVM bookVM = new BookVM
             {
                 Book = book,
-                Comments=comments
+                Comments=comments ?? Enumerable.Empty<Comment>()
                 
             };
 
@@ -121,7 +123,7 @@ namespace Pages.App.Controllers
         public async Task<IActionResult> RemoveBasket(int id)
         {
             await _basketService.Remove(id);
-            return RedirectToAction("index", "home");
+            return RedirectToAction(nameof(Index));
         }
         [HttpPost]
         [Authorize(Roles ="User")]
