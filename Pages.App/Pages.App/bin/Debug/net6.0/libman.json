@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "select2@4.0.13",
+      "destination": "wwwroot/assets/lib/select2/"
+    },
+    {
+      "library": "Swiper@10.2.0",
+      "destination": "wwwroot/assets/lib/Swiper/"
+    }
+  ]
+}

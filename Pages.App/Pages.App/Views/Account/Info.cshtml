@@ -20,20 +20,20 @@
 
                             <div class="form-outline flex-fill mb-0">
                                 <input type="text" placeholder="Name" asp-for="Name" class="form-control" />
-                                <span class="text text-danger" asp-validation-for="Name"></span>
+								<span class="text text-danger" style="color:red" asp-validation-for="Name"></span>
                             </div>
                             <div class="form-outline flex-fill mb-0">
                                 <input type="text" placeholder="Surname" asp-for="Surname" class="form-control" />
-                                <span class="text text-danger" asp-validation-for="Surname"></span>
+								<span class="text text-danger" style="color:red" asp-validation-for="Surname"></span>
                             </div>
 							
                             <div class="form-outline flex-fill mb-0">
                                 <input type="email" placeholder="Email" asp-for="Email" class="form-control" />
-                                <span class="text text-danger" asp-validation-for="Email"></span>
+								<span class="text text-danger" style="color:red" asp-validation-for="Email"></span>
                             </div>
                             <div class="form-outline flex-fill mb-0">
                                 <input type="text" placeholder="UserName" asp-for="UserName" class="form-control" />
-                                <span class="text text-danger" asp-validation-for="UserName"></span>
+								<span class="text text-danger" style="color:red" asp-validation-for="UserName"></span>
                             </div>
                             <a asp-controller="account" asp-action="update" class="default-btn">Update</a>
 

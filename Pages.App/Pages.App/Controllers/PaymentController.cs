@@ -61,6 +61,14 @@ namespace Pages.App.Controllers
                 return View("Failure");
             }
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Success()
+        {
+            return View();
+        }
+
+    
     }
 }
 

@@ -28,7 +28,7 @@ namespace Pages.App.Controllers
 
         public async Task<IActionResult> CheckOut()
         {
-            AppUser appUser = null;
+            AppUser? appUser = null;
             if (User.Identity.IsAuthenticated)
             {
                 appUser = await _userManager.FindByNameAsync(User.Identity.Name);
