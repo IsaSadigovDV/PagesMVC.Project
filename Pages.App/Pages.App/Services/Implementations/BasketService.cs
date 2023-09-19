@@ -33,7 +33,8 @@ namespace Pages.App.Services.Implementations
             if (_httpContext.HttpContext.User.Identity.IsAuthenticated)
             {
                 AppUser appUser = await _usermanager.FindByNameAsync(_httpContext.HttpContext.User.Identity.Name);
-                Basket? basket = await _context.Baskets.Include(x => x.BasketItems.Where(y => !y.IsDeleted)).ThenInclude(x => x.Book).Where(x => !x.IsDeleted && x.AppUserId == appUser.Id).FirstOrDefaultAsync();
+                Basket? basket = await _context.Baskets.Where(x => !x.IsDeleted && x.AppUserId == appUser.Id).
+                    Include(x => x.BasketItems.Where(y => !y.IsDeleted)).ThenInclude(x => x.Book).FirstOrDefaultAsync();
 
                 if (basket == null)
                 {
@@ -56,7 +57,7 @@ namespace Pages.App.Services.Implementations
                 }
                 else
                 {
-                    BasketItem? basketItem = await _context.BasketItems.FirstOrDefaultAsync(x => x.BookId == id);
+                    BasketItem? basketItem = await _context.BasketItems.Include(x=>x.Basket).FirstOrDefaultAsync(x => x.BookId == id && !x.Basket.IsDeleted);
 
                     if (basketItem != null && !basketItem.IsDeleted)
                     {

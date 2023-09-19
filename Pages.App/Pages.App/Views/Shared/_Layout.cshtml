@@ -129,7 +129,7 @@
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
           
-            <div style="height:200px; overflow-y:scroll; width:200px" class="cart-quick-view listProducts">
+            <div class="cart-quick-view listProducts" style="padding:10px; width:230px;" >
                        
 
                 @foreach (var item in basketItemViewModels)
@@ -160,13 +160,12 @@
                         }
 
               <div class="d-flex align-center space-between cart-total-price">
-                            <div class="totalPrice">
-                                <div class="totalText">
-                                    <span id="totalCount">TOTAL :@count</span>
+                            <div class="totalPrice" style="padding:10px 0;">
+                                <div class="totalText" style="padding:5px 0;">
+                                    <span id="totalCount">TOTAL Count :@count</span>
                                 </div>
                                 <div class="priceText">
-                                    <span>$</span>
-                                    <span id="totalPrice">@TotalPrice</span>
+                                    <span id="totalPrice">Total Price: @TotalPrice $</span>
                                 </div>
                             </div>
                           

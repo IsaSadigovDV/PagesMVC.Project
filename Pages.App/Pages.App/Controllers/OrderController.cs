@@ -28,14 +28,46 @@ namespace Pages.App.Controllers
 
         public async Task<IActionResult> CheckOut()
         {
-            AppUser appUser = await _userManager.FindByNameAsync(User.Identity.Name);
+            AppUser appUser = null;
+            if (User.Identity.IsAuthenticated)
+            {
+                appUser = await _userManager.FindByNameAsync(User.Identity.Name);
+            }
+            else
+            {
+                return RedirectToAction("index", "home");
+            }
             var baskets = await _context.Baskets.Where(x => !x.IsDeleted && x.AppUserId == appUser.Id)
                 .Include(x => x.BasketItems.Where(y => !y.IsDeleted))
                 .ThenInclude(x => x.Book)
-                .Include(x => x.BasketItems.Where(y => !y.IsDeleted))
-                .ThenInclude(x=>x.Book)
                 .FirstOrDefaultAsync();
-
+            if(baskets is null)
+            {
+                return RedirectToAction("index", "book");
+            }
+            //double totalPrice = 0;
+            //foreach(var item in baskets.BasketItems)
+            //{
+            //    totalPrice += item.BookCount * item.Book.Price;
+            //}
+            //Order order = new Order
+            //{
+            //    AppUserId = baskets.AppUserId,
+            //    TotalPrice = totalPrice,
+            //    isPaid = false
+            //};
+            //await _context.Orders.AddAsync(order);
+            //foreach (var item in baskets.BasketItems)
+            //{
+            //    OrderItem orderitem = new OrderItem
+            //    {
+            //        BookId = item.BookId,
+            //        Order = order,
+            //        ProductCount = item.BookCount
+            //    };
+            //    await _context.OrderItems.AddAsync(orderitem);
+            //}
+            //await _context.SaveChangesAsync();
             return View(baskets);
         }
 
@@ -59,7 +91,7 @@ namespace Pages.App.Controllers
             {
                 AppUserId = appUser.Id,
                 CreatedDate = DateTime.Now,
-
+                isPaid=false
             };
             decimal totalprice = 0;
             foreach (var item in basket.BasketItems)
@@ -78,9 +110,9 @@ namespace Pages.App.Controllers
             _context.Add(order);
             basket.IsDeleted = true;
             _context.SaveChanges();
-
+            Order orderId = await _context.Orders.Where(x=>!x.IsDeleted && !x.isPaid && x.AppUserId==appUser.Id).FirstOrDefaultAsync();
             TempData["Order Created"] = "Order succesfully created";
-            return RedirectToAction("index", "home");
+            return RedirectToAction("index", "payment", new { @id = orderId.Id });
         }
         //public async Task<IActionResult> RemoveBasket(int id)
         //{

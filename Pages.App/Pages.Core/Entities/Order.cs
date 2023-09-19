@@ -12,5 +12,6 @@ namespace Pages.Core.Entities
         public AppUser? AppUser { get; set; }
         public double TotalPrice { get; set; }
         public List<OrderItem>? OrderItems { get; set; }
+        public bool isPaid { get; set; }
     }
 }

@@ -17,6 +17,7 @@ namespace Pages.App.ServiceRegistrations
             });
             services.AddScoped<IBasketService, BasketService>();
             services.AddScoped<IEmailService, EmailService>();
+            services.AddTransient<IBraintreeService, BraintreeService>();
             services.AddIdentity<AppUser, IdentityRole>()
                 .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<PagesDbContext>();

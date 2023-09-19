@@ -36,15 +36,16 @@
                             <button class="decreaseCount" data-id="@item.BookId">
                                 <i class="fa-solid fa-minus"></i>
                             </button>
-
-                            <input class="book-count-input" type="number" value="@item.BookCount" min="0" max="50" readonly />
+                            <input id="basketId" hidden value="@Model.Id" />
+                            <input id="bookId" hidden value="@item.Book.Id" />
+                            <input class="book-count-input" type="number" value="@item.BookCount" min="0" max="50" style="padding-left:25px" readonly />
 
                             <button class="increaseCount" data-id="@item.BookId">
                                 <i class="fa-solid fa-plus"></i>
                             </button>
                         </div>
 
-                        <p class="card-price"> @item.Book.Price $</p>
+                        <p class="card-price" style="width:110px"> @item.Book.Price $</p>
                     </div>
                 </div>
             }
@@ -58,50 +59,52 @@
             </div>
 
             <button>
-                <a href="#" style="color:black">Checkout</a>
+                <a asp-action="createOrder" asp-controller="order" style="color:black">Checkout</a>
             </button>
         </div>
     </div>
 </section>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.increaseCount').click(function () {
-                var bookId = $(this).data('id');
-                var inputElement = $(this).siblings('.book-count-input');
-                var currentValue = parseInt(inputElement.val());
-                inputElement.val(currentValue + 1);
-                updateTotalPrice();
-            });
-
-            $('.decreaseCount').click(function () {
-                var bookId = $(this).data('id');
-                var inputElement = $(this).siblings('.book-count-input');
-                var currentValue = parseInt(inputElement.val());
-                if (currentValue > 0) {
-                    inputElement.val(currentValue - 1);
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.increaseCount').click(function () {
+                    var bookId = $(this).data('id');
+                    var inputElement = $(this).siblings('.book-count-input');
+                    var currentValue = parseInt(inputElement.val());
+                    inputElement.val(currentValue + 1);
                     updateTotalPrice();
-                }
+                });
+
+                $('.decreaseCount').click(function () {
+                    var bookId = $(this).data('id');
+                    var inputElement = $(this).siblings('.book-count-input');
+                    var currentValue = parseInt(inputElement.val());
+                    if (currentValue > 0) {
+                        inputElement.val(currentValue - 1);
+                        updateTotalPrice();
+                    }
+                });
+
+            function updateTotalPrice() {
+                var totalPrice = 0;
+                $('.single-card').each(function () {
+                var bookId = parseInt($(this).find('#bookId').val());
+                    var bookPrice = parseFloat($(this).find('.card-price').text().replace('$', ''));
+                    var itemTotalPrice = bookCount * bookPrice;
+                    totalPrice += itemTotalPrice;
+                    document.querySelector(".checkout-content #totalPrice").textContent = ` $${totalPrice}`
+                let id = document.querySelector("#basketId").value
+                fetch(`/book/UpdateBookCount?basketid=${id}&bookid=${bookId}&count=${bookCount}`)
+                    .then(res => res.json())
+                    .then(b => { })
+                });
+               
+                setTimeout(function () {
+                    $('#totalPrice').text(totalPrice.toFixed(2) + ' $');
+                }, 100);
+            }
+
+
             });
-
-        function updateTotalPrice() {
-            var totalPrice = 0;
-            $('.single-card').each(function () {
-                var bookCount = parseInt($(this).find('.book-count-input').val());
-                var bookPrice = parseFloat($(this).find('.card-price').text().replace('$', ''));
-                var itemTotalPrice = bookCount * bookPrice;
-                console.log(`Book Count: ${bookCount}, Book Price: ${bookPrice}, Item Total Price: ${itemTotalPrice}`);
-                totalPrice += itemTotalPrice;
-            });
-            console.log(`Total Price: ${totalPrice}`);
-
-            // Delay the update to ensure the DOM is ready
-            setTimeout(function () {
-                $('#totalPrice').text(totalPrice.toFixed(2) + ' $');
-            }, 100);
-        }
-
-
-        });
-    </script>
+        </script>

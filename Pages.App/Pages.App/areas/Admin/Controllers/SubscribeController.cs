@@ -8,7 +8,7 @@ using System.Data;
 namespace Pages.App.areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize(Roles = "Admin,SuperAdmin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class SubscribeController : Controller
     {
         private readonly PagesDbContext _context;

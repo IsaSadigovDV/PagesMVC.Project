@@ -114,7 +114,13 @@ namespace Pages.App.Controllers
             await _basketService.AddBasket(id);
             return Json(new { status = 200 });
         }
-
+        public async Task<IActionResult> UpdateBookCount(int basketId,int bookId,int count)
+        {
+            BasketItem item = await _context.BasketItems.Where(x => !x.IsDeleted && x.BasketId == basketId && bookId == x.BookId).FirstOrDefaultAsync();
+            item.BookCount = count;
+            await _context.SaveChangesAsync();
+            return Json("Ok");
+        }
         public async Task<IActionResult> GetAllBaskets()
         {
             var result = await _basketService.GetAllBaskets();

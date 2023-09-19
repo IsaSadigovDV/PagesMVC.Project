@@ -11,7 +11,7 @@ using System.Reflection.Metadata;
 namespace Pages.App.areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize(Roles = "Admin,SuperAdmin")]
+    [Authorize(Roles = "Admin,SuperAdmin")]
     public class SponsorController : Controller
     {
         private readonly PagesDbContext _context;
