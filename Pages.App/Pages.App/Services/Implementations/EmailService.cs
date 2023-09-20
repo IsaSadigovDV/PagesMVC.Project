@@ -39,5 +39,6 @@ namespace Pages.App.Services.Implementations
             smtp.Send(mail);
         }
 
+      
     }
 }

@@ -45,6 +45,12 @@ namespace Pages.App.Controllers
             {
                 return RedirectToAction("index", "book");
             }
+            double totalPrice = 0;
+            foreach (var item in baskets.BasketItems)
+            {
+                totalPrice += item.BookCount * (double)item.Book.Price;
+            }
+
             //double totalPrice = 0;
             //foreach(var item in baskets.BasketItems)
             //{

@@ -6,7 +6,7 @@
 
 <div class="wrapper">
     <div class="checkout container">
-        <form id="payment-form" method="post" asp-controller="Payment" asp-action="Create">
+        <form id="payment-form" method="post" asp-controller="payment" asp-action="index">
             @Html.HiddenFor(n => n.Id)
             <div class="card">
             </div>
@@ -17,7 +17,7 @@
             </section>
             @Html.HiddenFor(n => n.Nonce, new { @id = "nonce" })
             <hr />
-            <button class="btn btn-success" type="submit"><a asp-action="success" asp-controller="payment">Confirm payment - $@Model.TotalPrice</a></button>
+            <button class="btn btn-success" type="submit"><a asp-action="success" asp-controller="payment" style="color:black">Confirm payment - $@Model.TotalPrice</a></button>
         </form>
     </div>
 </div>

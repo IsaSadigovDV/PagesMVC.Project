@@ -66,7 +66,65 @@
 </section>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
+
+<script>
+    $(document).ready(function () {
+        $('.increaseCount').click(function () {
+            var bookId = $(this).data('id');
+            var inputElement = $(this).siblings('.book-count-input');
+            var currentValue = parseInt(inputElement.val());
+            inputElement.val(currentValue + 1);
+            updateTotalPrice();
+        });
+
+        $('.decreaseCount').click(function () {
+            var bookId = $(this).data('id');
+            var inputElement = $(this).siblings('.book-count-input');
+            var currentValue = parseInt(inputElement.val());
+            if (currentValue > 0) {
+                inputElement.val(currentValue - 1);
+                updateTotalPrice();
+            }
+        });
+
+        function updateTotalPrice() {
+            var totalPrice = 0;
+            $('.single-card').each(function () {
+                var bookCount = parseInt($(this).find('.book-count-input').val());
+                var bookPrice = parseFloat($(this).find('.card-price').text().replace('$', ''));
+                var itemTotalPrice = bookCount * bookPrice;
+                totalPrice += itemTotalPrice;
+            });
+
+            // Update the total price in the DOM
+            $('.checkout-content #totalPrice').text('$' + totalPrice.toFixed(2));
+
+            // Send the updated book counts to the server using AJAX
+            var basketId = $('#basketId').val();
+            var bookCounts = {};
+
+            $('.single-card').each(function () {
+                var bookId = parseInt($(this).find('#bookId').val());
+                var bookCount = parseInt($(this).find('.book-count-input').val());
+                bookCounts[bookId] = bookCount;
+            });
+
+            $.ajax({
+                url: '/book/UpdateBookCounts',
+                type: 'POST',
+                data: {
+                    basketId: basketId,
+                    bookCounts: bookCounts
+                },
+                success: function (response) {
+                    // Handle the server response if needed
+                }
+            });
+        }
+    });
+</script>
+
+      @*  <script>
             $(document).ready(function () {
                 $('.increaseCount').click(function () {
                     var bookId = $(this).data('id');
@@ -107,4 +165,4 @@
 
 
             });
-        </script>
+        </script>*@

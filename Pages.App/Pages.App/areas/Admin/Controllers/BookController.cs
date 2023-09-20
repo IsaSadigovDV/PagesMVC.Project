@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Pages.App.Context;
 using Pages.App.Extentions;
 using Pages.App.Helpers;
+using Pages.App.Services.Interfaces;
 using Pages.Core.Entities;
 using System.Data;
 
@@ -17,14 +18,16 @@ namespace Pages.App.Areas.Admin.Controllers
 
         private readonly PagesDbContext _context;
         private readonly IWebHostEnvironment _env;
+        private readonly IEmailService _emailService;
 
-        public BookController(PagesDbContext context, IWebHostEnvironment env)
+        public BookController(PagesDbContext context, IWebHostEnvironment env, IEmailService emailService)
         {
             _context = context;
             _env = env;
+            _emailService = emailService;
         }
 
-		public async Task<IActionResult> Index(int page = 1)
+        public async Task<IActionResult> Index(int page = 1)
 		{
 			int TotalCount = _context.Books.Where(x => !x.IsDeleted).Count();
 			ViewBag.TotalPage = (int)Math.Ceiling((decimal)TotalCount / 8);
@@ -124,10 +127,20 @@ namespace Pages.App.Areas.Admin.Controllers
                     book.BookAuthors.Add(authorItem);
                 }
             }
+
+            
             book.Image = book.FormFile.CreateImage(_env.WebRootPath, "assets/img/");
             book.CreatedDate = DateTime.Now.AddHours(4);
             await _context.AddAsync(book);
             await _context.SaveChangesAsync();
+
+            //List<Subscribe> subscribes = await _context.Subscribes.Where(x => !x.IsDeleted).ToListAsync();
+
+
+            //foreach (var item in Subscribe)
+            //{
+            //    _emailService.Send(_emailService.Send(,));
+            //}
 
             ViewBag.Language = new SelectList(_context.Languages.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
             ViewBag.Genre = new SelectList(_context.Genres.Where(x => !x.IsDeleted).ToList(), "Id", "Name");
