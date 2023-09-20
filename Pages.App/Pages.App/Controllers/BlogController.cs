@@ -36,7 +36,7 @@ namespace Pages.App.Controllers
                 IEnumerable<Blog> blogs = await _context.Blogs.Where(x => !x.IsDeleted)
                     .Include(x => x.Tags)
                     .Skip((page - 1) * 12)
-            .Take(3).ToListAsync();
+            .Take(9).ToListAsync();
                 return View(blogs);
             }
             else
