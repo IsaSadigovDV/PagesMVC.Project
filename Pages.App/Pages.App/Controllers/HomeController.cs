@@ -24,7 +24,7 @@ namespace Pages.App.Controllers
                 Sponsors = _context.Sponsors.Where(x => !x.IsDeleted).ToList(),
                 Blogs = _context.Blogs.Where(x => !x.IsDeleted).ToList(),
                 Books = _context.Books.Where(x => !x.IsDeleted).Include(x => x.BookLanguages).ThenInclude(x => x.Language).ToList(),
-                Comments = _context.Comments.Where(x => !x.IsDeleted)
+                Comments = _context.Comments.Where(x => !x.IsDeleted && x.BookId !=null )
                 .OrderByDescending(c=>c.CreatedDate)
                 .Include(x=>x.AppUser)
                 .Include(x=>x.Blog)

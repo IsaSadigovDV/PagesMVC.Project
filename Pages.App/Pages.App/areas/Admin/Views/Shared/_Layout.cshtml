@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Majestic Admin</title>
+    <title>Pages Admin</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="~/admin/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="~/admin/assets/vendors/base/vendor.bundle.base.css">
@@ -15,7 +15,8 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="~/admin/assets/css/style.css">
     <!-- endinject -->
-    <link rel="shortcut icon" href="~/admin/assets/images/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/img/adminlogo.jpg" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -54,7 +55,7 @@
                             <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
                             <a class="dropdown-item">
                                 <div class="item-thumbnail">
-                                    <img src="~/admin/assets/img/faces/face4.jpg" alt="image" class="profile-pic">
+                                    <img src="~/assets/img/adminlogo.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
                                     <h6 class="ellipsis font-weight-normal">
@@ -67,7 +68,7 @@
                             </a>
                             <a class="dropdown-item">
                                 <div class="item-thumbnail">
-                                    <img src="~/admin/assets/images/faces/face2.jpg" alt="image" class="profile-pic">
+                                    <img src="~/assets/img/adminlogo.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
                                     <h6 class="ellipsis font-weight-normal">
@@ -80,7 +81,7 @@
                             </a>
                             <a class="dropdown-item">
                                 <div class="item-thumbnail">
-                                    <img src="~/admin/assets/images/faces/face3.jpg" alt="image" class="profile-pic">
+                                    <img src="~/assets/img/adminlogo.jpg" alt="image" class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
                                     <h6 class="ellipsis font-weight-normal">
@@ -143,7 +144,7 @@
                     </li>
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-                            <img src="~/admin/img/faces/face5.jpg" alt="profile" />
+                            <img src="~/assets/img/adminlogo.jpg" alt="profile" />
                             <span class="nav-profile-name">@User.Identity.Name</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
@@ -199,7 +200,6 @@
                                 <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="blog">Blog</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="category">Category</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="sponsor">Sponsors</a></li>
-                                <li class="nav-item"> <a class="nav-link" asp-action="index" asp-controller="subscribe">Subscribes</a></li>
                             </ul>
                         </div>
                     </li>
@@ -258,34 +258,23 @@
                             <span class="menu-title">Messages</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-action="index" asp-controller="notice">
-                            <i class="mdi mdi-chart-pie menu-icon"></i>
-                            <span class="menu-title">Notices</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
+                    
+                    @*<li class="nav-item">
                         <a class="nav-link" asp-action="index" asp-controller="service">
                             <i class="mdi mdi-grid-large menu-icon"></i>
                             <span class="menu-title">Setting</span>
                         </a>
-                    </li>
-                    <li class="nav-item">
+                    </li>*@
+                    @*<li class="nav-item">
                         <a class="nav-link" asp-action="index" asp-controller="slider">
                             <i class="mdi mdi-emoticon menu-icon"></i>
                             <span class="menu-title">Slider</span>
                         </a>
-                    </li>
+                    </li>*@
                     <li class="nav-item">
                         <a class="nav-link" asp-action="index" asp-controller="subscribe">
                             <i class="mdi mdi-file-document-box-outline menu-icon"></i>
                             <span class="menu-title">Subscribe</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-action="index" asp-controller="user">
-                            <i class="mdi mdi-view-headline menu-icon"></i>
-                            <span class="menu-title">Users</span>
                         </a>
                     </li>
                     @if (User.IsInRole("SuperAdmin"))

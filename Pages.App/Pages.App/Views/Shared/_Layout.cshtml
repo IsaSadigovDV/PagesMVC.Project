@@ -13,6 +13,7 @@
     <title>Book Store</title>
     <link rel="stylesheet" href="~/Css/home.css" />
 	<link href="~/assets/lib/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/img/logo.jpg" />
     <link rel="stylesheet"
           href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
     <link rel="stylesheet"
@@ -61,8 +62,8 @@
         <div class="header d-flex container space-between align-center">
             <div class="d-flex align-center icon-container">
                 <div class="d-flex align-center logo-container">
-                    <i class="fa-solid fa-book-bookmark yellow fa-lg"></i>
-                    <h3>Pages</h3>
+                    <i  class="fa-solid fa-book-bookmark yellow fa-lg"></i>
+                    <h3><a asp-action="index" asp-controller="home">Pages</a></h3>
                 </div>
             </div>
             <!-- navigation start -->
@@ -138,8 +139,8 @@
                                                 @{TotalPrice += item.Price*item.Count;
 
                                                 count++;}
-                            <div class="cart-box-image">
-                                <img src="../assets/img/@item.Image" alt="" />
+                            <div style="max-width:32px" class="cart-box-image">
+                                <img src="~/assets/img/@item.Image" alt="" />
                             </div>
 
                             <div class="cart-box-info">
@@ -165,7 +166,7 @@
                                     <span id="totalCount">TOTAL Count :@count</span>
                                 </div>
                                 <div class="priceText">
-                                    <span id="totalPrice">Total Price: @TotalPrice $</span>
+                                    <span id="totalPrice">Total Price :@TotalPrice.ToString("0.00") $</span>
                                 </div>
                             </div>
                           
@@ -312,7 +313,6 @@
 
 	<script src="~/assets/lib/swiper/swiper-bundle.js"></script>
 	<script src="~/assets/lib/swiper/swiper-bundle.min.js"></script>
-	@*<a href="~/assets/lib/swiper/swiper-bundle.min.js.map">~/assets/lib/swiper/swiper-bundle.min.js.map</a>*@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/swiper.js"></script>
     <script src="../Js/home.js"></script>
